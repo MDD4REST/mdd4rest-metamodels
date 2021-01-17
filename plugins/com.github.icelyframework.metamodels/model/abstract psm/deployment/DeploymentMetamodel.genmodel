@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.github.icelyframework.metamodels/src" modelPluginID="com.github.icelyframework.metamodels"
+    modelName="Deployment" importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0"
+    copyrightFields="false">
+  <foreignModel>DeploymentMetamodel.ecore</foreignModel>
+  <genPackages prefix="Deployment" basePackage="com.github.icelyframework" disposableProviderFactory="true"
+      ecorePackage="DeploymentMetamodel.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="DeploymentMetamodel.ecore#//DatabaseType">
+      <genEnumLiterals ecoreEnumLiteral="DeploymentMetamodel.ecore#//DatabaseType/SQL"/>
+      <genEnumLiterals ecoreEnumLiteral="DeploymentMetamodel.ecore#//DatabaseType/MONGODB"/>
+      <genEnumLiterals ecoreEnumLiteral="DeploymentMetamodel.ecore#//DatabaseType/CASSANDRA"/>
+      <genEnumLiterals ecoreEnumLiteral="DeploymentMetamodel.ecore#//DatabaseType/COUCHBASE"/>
+      <genEnumLiterals ecoreEnumLiteral="DeploymentMetamodel.ecore#//DatabaseType/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="DeploymentMetamodel.ecore#//ServiceDiscoveryType">
+      <genEnumLiterals ecoreEnumLiteral="DeploymentMetamodel.ecore#//ServiceDiscoveryType/EUREKA"/>
+      <genEnumLiterals ecoreEnumLiteral="DeploymentMetamodel.ecore#//ServiceDiscoveryType/CONSUL"/>
+      <genEnumLiterals ecoreEnumLiteral="DeploymentMetamodel.ecore#//ServiceDiscoveryType/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="DeploymentMetamodel.ecore#//DeploymentType">
+      <genEnumLiterals ecoreEnumLiteral="DeploymentMetamodel.ecore#//DeploymentType/DOCKER_COMPOSE"/>
+      <genEnumLiterals ecoreEnumLiteral="DeploymentMetamodel.ecore#//DeploymentType/KUBERNETES"/>
+      <genEnumLiterals ecoreEnumLiteral="DeploymentMetamodel.ecore#//DeploymentType/OPENSHIFT"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="DeploymentMetamodel.ecore#//GatewayType">
+      <genEnumLiterals ecoreEnumLiteral="DeploymentMetamodel.ecore#//GatewayType/ZUUL"/>
+      <genEnumLiterals ecoreEnumLiteral="DeploymentMetamodel.ecore#//GatewayType/TRAEFIK"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="DeploymentMetamodel.ecore#//ApplicationType">
+      <genEnumLiterals ecoreEnumLiteral="DeploymentMetamodel.ecore#//ApplicationType/JHIPSTER_MICROSERVICE"/>
+      <genEnumLiterals ecoreEnumLiteral="DeploymentMetamodel.ecore#//ApplicationType/JHIPSTER_GATEWAY"/>
+      <genEnumLiterals ecoreEnumLiteral="DeploymentMetamodel.ecore#//ApplicationType/JHIPSTER_MONOLITH"/>
+      <genEnumLiterals ecoreEnumLiteral="DeploymentMetamodel.ecore#//ApplicationType/JHIPSTER_UAA"/>
+      <genEnumLiterals ecoreEnumLiteral="DeploymentMetamodel.ecore#//ApplicationType/SCULPTOR_MICROSERVICE"/>
+      <genEnumLiterals ecoreEnumLiteral="DeploymentMetamodel.ecore#//ApplicationType/SCULPTOR_MONOLITH"/>
+    </genEnums>
+    <genClasses ecoreClass="DeploymentMetamodel.ecore#//ApplicationDeployment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DeploymentMetamodel.ecore#//ApplicationDeployment/directoryPath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DeploymentMetamodel.ecore#//ApplicationDeployment/dbPassword"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DeploymentMetamodel.ecore#//ApplicationDeployment/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DeploymentMetamodel.ecore#//ApplicationDeployment/dbIP"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DeploymentMetamodel.ecore#//ApplicationDeployment/dbUsername"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DeploymentMetamodel.ecore#//ApplicationDeployment/dbPort"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DeploymentMetamodel.ecore#//ApplicationDeployment/dbType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DeploymentMetamodel.ecore#//ApplicationDeployment/serverType"/>
+    </genClasses>
+    <genClasses ecoreClass="DeploymentMetamodel.ecore#//ProjectDeployment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DeploymentMetamodel.ecore#//ProjectDeployment/dockerRepositoryName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DeploymentMetamodel.ecore#//ProjectDeployment/directoryPath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DeploymentMetamodel.ecore#//ProjectDeployment/serviceDiscoveryType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DeploymentMetamodel.ecore#//ProjectDeployment/gatewayType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DeploymentMetamodel.ecore#//ProjectDeployment/deploymentType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DeploymentMetamodel.ecore#//ProjectDeployment/appsFolders"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DeploymentMetamodel.ecore#//ProjectDeployment/monitoring"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DeploymentMetamodel.ecore#//ProjectDeployment/kubernetesServiceType"/>
+    </genClasses>
+    <genClasses ecoreClass="DeploymentMetamodel.ecore#//Project">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DeploymentMetamodel.ecore#//Project/applications"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DeploymentMetamodel.ecore#//Project/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DeploymentMetamodel.ecore#//Project/basePath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DeploymentMetamodel.ecore#//Project/basePackage"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DeploymentMetamodel.ecore#//Project/deployment"/>
+    </genClasses>
+    <genClasses ecoreClass="DeploymentMetamodel.ecore#//Application">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DeploymentMetamodel.ecore#//Application/name"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference DeploymentMetamodel.ecore#//Application/project"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DeploymentMetamodel.ecore#//Application/basePackage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DeploymentMetamodel.ecore#//Application/applicationType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DeploymentMetamodel.ecore#//Application/deployment"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

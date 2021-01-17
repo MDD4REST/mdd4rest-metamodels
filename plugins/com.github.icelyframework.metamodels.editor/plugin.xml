@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated StaticViewMetamodel -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="com.github.icelyframework.staticview.presentation.StaticviewModelWizardID"
+            name="%_UI_StaticviewModelWizard_label"
+            class="com.github.icelyframework.staticview.presentation.StaticviewModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/StaticviewModelFile.gif">
+         <description>%_UI_StaticviewModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated StaticViewMetamodel -->
+      <editor
+            id="com.github.icelyframework.staticview.presentation.StaticviewEditorID"
+            name="%_UI_StaticviewEditor_label"
+            icon="icons/full/obj16/StaticviewModelFile.gif"
+            extensions="static"
+            class="com.github.icelyframework.staticview.presentation.StaticviewEditor"
+            contributorClass="com.github.icelyframework.staticview.presentation.StaticviewActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated DynamicViewMetamodel -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="com.github.icelyframework.dynamicview.presentation.DynamicviewModelWizardID"
+            name="%_UI_DynamicviewModelWizard_label"
+            class="com.github.icelyframework.dynamicview.presentation.DynamicviewModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/DynamicviewModelFile.gif">
+         <description>%_UI_DynamicviewModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated DynamicViewMetamodel -->
+      <editor
+            id="com.github.icelyframework.dynamicview.presentation.DynamicviewEditorID"
+            name="%_UI_DynamicviewEditor_label"
+            icon="icons/full/obj16/DynamicviewModelFile.gif"
+            extensions="dynamic"
+            class="com.github.icelyframework.dynamicview.presentation.DynamicviewEditor"
+            contributorClass="com.github.icelyframework.dynamicview.presentation.DynamicviewActionBarContributor">
+      </editor>
+   </extension>
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated ConfigurationMetamodel -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="com.github.icelyframework.configuration.presentation.ConfigurationModelWizardID"
+            name="%_UI_ConfigurationModelWizard_label"
+            class="com.github.icelyframework.configuration.presentation.ConfigurationModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ConfigurationModelFile.gif">
+         <description>%_UI_ConfigurationModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated ConfigurationMetamodel -->
+      <editor
+            id="com.github.icelyframework.configuration.presentation.ConfigurationEditorID"
+            name="%_UI_ConfigurationEditor_label"
+            icon="icons/full/obj16/ConfigurationModelFile.gif"
+            extensions="configuration"
+            class="com.github.icelyframework.configuration.presentation.ConfigurationEditor"
+            contributorClass="com.github.icelyframework.configuration.presentation.ConfigurationActionBarContributor">
+      </editor>
+   </extension>
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated DeploymentMetamodel -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="com.github.icelyframework.deployment.presentation.DeploymentModelWizardID"
+            name="%_UI_DeploymentModelWizard_label"
+            class="com.github.icelyframework.deployment.presentation.DeploymentModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/DeploymentModelFile.gif">
+         <description>%_UI_DeploymentModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated DeploymentMetamodel -->
+      <editor
+            id="com.github.icelyframework.deployment.presentation.DeploymentEditorID"
+            name="%_UI_DeploymentEditor_label"
+            icon="icons/full/obj16/DeploymentModelFile.gif"
+            extensions="deployment"
+            class="com.github.icelyframework.deployment.presentation.DeploymentEditor"
+            contributorClass="com.github.icelyframework.deployment.presentation.DeploymentActionBarContributor">
+      </editor>
+   </extension>
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated ServiceMetamodel -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="com.github.icelyframework.service.presentation.ServiceModelWizardID"
+            name="%_UI_ServiceModelWizard_label"
+            class="com.github.icelyframework.service.presentation.ServiceModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ServiceModelFile.gif">
+         <description>%_UI_ServiceModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated ServiceMetamodel -->
+      <editor
+            id="com.github.icelyframework.service.presentation.ServiceEditorID"
+            name="%_UI_ServiceEditor_label"
+            icon="icons/full/obj16/ServiceModelFile.gif"
+            extensions="service"
+            class="com.github.icelyframework.service.presentation.ServiceEditor"
+            contributorClass="com.github.icelyframework.service.presentation.ServiceActionBarContributor">
+      </editor>
+   </extension>
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated JDLMetamodel -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="com.github.icelyframework.jdl.presentation.JdlModelWizardID"
+            name="%_UI_JdlModelWizard_label"
+            class="com.github.icelyframework.jdl.presentation.JdlModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/JdlModelFile.gif">
+         <description>%_UI_JdlModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated JDLMetamodel -->
+      <editor
+            id="com.github.icelyframework.jdl.presentation.JdlEditorID"
+            name="%_UI_JdlEditor_label"
+            icon="icons/full/obj16/JdlModelFile.gif"
+            extensions="jdl"
+            class="com.github.icelyframework.jdl.presentation.JdlEditor"
+            contributorClass="com.github.icelyframework.jdl.presentation.JdlActionBarContributor">
+      </editor>
+   </extension>
+</plugin>

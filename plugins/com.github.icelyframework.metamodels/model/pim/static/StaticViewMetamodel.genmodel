@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.github.icelyframework.metamodels/src" modelPluginID="com.github.icelyframework.metamodels"
+    modelName="Staticview" importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0"
+    copyrightFields="false">
+  <foreignModel>StaticViewMetamodel.ecore</foreignModel>
+  <genPackages prefix="Staticview" basePackage="com.github.icelyframework" disposableProviderFactory="true"
+      fileExtensions="static" ecorePackage="StaticViewMetamodel.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="StaticViewMetamodel.ecore#//Multiplicity">
+      <genEnumLiterals ecoreEnumLiteral="StaticViewMetamodel.ecore#//Multiplicity/ONE_TO_MANY"/>
+      <genEnumLiterals ecoreEnumLiteral="StaticViewMetamodel.ecore#//Multiplicity/MANY_TO_ONE"/>
+      <genEnumLiterals ecoreEnumLiteral="StaticViewMetamodel.ecore#//Multiplicity/ONE_TO_ONE"/>
+      <genEnumLiterals ecoreEnumLiteral="StaticViewMetamodel.ecore#//Multiplicity/MANY_TO_MANY"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="StaticViewMetamodel.ecore#//DefaultType">
+      <genEnumLiterals ecoreEnumLiteral="StaticViewMetamodel.ecore#//DefaultType/String"/>
+      <genEnumLiterals ecoreEnumLiteral="StaticViewMetamodel.ecore#//DefaultType/Integer"/>
+      <genEnumLiterals ecoreEnumLiteral="StaticViewMetamodel.ecore#//DefaultType/Float"/>
+      <genEnumLiterals ecoreEnumLiteral="StaticViewMetamodel.ecore#//DefaultType/Boolean"/>
+      <genEnumLiterals ecoreEnumLiteral="StaticViewMetamodel.ecore#//DefaultType/null"/>
+      <genEnumLiterals ecoreEnumLiteral="StaticViewMetamodel.ecore#//DefaultType/Date"/>
+    </genEnums>
+    <genClasses image="false" ecoreClass="StaticViewMetamodel.ecore#//Resource">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StaticViewMetamodel.ecore#//Resource/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StaticViewMetamodel.ecore#//Resource/hasRelatedResource"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StaticViewMetamodel.ecore#//Resource/isRelatedResource"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference StaticViewMetamodel.ecore#//Resource/aggregate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StaticViewMetamodel.ecore#//Resource/simpleName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StaticViewMetamodel.ecore#//Resource/pathName"/>
+    </genClasses>
+    <genClasses ecoreClass="StaticViewMetamodel.ecore#//Property">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StaticViewMetamodel.ecore#//Property/isUnique"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StaticViewMetamodel.ecore#//Property/isNamingProperty"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StaticViewMetamodel.ecore#//Property/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StaticViewMetamodel.ecore#//Property/isRequired"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StaticViewMetamodel.ecore#//Property/min"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StaticViewMetamodel.ecore#//Property/max"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StaticViewMetamodel.ecore#//Property/type"/>
+    </genClasses>
+    <genClasses ecoreClass="StaticViewMetamodel.ecore#//Project">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StaticViewMetamodel.ecore#//Project/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StaticViewMetamodel.ecore#//Project/basePath"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference StaticViewMetamodel.ecore#//Project/hasApplication"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference StaticViewMetamodel.ecore#//Project/primitiveTypes"/>
+    </genClasses>
+    <genClasses ecoreClass="StaticViewMetamodel.ecore#//Relation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StaticViewMetamodel.ecore#//Relation/multiplicity"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StaticViewMetamodel.ecore#//Relation/target"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference StaticViewMetamodel.ecore#//Relation/source"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StaticViewMetamodel.ecore#//Relation/cascade"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StaticViewMetamodel.ecore#//Relation/orderBy"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StaticViewMetamodel.ecore#//Relation/visibility"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StaticViewMetamodel.ecore#//Relation/required"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StaticViewMetamodel.ecore#//Relation/nullable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StaticViewMetamodel.ecore#//Relation/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StaticViewMetamodel.ecore#//Relation/opposite"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StaticViewMetamodel.ecore#//Relation/type"/>
+    </genClasses>
+    <genClasses ecoreClass="StaticViewMetamodel.ecore#//Application">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference StaticViewMetamodel.ecore#//Application/hasAggregate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StaticViewMetamodel.ecore#//Application/name"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference StaticViewMetamodel.ecore#//Application/project"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference StaticViewMetamodel.ecore#//Application/complextypes"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="StaticViewMetamodel.ecore#//TypeDefinition"/>
+    <genClasses ecoreClass="StaticViewMetamodel.ecore#//Enumeration">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference StaticViewMetamodel.ecore#//Enumeration/hasLiteral"/>
+    </genClasses>
+    <genClasses ecoreClass="StaticViewMetamodel.ecore#//BasicType"/>
+    <genClasses ecoreClass="StaticViewMetamodel.ecore#//Literal">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StaticViewMetamodel.ecore#//Literal/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StaticViewMetamodel.ecore#//Literal/value"/>
+    </genClasses>
+    <genClasses ecoreClass="StaticViewMetamodel.ecore#//Entity"/>
+    <genClasses ecoreClass="StaticViewMetamodel.ecore#//DTO"/>
+    <genClasses image="false" ecoreClass="StaticViewMetamodel.ecore#//DomainObject">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference StaticViewMetamodel.ecore#//DomainObject/hasProperty"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StaticViewMetamodel.ecore#//DomainObject/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StaticViewMetamodel.ecore#//DomainObject/abstract"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StaticViewMetamodel.ecore#//DomainObject/aggregateRoot"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference StaticViewMetamodel.ecore#//DomainObject/hasRelation"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference StaticViewMetamodel.ecore#//DomainObject/aggregate"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StaticViewMetamodel.ecore#//DomainObject/extends"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StaticViewMetamodel.ecore#//DomainObject/scaffold"/>
+    </genClasses>
+    <genClasses ecoreClass="StaticViewMetamodel.ecore#//ValueObject">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StaticViewMetamodel.ecore#//ValueObject/immutable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StaticViewMetamodel.ecore#//ValueObject/persistent"/>
+    </genClasses>
+    <genClasses ecoreClass="StaticViewMetamodel.ecore#//Aggregate">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference StaticViewMetamodel.ecore#//Aggregate/hasDomainobject"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StaticViewMetamodel.ecore#//Aggregate/name"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference StaticViewMetamodel.ecore#//Aggregate/application"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference StaticViewMetamodel.ecore#//Aggregate/hasResource"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StaticViewMetamodel.ecore#//Aggregate/aggregateRoot"/>
+    </genClasses>
+    <genClasses ecoreClass="StaticViewMetamodel.ecore#//SingletonResource">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StaticViewMetamodel.ecore#//SingletonResource/lookupField"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="StaticViewMetamodel.ecore#//Event"/>
+    <genClasses ecoreClass="StaticViewMetamodel.ecore#//CommandEvent"/>
+    <genClasses ecoreClass="StaticViewMetamodel.ecore#//DomainEvent"/>
+    <genClasses ecoreClass="StaticViewMetamodel.ecore#//PrimitiveType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StaticViewMetamodel.ecore#//PrimitiveType/type"/>
+    </genClasses>
+    <genClasses ecoreClass="StaticViewMetamodel.ecore#//CollectionResource"/>
+    <genClasses image="false" ecoreClass="StaticViewMetamodel.ecore#//SimpleType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute StaticViewMetamodel.ecore#//SimpleType/typeName"/>
+    </genClasses>
+    <genClasses ecoreClass="StaticViewMetamodel.ecore#//ComplexType">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference StaticViewMetamodel.ecore#//ComplexType/type"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

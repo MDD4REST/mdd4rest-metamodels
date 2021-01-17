@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.github.icelyframework.metamodels/src" modelPluginID="com.github.icelyframework.metamodels"
+    modelName="Dynamicview" importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0"
+    copyrightFields="false">
+  <foreignModel>DynamicViewMetamodel.ecore</foreignModel>
+  <genPackages prefix="Dynamicview" basePackage="com.github.icelyframework" disposableProviderFactory="true"
+      fileExtensions="dynamic" ecorePackage="DynamicViewMetamodel.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="DynamicViewMetamodel.ecore#//MediaType">
+      <genEnumLiterals ecoreEnumLiteral="DynamicViewMetamodel.ecore#//MediaType/JSON"/>
+      <genEnumLiterals ecoreEnumLiteral="DynamicViewMetamodel.ecore#//MediaType/XML"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="DynamicViewMetamodel.ecore#//DefaultType">
+      <genEnumLiterals ecoreEnumLiteral="DynamicViewMetamodel.ecore#//DefaultType/String"/>
+      <genEnumLiterals ecoreEnumLiteral="DynamicViewMetamodel.ecore#//DefaultType/Integer"/>
+      <genEnumLiterals ecoreEnumLiteral="DynamicViewMetamodel.ecore#//DefaultType/Float"/>
+      <genEnumLiterals ecoreEnumLiteral="DynamicViewMetamodel.ecore#//DefaultType/Boolean"/>
+      <genEnumLiterals ecoreEnumLiteral="DynamicViewMetamodel.ecore#//DefaultType/null"/>
+      <genEnumLiterals ecoreEnumLiteral="DynamicViewMetamodel.ecore#//DefaultType/Date"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="DynamicViewMetamodel.ecore#//AuthenticationType">
+      <genEnumLiterals ecoreEnumLiteral="DynamicViewMetamodel.ecore#//AuthenticationType/CENTERALIZED"/>
+      <genEnumLiterals ecoreEnumLiteral="DynamicViewMetamodel.ecore#//AuthenticationType/DECENTERALIZED"/>
+    </genEnums>
+    <genClasses image="false" ecoreClass="DynamicViewMetamodel.ecore#//Resource">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DynamicViewMetamodel.ecore#//Resource/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DynamicViewMetamodel.ecore#//Resource/hasRelatedResource"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DynamicViewMetamodel.ecore#//Resource/isRelatedResource"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DynamicViewMetamodel.ecore#//Resource/readActivity"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DynamicViewMetamodel.ecore#//Resource/createActivity"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DynamicViewMetamodel.ecore#//Resource/deleteActivity"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DynamicViewMetamodel.ecore#//Resource/otherActivities"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference DynamicViewMetamodel.ecore#//Resource/aggregate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DynamicViewMetamodel.ecore#//Resource/hasActivity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DynamicViewMetamodel.ecore#//Resource/pathName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DynamicViewMetamodel.ecore#//Resource/hasPermission"/>
+    </genClasses>
+    <genClasses ecoreClass="DynamicViewMetamodel.ecore#//Application">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DynamicViewMetamodel.ecore#//Application/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DynamicViewMetamodel.ecore#//Application/hasAggregate"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference DynamicViewMetamodel.ecore#//Application/project"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DynamicViewMetamodel.ecore#//Application/complextypes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DynamicViewMetamodel.ecore#//Application/hasRole"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="DynamicViewMetamodel.ecore#//ResourceActivity">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DynamicViewMetamodel.ecore#//ResourceActivity/trigger"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DynamicViewMetamodel.ecore#//ResourceActivity/resource"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DynamicViewMetamodel.ecore#//ResourceActivity/pathName"/>
+    </genClasses>
+    <genClasses ecoreClass="DynamicViewMetamodel.ecore#//Create"/>
+    <genClasses ecoreClass="DynamicViewMetamodel.ecore#//Read"/>
+    <genClasses ecoreClass="DynamicViewMetamodel.ecore#//Other"/>
+    <genClasses ecoreClass="DynamicViewMetamodel.ecore#//Delete"/>
+    <genClasses ecoreClass="DynamicViewMetamodel.ecore#//Operation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DynamicViewMetamodel.ecore#//Operation/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DynamicViewMetamodel.ecore#//Operation/publish"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DynamicViewMetamodel.ecore#//Operation/hasParameter"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DynamicViewMetamodel.ecore#//Operation/returntype"/>
+    </genClasses>
+    <genClasses ecoreClass="DynamicViewMetamodel.ecore#//SingletonResource">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DynamicViewMetamodel.ecore#//SingletonResource/lookupField"/>
+    </genClasses>
+    <genClasses ecoreClass="DynamicViewMetamodel.ecore#//PrimitiveType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DynamicViewMetamodel.ecore#//PrimitiveType/type"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="DynamicViewMetamodel.ecore#//Event"/>
+    <genClasses ecoreClass="DynamicViewMetamodel.ecore#//Publish">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DynamicViewMetamodel.ecore#//Publish/eventType"/>
+    </genClasses>
+    <genClasses ecoreClass="DynamicViewMetamodel.ecore#//CommandEvent"/>
+    <genClasses ecoreClass="DynamicViewMetamodel.ecore#//DomainEvent"/>
+    <genClasses ecoreClass="DynamicViewMetamodel.ecore#//DomainObjectOperation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DynamicViewMetamodel.ecore#//DomainObjectOperation/abstract"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference DynamicViewMetamodel.ecore#//DomainObjectOperation/domainobject"/>
+    </genClasses>
+    <genClasses ecoreClass="DynamicViewMetamodel.ecore#//Policy">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DynamicViewMetamodel.ecore#//Policy/eventType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DynamicViewMetamodel.ecore#//Policy/name"/>
+    </genClasses>
+    <genClasses ecoreClass="DynamicViewMetamodel.ecore#//CommandOperation"/>
+    <genClasses ecoreClass="DynamicViewMetamodel.ecore#//QueryOperation"/>
+    <genClasses ecoreClass="DynamicViewMetamodel.ecore#//ProcessOperation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DynamicViewMetamodel.ecore#//ProcessOperation/delegate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DynamicViewMetamodel.ecore#//ProcessOperation/policy"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference DynamicViewMetamodel.ecore#//ProcessOperation/process"/>
+    </genClasses>
+    <genClasses ecoreClass="DynamicViewMetamodel.ecore#//Process">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DynamicViewMetamodel.ecore#//Process/hasOperation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DynamicViewMetamodel.ecore#//Process/name"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference DynamicViewMetamodel.ecore#//Process/aggregate"/>
+    </genClasses>
+    <genClasses ecoreClass="DynamicViewMetamodel.ecore#//Project">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DynamicViewMetamodel.ecore#//Project/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DynamicViewMetamodel.ecore#//Project/basePath"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DynamicViewMetamodel.ecore#//Project/hasApplication"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DynamicViewMetamodel.ecore#//Project/primitiveTypes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DynamicViewMetamodel.ecore#//Project/authenticationType"/>
+    </genClasses>
+    <genClasses ecoreClass="DynamicViewMetamodel.ecore#//CollectionResource"/>
+    <genClasses image="false" ecoreClass="DynamicViewMetamodel.ecore#//TypeDefinition"/>
+    <genClasses ecoreClass="DynamicViewMetamodel.ecore#//Parameter">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DynamicViewMetamodel.ecore#//Parameter/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DynamicViewMetamodel.ecore#//Parameter/name"/>
+    </genClasses>
+    <genClasses ecoreClass="DynamicViewMetamodel.ecore#//Aggregate">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DynamicViewMetamodel.ecore#//Aggregate/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DynamicViewMetamodel.ecore#//Aggregate/hasProcess"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference DynamicViewMetamodel.ecore#//Aggregate/application"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DynamicViewMetamodel.ecore#//Aggregate/domainobjects"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DynamicViewMetamodel.ecore#//Aggregate/hasResource"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DynamicViewMetamodel.ecore#//Aggregate/aggregateRoot"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="DynamicViewMetamodel.ecore#//DomainObject">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DynamicViewMetamodel.ecore#//DomainObject/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DynamicViewMetamodel.ecore#//DomainObject/aggregateRoot"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DynamicViewMetamodel.ecore#//DomainObject/hasOperation"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference DynamicViewMetamodel.ecore#//DomainObject/aggregate"/>
+    </genClasses>
+    <genClasses ecoreClass="DynamicViewMetamodel.ecore#//Entity"/>
+    <genClasses ecoreClass="DynamicViewMetamodel.ecore#//ValueObject"/>
+    <genClasses ecoreClass="DynamicViewMetamodel.ecore#//DTO"/>
+    <genClasses ecoreClass="DynamicViewMetamodel.ecore#//Enumeration"/>
+    <genClasses ecoreClass="DynamicViewMetamodel.ecore#//BasicType"/>
+    <genClasses image="false" ecoreClass="DynamicViewMetamodel.ecore#//SimpleType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DynamicViewMetamodel.ecore#//SimpleType/typeName"/>
+    </genClasses>
+    <genClasses ecoreClass="DynamicViewMetamodel.ecore#//ComplexType">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DynamicViewMetamodel.ecore#//ComplexType/type"/>
+    </genClasses>
+    <genClasses ecoreClass="DynamicViewMetamodel.ecore#//Role">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference DynamicViewMetamodel.ecore#//Role/application"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="DynamicViewMetamodel.ecore#//Permission"/>
+    <genClasses ecoreClass="DynamicViewMetamodel.ecore#//HasAuthority">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DynamicViewMetamodel.ecore#//HasAuthority/role"/>
+    </genClasses>
+    <genClasses ecoreClass="DynamicViewMetamodel.ecore#//Authenticated"/>
+    <genClasses ecoreClass="DynamicViewMetamodel.ecore#//PermitAll">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DynamicViewMetamodel.ecore#//PermitAll/withAllSubresource"/>
+    </genClasses>
+    <genClasses ecoreClass="DynamicViewMetamodel.ecore#//HasAnyAuthorities">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DynamicViewMetamodel.ecore#//HasAnyAuthorities/role"/>
+    </genClasses>
+    <genClasses ecoreClass="DynamicViewMetamodel.ecore#//Access">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DynamicViewMetamodel.ecore#//Access/access"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

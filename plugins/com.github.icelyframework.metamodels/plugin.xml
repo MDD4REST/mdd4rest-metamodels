@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated StaticViewMetamodel -->
+      <package
+            uri="http://github.com/icelyframework/static"
+            class="com.github.icelyframework.staticview.StaticviewPackage"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated DynamicViewMetamodel -->
+      <package
+            uri="http://github.com/icelyframework/dynamic"
+            class="com.github.icelyframework.dynamicview.DynamicviewPackage"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ConfigurationMetamodel -->
+      <package
+            uri="http://github.com/icelyframework/configuration"
+            class="com.github.icelyframework.configuration.ConfigurationPackage"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated DeploymentMetamodel -->
+      <package
+            uri="http://github.com/icelyframework/deployment"
+            class="com.github.icelyframework.deployment.DeploymentPackage"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ServiceMetamodel -->
+      <package
+            uri="http://github.com/icelyframework/service"
+            class="com.github.icelyframework.service.ServicePackage"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated JDLMetamodel -->
+      <package
+            uri="http://github.com/icelyframework/jdl"
+            class="com.github.icelyframework.jdl.JdlPackage"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated sculptormetamodel -->
+      <package
+            uri="http://sculptor.org/sculptor"
+            class="org.sculptor.sculptormetamodel.SculptormetamodelPackage"
+            genModel="model/genterator%20psm/sculptor/sculptormetamodel.xcore"/>
+   </extension>
+
+</plugin>

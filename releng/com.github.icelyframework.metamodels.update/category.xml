@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature id="com.github.icelyframework.metamodels.feature">
+      <category name="Icely Metamodels"/>
+   </feature>
+   <category-def name="Icely Metamodels" label="Icely Metamodels"/>
+</site>

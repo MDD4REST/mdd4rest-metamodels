@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.github.icelyframework.metamodels/src" modelPluginID="com.github.icelyframework.metamodels"
+    modelName="Configuration" importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0"
+    copyrightFields="false">
+  <foreignModel>ConfigurationMetamodel.ecore</foreignModel>
+  <genPackages prefix="Configuration" basePackage="com.github.icelyframework" disposableProviderFactory="true"
+      ecorePackage="ConfigurationMetamodel.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ConfigurationMetamodel.ecore#//ApplicationType">
+      <genEnumLiterals ecoreEnumLiteral="ConfigurationMetamodel.ecore#//ApplicationType/JHIPSTER_MICROSERVICE"/>
+      <genEnumLiterals ecoreEnumLiteral="ConfigurationMetamodel.ecore#//ApplicationType/JHIPSTER_GATEWAY"/>
+      <genEnumLiterals ecoreEnumLiteral="ConfigurationMetamodel.ecore#//ApplicationType/JHIPSTER_MONOLITH"/>
+      <genEnumLiterals ecoreEnumLiteral="ConfigurationMetamodel.ecore#//ApplicationType/JHIPSTER_UAA"/>
+      <genEnumLiterals ecoreEnumLiteral="ConfigurationMetamodel.ecore#//ApplicationType/SCULPTOR_MICROSERVICE"/>
+      <genEnumLiterals ecoreEnumLiteral="ConfigurationMetamodel.ecore#//ApplicationType/SCULPTOR_MONOLITH"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ConfigurationMetamodel.ecore#//ArchitectureType">
+      <genEnumLiterals ecoreEnumLiteral="ConfigurationMetamodel.ecore#//ArchitectureType/SIMPLE"/>
+      <genEnumLiterals ecoreEnumLiteral="ConfigurationMetamodel.ecore#//ArchitectureType/CQRS"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ConfigurationMetamodel.ecore#//DatabaseType">
+      <genEnumLiterals ecoreEnumLiteral="ConfigurationMetamodel.ecore#//DatabaseType/SQL"/>
+      <genEnumLiterals ecoreEnumLiteral="ConfigurationMetamodel.ecore#//DatabaseType/MONGODB"/>
+      <genEnumLiterals ecoreEnumLiteral="ConfigurationMetamodel.ecore#//DatabaseType/CASSANDRA"/>
+      <genEnumLiterals ecoreEnumLiteral="ConfigurationMetamodel.ecore#//DatabaseType/COUCHBASE"/>
+      <genEnumLiterals ecoreEnumLiteral="ConfigurationMetamodel.ecore#//DatabaseType/NO"/>
+    </genEnums>
+    <genClasses ecoreClass="ConfigurationMetamodel.ecore#//ApplicationConfig">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//ApplicationConfig/baseName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//ApplicationConfig/servicePort"/>
+    </genClasses>
+    <genClasses ecoreClass="ConfigurationMetamodel.ecore#//ProjectConfig">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//ProjectConfig/version"/>
+    </genClasses>
+    <genClasses ecoreClass="ConfigurationMetamodel.ecore#//Application">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//Application/name"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ConfigurationMetamodel.ecore#//Application/project"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//Application/basePackage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//Application/applicationType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetamodel.ecore#//Application/config"/>
+    </genClasses>
+    <genClasses ecoreClass="ConfigurationMetamodel.ecore#//Project">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetamodel.ecore#//Project/applications"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//Project/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//Project/basePath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//Project/basePackage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//Project/architecture"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetamodel.ecore#//Project/config"/>
+    </genClasses>
+    <genClasses ecoreClass="ConfigurationMetamodel.ecore#//SculptorConfig">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//SculptorConfig/cartridges"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//SculptorConfig/project_nature"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//SculptorConfig/id_type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//SculptorConfig/datetime_library"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//SculptorConfig/toStringStyle"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//SculptorConfig/scaffold_operations"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//SculptorConfig/check_cyclicDependencies"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//SculptorConfig/findAll_paging"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//SculptorConfig/findByCondition_paging"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetamodel.ecore#//SculptorConfig/framework"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetamodel.ecore#//SculptorConfig/rest"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetamodel.ecore#//SculptorConfig/generate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetamodel.ecore#//SculptorConfig/cascade"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetamodel.ecore#//SculptorConfig/database"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetamodel.ecore#//SculptorConfig/jpa"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetamodel.ecore#//SculptorConfig/deployment"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetamodel.ecore#//SculptorConfig/hibernatetypes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetamodel.ecore#//SculptorConfig/javatypes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetamodel.ecore#//SculptorConfig/packagenames"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetamodel.ecore#//SculptorConfig/defaultbaseclassnames"/>
+    </genClasses>
+    <genClasses ecoreClass="ConfigurationMetamodel.ecore#//JhipsterConfig">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//JhipsterConfig/databaseType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//JhipsterConfig/jhiPrefix"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//JhipsterConfig/skipUserManagement"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//JhipsterConfig/nativeLanguage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//JhipsterConfig/testFrameworks"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//JhipsterConfig/cacheProvider"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//JhipsterConfig/entitySuffix"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//JhipsterConfig/skipServer"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//JhipsterConfig/dtoSuffix"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//JhipsterConfig/enableHibernateCache"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//JhipsterConfig/skipClient"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//JhipsterConfig/buildTool"/>
+    </genClasses>
+    <genClasses ecoreClass="ConfigurationMetamodel.ecore#//RESTOptions">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//RESTOptions/spring_remoting_type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//RESTOptions/rest_default_path"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//RESTOptions/rest_default_httpMethod"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//RESTOptions/generate_resource"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//RESTOptions/generate_restWeb"/>
+    </genClasses>
+    <genClasses ecoreClass="ConfigurationMetamodel.ecore#//CacheOptions">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//CacheOptions/cache_provider"/>
+    </genClasses>
+    <genClasses ecoreClass="ConfigurationMetamodel.ecore#//GenerateOptions">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//GenerateOptions/generate_domainObject_conditionalCriteriaProperties"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//GenerateOptions/generate_repository_finders"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//GenerateOptions/generate_modelDoc"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//GenerateOptions/generate_umlgraph"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//GenerateOptions/generate_spring_annotation_tx"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//GenerateOptions/generate_ddl"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//GenerateOptions/generate_ddl_drop"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//GenerateOptions/generate_domainObject_compositeKeyClass"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//GenerateOptions/generate_serviceContext"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//GenerateOptions/generate_NotFoundException"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//GenerateOptions/generate_spring_annotation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//GenerateOptions/generate_jpa_annotation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//GenerateOptions/generate_validation_annotation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//GenerateOptions/generate_jpa_annotation_onField"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//GenerateOptions/generate_jpa_annotation_columnDefinition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//GenerateOptions/generate_xstream_annotation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//GenerateOptions/generat_test"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//GenerateOptions/generate_gapClass"/>
+    </genClasses>
+    <genClasses ecoreClass="ConfigurationMetamodel.ecore#//FrameworkOptions">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//FrameworkOptions/framework_accessimpl_package"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//FrameworkOptions/framework_accessimpl_prefix"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//FrameworkOptions/framework_accessapi_packag"/>
+    </genClasses>
+    <genClasses ecoreClass="ConfigurationMetamodel.ecore#//CascadeOptions">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//CascadeOptions/cascade_aggregate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//CascadeOptions/cascade_aggregate_oneToMany"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//CascadeOptions/cascade_manyToMany"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//CascadeOptions/cascade_oneToMany"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//CascadeOptions/cascade_toMany"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//CascadeOptions/cascade_toOne"/>
+    </genClasses>
+    <genClasses ecoreClass="ConfigurationMetamodel.ecore#//PackageName">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//PackageName/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//PackageName/value"/>
+    </genClasses>
+    <genClasses ecoreClass="ConfigurationMetamodel.ecore#//JavaType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//JavaType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//JavaType/value"/>
+    </genClasses>
+    <genClasses ecoreClass="ConfigurationMetamodel.ecore#//HibernateType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//HibernateType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//HibernateType/value"/>
+    </genClasses>
+    <genClasses ecoreClass="ConfigurationMetamodel.ecore#//DefaultBaseClassName">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//DefaultBaseClassName/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//DefaultBaseClassName/value"/>
+    </genClasses>
+    <genClasses ecoreClass="ConfigurationMetamodel.ecore#//DatabaseOptions">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//DatabaseOptions/db_useUnderscoreNaming"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//DatabaseOptions/db_useIdSuffixInForeigKey"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//DatabaseOptions/db_useTablePrefixedIdColumn"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//DatabaseOptions/db_product"/>
+    </genClasses>
+    <genClasses ecoreClass="ConfigurationMetamodel.ecore#//JPAOptions">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//JPAOptions/jpa_provider"/>
+    </genClasses>
+    <genClasses ecoreClass="ConfigurationMetamodel.ecore#//DeploymentOptions">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//DeploymentOptions/deployment_applicationServer"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.github.icelyframework.metamodels/src" modelPluginID="com.github.icelyframework.metamodels"
+    modelName="Jdl" importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0"
+    copyrightFields="false">
+  <foreignModel>JDLMetamodel.ecore</foreignModel>
+  <genPackages prefix="Jdl" basePackage="com.github.icelyframework" disposableProviderFactory="true"
+      ecorePackage="JDLMetamodel.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="JDLMetamodel.ecore#//ApplicationType">
+      <genEnumLiterals ecoreEnumLiteral="JDLMetamodel.ecore#//ApplicationType/MICROSERVICE"/>
+      <genEnumLiterals ecoreEnumLiteral="JDLMetamodel.ecore#//ApplicationType/GATEWAY"/>
+      <genEnumLiterals ecoreEnumLiteral="JDLMetamodel.ecore#//ApplicationType/MONOLITH"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="JDLMetamodel.ecore#//DatabaseType">
+      <genEnumLiterals ecoreEnumLiteral="JDLMetamodel.ecore#//DatabaseType/SQL"/>
+      <genEnumLiterals ecoreEnumLiteral="JDLMetamodel.ecore#//DatabaseType/MONGODB"/>
+      <genEnumLiterals ecoreEnumLiteral="JDLMetamodel.ecore#//DatabaseType/CASSANDRA"/>
+      <genEnumLiterals ecoreEnumLiteral="JDLMetamodel.ecore#//DatabaseType/COUCHBASE"/>
+      <genEnumLiterals ecoreEnumLiteral="JDLMetamodel.ecore#//DatabaseType/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="JDLMetamodel.ecore#//Multiplicity">
+      <genEnumLiterals ecoreEnumLiteral="JDLMetamodel.ecore#//Multiplicity/ONE_TO_MANY"/>
+      <genEnumLiterals ecoreEnumLiteral="JDLMetamodel.ecore#//Multiplicity/MANY_TO_ONE"/>
+      <genEnumLiterals ecoreEnumLiteral="JDLMetamodel.ecore#//Multiplicity/ONE_TO_ONE"/>
+      <genEnumLiterals ecoreEnumLiteral="JDLMetamodel.ecore#//Multiplicity/MANY_TO_MANY"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="JDLMetamodel.ecore#//RelationshipType">
+      <genEnumLiterals ecoreEnumLiteral="JDLMetamodel.ecore#//RelationshipType/UNIDIRECTIONAL"/>
+      <genEnumLiterals ecoreEnumLiteral="JDLMetamodel.ecore#//RelationshipType/BIDIRECTIONAL"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="JDLMetamodel.ecore#//DeploymentType">
+      <genEnumLiterals ecoreEnumLiteral="JDLMetamodel.ecore#//DeploymentType/DOCKER_COMPOSE"/>
+      <genEnumLiterals ecoreEnumLiteral="JDLMetamodel.ecore#//DeploymentType/KUBERNETES"/>
+      <genEnumLiterals ecoreEnumLiteral="JDLMetamodel.ecore#//DeploymentType/OPENSHIFT"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="JDLMetamodel.ecore#//BuildToolType">
+      <genEnumLiterals ecoreEnumLiteral="JDLMetamodel.ecore#//BuildToolType/MAVEN"/>
+      <genEnumLiterals ecoreEnumLiteral="JDLMetamodel.ecore#//BuildToolType/GRADLE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="JDLMetamodel.ecore#//CacheProviderType">
+      <genEnumLiterals ecoreEnumLiteral="JDLMetamodel.ecore#//CacheProviderType/EHCACHE"/>
+      <genEnumLiterals ecoreEnumLiteral="JDLMetamodel.ecore#//CacheProviderType/HAZELCAST"/>
+      <genEnumLiterals ecoreEnumLiteral="JDLMetamodel.ecore#//CacheProviderType/CAFFEINE"/>
+      <genEnumLiterals ecoreEnumLiteral="JDLMetamodel.ecore#//CacheProviderType/MEMCACHED"/>
+      <genEnumLiterals ecoreEnumLiteral="JDLMetamodel.ecore#//CacheProviderType/REDIS"/>
+      <genEnumLiterals ecoreEnumLiteral="JDLMetamodel.ecore#//CacheProviderType/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="JDLMetamodel.ecore#//ClientFramework">
+      <genEnumLiterals ecoreEnumLiteral="JDLMetamodel.ecore#//ClientFramework/ANGULARX"/>
+      <genEnumLiterals ecoreEnumLiteral="JDLMetamodel.ecore#//ClientFramework/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="JDLMetamodel.ecore#//SearchEngine">
+      <genEnumLiterals ecoreEnumLiteral="JDLMetamodel.ecore#//SearchEngine/ELASTICSEARCH"/>
+      <genEnumLiterals ecoreEnumLiteral="JDLMetamodel.ecore#//SearchEngine/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="JDLMetamodel.ecore#//MessageBroker">
+      <genEnumLiterals ecoreEnumLiteral="JDLMetamodel.ecore#//MessageBroker/KAFKA"/>
+      <genEnumLiterals ecoreEnumLiteral="JDLMetamodel.ecore#//MessageBroker/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="JDLMetamodel.ecore#//AuthenticationType">
+      <genEnumLiterals ecoreEnumLiteral="JDLMetamodel.ecore#//AuthenticationType/JWT"/>
+      <genEnumLiterals ecoreEnumLiteral="JDLMetamodel.ecore#//AuthenticationType/UAA"/>
+      <genEnumLiterals ecoreEnumLiteral="JDLMetamodel.ecore#//AuthenticationType/SESSION"/>
+      <genEnumLiterals ecoreEnumLiteral="JDLMetamodel.ecore#//AuthenticationType/OAUTH2"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="JDLMetamodel.ecore#//ServiceDiscoveryType">
+      <genEnumLiterals ecoreEnumLiteral="JDLMetamodel.ecore#//ServiceDiscoveryType/EUREKA"/>
+      <genEnumLiterals ecoreEnumLiteral="JDLMetamodel.ecore#//ServiceDiscoveryType/CONSUL"/>
+      <genEnumLiterals ecoreEnumLiteral="JDLMetamodel.ecore#//ServiceDiscoveryType/NO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="JDLMetamodel.ecore#//GatewayType">
+      <genEnumLiterals ecoreEnumLiteral="JDLMetamodel.ecore#//GatewayType/ZUUL"/>
+      <genEnumLiterals ecoreEnumLiteral="JDLMetamodel.ecore#//GatewayType/TRAEFIK"/>
+    </genEnums>
+    <genClasses ecoreClass="JDLMetamodel.ecore#//Application">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JDLMetamodel.ecore#//Application/config"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference JDLMetamodel.ecore#//Application/entities"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JDLMetamodel.ecore#//Application/deployments"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference JDLMetamodel.ecore#//Application/dtos"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference JDLMetamodel.ecore#//Application/paginates"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference JDLMetamodel.ecore#//Application/services"/>
+    </genClasses>
+    <genClasses ecoreClass="JDLMetamodel.ecore#//Config">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JDLMetamodel.ecore#//Config/baseName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JDLMetamodel.ecore#//Config/applicationType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JDLMetamodel.ecore#//Config/servicePort"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JDLMetamodel.ecore#//Config/databaseType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JDLMetamodel.ecore#//Config/buildTool"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JDLMetamodel.ecore#//Config/dtoSuffix"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JDLMetamodel.ecore#//Config/enableHibernateCache"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JDLMetamodel.ecore#//Config/entitySuffix"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JDLMetamodel.ecore#//Config/jhiPrefix"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JDLMetamodel.ecore#//Config/nativeLanguage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JDLMetamodel.ecore#//Config/skipClient"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JDLMetamodel.ecore#//Config/skipServer"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JDLMetamodel.ecore#//Config/skipUserManagement"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JDLMetamodel.ecore#//Config/uaaBaseName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JDLMetamodel.ecore#//Config/testFrameworks"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JDLMetamodel.ecore#//Config/authenticationType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JDLMetamodel.ecore#//Config/cacheProvider"/>
+    </genClasses>
+    <genClasses ecoreClass="JDLMetamodel.ecore#//Entity">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JDLMetamodel.ecore#//Entity/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JDLMetamodel.ecore#//Entity/fields"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JDLMetamodel.ecore#//Entity/relationships"/>
+    </genClasses>
+    <genClasses ecoreClass="JDLMetamodel.ecore#//Field">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JDLMetamodel.ecore#//Field/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JDLMetamodel.ecore#//Field/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JDLMetamodel.ecore#//Field/required"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JDLMetamodel.ecore#//Field/unique"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JDLMetamodel.ecore#//Field/min"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JDLMetamodel.ecore#//Field/max"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="JDLMetamodel.ecore#//Relationship">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JDLMetamodel.ecore#//Relationship/multiplicity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JDLMetamodel.ecore#//Relationship/toName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JDLMetamodel.ecore#//Relationship/fromColumn"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JDLMetamodel.ecore#//Relationship/fromName"/>
+    </genClasses>
+    <genClasses ecoreClass="JDLMetamodel.ecore#//RelationshipColumn">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JDLMetamodel.ecore#//RelationshipColumn/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JDLMetamodel.ecore#//RelationshipColumn/isRequired"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference JDLMetamodel.ecore#//RelationshipColumn/entity"/>
+    </genClasses>
+    <genClasses ecoreClass="JDLMetamodel.ecore#//JDL">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JDLMetamodel.ecore#//JDL/applications"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JDLMetamodel.ecore#//JDL/entities"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JDLMetamodel.ecore#//JDL/enums"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JDLMetamodel.ecore#//JDL/paginate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JDLMetamodel.ecore#//JDL/dto"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JDLMetamodel.ecore#//JDL/service"/>
+    </genClasses>
+    <genClasses ecoreClass="JDLMetamodel.ecore#//Deployment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JDLMetamodel.ecore#//Deployment/deploymentType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JDLMetamodel.ecore#//Deployment/directoryPath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JDLMetamodel.ecore#//Deployment/dockerRepositoryName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JDLMetamodel.ecore#//Deployment/appsFolders"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JDLMetamodel.ecore#//Deployment/serviceDiscoveryType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JDLMetamodel.ecore#//Deployment/monitoring"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JDLMetamodel.ecore#//Deployment/gatewayType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JDLMetamodel.ecore#//Deployment/kubernetesServiceType"/>
+    </genClasses>
+    <genClasses ecoreClass="JDLMetamodel.ecore#//UnidirectionalRelationship">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference JDLMetamodel.ecore#//UnidirectionalRelationship/toEntity"/>
+    </genClasses>
+    <genClasses ecoreClass="JDLMetamodel.ecore#//BidirectionalRelationship">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JDLMetamodel.ecore#//BidirectionalRelationship/toColumn"/>
+    </genClasses>
+    <genClasses ecoreClass="JDLMetamodel.ecore#//Enum">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JDLMetamodel.ecore#//Enum/literals"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JDLMetamodel.ecore#//Enum/name"/>
+    </genClasses>
+    <genClasses ecoreClass="JDLMetamodel.ecore#//Literal">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JDLMetamodel.ecore#//Literal/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JDLMetamodel.ecore#//Literal/value"/>
+    </genClasses>
+    <genClasses ecoreClass="JDLMetamodel.ecore#//Paginate">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference JDLMetamodel.ecore#//Paginate/entity"/>
+    </genClasses>
+    <genClasses ecoreClass="JDLMetamodel.ecore#//DTO">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference JDLMetamodel.ecore#//DTO/entities"/>
+    </genClasses>
+    <genClasses ecoreClass="JDLMetamodel.ecore#//Service">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference JDLMetamodel.ecore#//Service/entities"/>
+    </genClasses>
+    <genClasses ecoreClass="JDLMetamodel.ecore#//Search"/>
+  </genPackages>
+</genmodel:GenModel>

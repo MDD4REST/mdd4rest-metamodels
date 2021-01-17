@@ -1,0 +1,173 @@
+@Ecore(invocationDelegates="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot", settingDelegates="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot", validationDelegates="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot")
+@namespace(uri="http://github.com/icelyframework/configuration", prefix="icely")
+package configuration;
+
+class ApplicationConfig {
+	attr String[1] baseName;
+	attr String servicePort;
+}
+
+class ProjectConfig {
+	attr String version;
+}
+
+enum ApplicationType {
+	JHIPSTER_MICROSERVICE = 0;
+	JHIPSTER_GATEWAY = 1;
+	JHIPSTER_MONOLITH = 2;
+	JHIPSTER_UAA = 3;
+	SCULPTOR_MICROSERVICE = 4;
+	SCULPTOR_MONOLITH = 5;
+}
+
+class Application {
+	attr String[1] name;
+	ref Project[1]#applications project;
+	!unique attr String basePackage;
+	attr ApplicationType applicationType;
+	val ApplicationConfig[1] config;
+}
+
+class Project {
+	val Application[*]#project applications;
+	attr String[1] name;
+	attr String basePath;
+	!unique attr String basePackage;
+	attr ArchitectureType[1] architecture;
+	val ProjectConfig[1] config;
+}
+
+enum ArchitectureType {
+	SIMPLE = 0;
+	CQRS = 0;
+}
+
+class SculptorConfig extends ApplicationConfig {
+	attr String cartridges;
+	attr String project_nature;
+	attr String id_type;
+	attr String datetime_library;
+	attr String toStringStyle;
+	attr String scaffold_operations;
+	attr boolean check_cyclicDependencies;
+	attr String findAll_paging;
+	attr String findByCondition_paging;
+	val FrameworkOptions framework;
+	val RESTOptions rest;
+	val GenerateOptions generate;
+	val CascadeOptions[*] cascade;
+	val DatabaseOptions[*] database;
+	val JPAOptions[*] jpa;
+	val DeploymentOptions[*] deployment;
+	val HibernateType[*] hibernatetypes;
+	val JavaType[*] javatypes;
+	val PackageName[*] packagenames;
+	val DefaultBaseClassName[*] defaultbaseclassnames;
+}
+
+class JhipsterConfig extends ApplicationConfig {
+	attr DatabaseType databaseType;
+	attr String jhiPrefix;
+	attr boolean skipUserManagement;
+	attr String nativeLanguage;
+	attr String testFrameworks;
+	attr String cacheProvider;
+	attr String entitySuffix;
+	attr boolean skipServer;
+	attr String dtoSuffix;
+	attr boolean enableHibernateCache;
+	attr boolean skipClient;
+	attr String buildTool;
+}
+
+class RESTOptions {
+	attr String spring_remoting_type;
+	attr String rest_default_path;
+	attr String rest_default_httpMethod;
+	attr boolean generate_resource;
+	attr boolean generate_restWeb;
+}
+
+class CacheOptions {
+	attr String cache_provider;
+}
+
+class GenerateOptions {
+	attr boolean generate_domainObject_conditionalCriteriaProperties;
+	attr boolean generate_repository_finders;
+	attr boolean generate_modelDoc;
+	attr boolean generate_umlgraph;
+	attr boolean generate_spring_annotation_tx;
+	attr boolean generate_ddl;
+	attr boolean generate_ddl_drop;
+	attr boolean generate_domainObject_compositeKeyClass;
+	attr boolean generate_serviceContext;
+	attr boolean generate_NotFoundException;
+	attr boolean generate_spring_annotation;
+	attr boolean generate_jpa_annotation;
+	attr boolean generate_validation_annotation;
+	attr boolean generate_jpa_annotation_onField;
+	attr boolean generate_jpa_annotation_columnDefinition;
+	attr boolean generate_xstream_annotation;
+	attr boolean generat_test;
+	attr boolean generate_gapClass;
+}
+
+class FrameworkOptions {
+	attr String framework_accessimpl_package;
+	attr String framework_accessimpl_prefix;
+	attr String framework_accessapi_packag;
+}
+
+class CascadeOptions {
+	attr String cascade_aggregate;
+	attr String cascade_aggregate_oneToMany;
+	attr String cascade_manyToMany;
+	attr String cascade_oneToMany;
+	attr String cascade_toMany;
+	attr String cascade_toOne;
+}
+
+class PackageName {
+	attr String name;
+	attr String value;
+}
+
+class JavaType {
+	attr String name;
+	attr String value;
+}
+
+class HibernateType {
+	attr String name;
+	attr String value;
+}
+
+class DefaultBaseClassName {
+	attr String name;
+	attr String value;
+}
+
+class DatabaseOptions {
+	attr boolean db_useUnderscoreNaming;
+	attr boolean db_useIdSuffixInForeigKey;
+	attr boolean db_useTablePrefixedIdColumn;
+	attr String db_product;
+}
+
+class JPAOptions {
+	attr String jpa_provider;
+}
+
+class DeploymentOptions {
+	attr String deployment_applicationServer;
+}
+
+enum DatabaseType {
+	SQL = 0;
+	MONGODB = 1;
+	CASSANDRA = 2;
+	COUCHBASE = 3;
+	NO = 4;
+}
+

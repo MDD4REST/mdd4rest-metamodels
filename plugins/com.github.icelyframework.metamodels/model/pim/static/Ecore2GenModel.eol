@@ -1,0 +1,6 @@
+var genModel = GenModel!GenModel.all.first();
+genModel.complianceLevel = GenModel!GenJDKLevel#JDK70;
+
+var genPackage =  GenModel!GenPackage.all.first();
+genPackage.basePackage = "com.github.icelyframework";
+genPackage.fileExtensions = "static";
