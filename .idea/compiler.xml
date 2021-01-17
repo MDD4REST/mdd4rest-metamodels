@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="com.github.icelyframework.metamodels.feature" />
+        <module name="com.github.icelyframework.metamodels" />
+        <module name="com.github.icelyframework.metamodels.target" />
+        <module name="com.github.icelyframework.metamodels.edit" />
+        <module name="com.github.icelyframework.metamodels.tests" />
+        <module name="com.github.icelyframework.metamodels.update" />
+        <module name="com.github.icelyframework.metamodels.editor" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="activitystorming.parent" target="1.5" />
+      <module name="com.github.icelyframework.metamodels" target="1.5" />
+      <module name="com.github.icelyframework.metamodels.edit" target="1.5" />
+      <module name="com.github.icelyframework.metamodels.editor" target="1.5" />
+      <module name="com.github.icelyframework.metamodels.feature" target="1.5" />
+      <module name="com.github.icelyframework.metamodels.target" target="1.5" />
+      <module name="com.github.icelyframework.metamodels.tests" target="1.5" />
+      <module name="com.github.icelyframework.metamodels.update" target="1.5" />
+      <module name="features" target="1.5" />
+      <module name="metamodels.parent" target="1.5" />
+      <module name="plugins" target="1.5" />
+      <module name="releng" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

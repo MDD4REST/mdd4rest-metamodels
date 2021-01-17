@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/plugins/com.github.icelyframework.metamodels/com.github.icelyframework.metamodels.iml" filepath="$PROJECT_DIR$/plugins/com.github.icelyframework.metamodels/com.github.icelyframework.metamodels.iml" />
+      <module fileurl="file://$PROJECT_DIR$/plugins/com.github.icelyframework.metamodels.edit/com.github.icelyframework.metamodels.edit.iml" filepath="$PROJECT_DIR$/plugins/com.github.icelyframework.metamodels.edit/com.github.icelyframework.metamodels.edit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/plugins/com.github.icelyframework.metamodels.editor/com.github.icelyframework.metamodels.editor.iml" filepath="$PROJECT_DIR$/plugins/com.github.icelyframework.metamodels.editor/com.github.icelyframework.metamodels.editor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/features/com.github.icelyframework.metamodels.feature/com.github.icelyframework.metamodels.feature.iml" filepath="$PROJECT_DIR$/features/com.github.icelyframework.metamodels.feature/com.github.icelyframework.metamodels.feature.iml" />
+      <module fileurl="file://$PROJECT_DIR$/releng/com.github.icelyframework.metamodels.target/com.github.icelyframework.metamodels.target.iml" filepath="$PROJECT_DIR$/releng/com.github.icelyframework.metamodels.target/com.github.icelyframework.metamodels.target.iml" />
+      <module fileurl="file://$PROJECT_DIR$/plugins/com.github.icelyframework.metamodels.tests/com.github.icelyframework.metamodels.tests.iml" filepath="$PROJECT_DIR$/plugins/com.github.icelyframework.metamodels.tests/com.github.icelyframework.metamodels.tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/releng/com.github.icelyframework.metamodels.update/com.github.icelyframework.metamodels.update.iml" filepath="$PROJECT_DIR$/releng/com.github.icelyframework.metamodels.update/com.github.icelyframework.metamodels.update.iml" />
+      <module fileurl="file://$PROJECT_DIR$/features/features.iml" filepath="$PROJECT_DIR$/features/features.iml" />
+      <module fileurl="file://$PROJECT_DIR$/metamodels.parent.iml" filepath="$PROJECT_DIR$/metamodels.parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/plugins/plugins.iml" filepath="$PROJECT_DIR$/plugins/plugins.iml" />
+      <module fileurl="file://$PROJECT_DIR$/releng/releng.iml" filepath="$PROJECT_DIR$/releng/releng.iml" />
+    </modules>
+  </component>
+</project>
