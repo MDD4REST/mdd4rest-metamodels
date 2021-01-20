@@ -17,7 +17,8 @@
       <!-- @generated DynamicViewMetamodel -->
       <package
             uri="http://github.com/icelyframework/dynamic"
-            class="com.github.icelyframework.dynamicview.DynamicviewPackage"/>
+            class="com.github.icelyframework.dynamicview.DynamicviewPackage"
+            genModel="model/pim/dynamic/DynamicViewMetamodel.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">

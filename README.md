@@ -61,7 +61,7 @@ Example using Maven:
     <dependency>
         <groupId>com.github.icelyframework.metamodels</groupId>
         <artifactId>com.github.icelyframework.metamodels</artifactId>
-        <version>1.0.0</version>
+        <version>1.1.0-SNAPSHOT</version>
     </dependency>
   ...
 </dependencies>

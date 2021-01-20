@@ -5,7 +5,7 @@
     <semanticResources>DynamicViewMetamodel.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_bHijQFicEeu_m-Uu5b4pfA">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_bfnFAFicEeu_m-Uu5b4pfA" name="dynamicview class diagram" repPath="#_be-L0FicEeu_m-Uu5b4pfA" changeId="2240e6a1-0c3b-4cc4-9eb3-d771d2ff4421">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_bfnFAFicEeu_m-Uu5b4pfA" name="dynamicview class diagram" repPath="#_be-L0FicEeu_m-Uu5b4pfA" changeId="9bb8773f-24e6-402a-a37b-270deeec54a8">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="DynamicViewMetamodel.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -445,6 +445,10 @@
         <children xmi:type="notation:Node" xmi:id="_cUL8lFicEeu_m-Uu5b4pfA" type="2003" element="_cRjfUFicEeu_m-Uu5b4pfA">
           <children xmi:type="notation:Node" xmi:id="_cUMjoFicEeu_m-Uu5b4pfA" type="5007"/>
           <children xmi:type="notation:Node" xmi:id="_cUMjoVicEeu_m-Uu5b4pfA" type="7004">
+            <children xmi:type="notation:Node" xmi:id="_lBUS8FqYEeuPB7Y0O0z-mQ" type="3010" element="_k-oyYFqYEeuPB7Y0O0z-mQ">
+              <styles xmi:type="notation:FontStyle" xmi:id="_lBUS8VqYEeuPB7Y0O0z-mQ" fontColor="2697711" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_lBUS8lqYEeuPB7Y0O0z-mQ"/>
+            </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_cUMjolicEeu_m-Uu5b4pfA"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_cUMjo1icEeu_m-Uu5b4pfA"/>
           </children>
@@ -2043,10 +2047,18 @@
     <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_cRjfUFicEeu_m-Uu5b4pfA" name="Role" tooltipText="" incomingEdges="_cS7_Y1icEeu_m-Uu5b4pfA _cS8mdlicEeu_m-Uu5b4pfA _cTh1SFicEeu_m-Uu5b4pfA" width="12" height="10">
       <target xmi:type="ecore:EClass" href="DynamicViewMetamodel.ecore#//Role"/>
       <semanticElements xmi:type="ecore:EClass" href="DynamicViewMetamodel.ecore#//Role"/>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_cRjfUVicEeu_m-Uu5b4pfA" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_rTmJX1qYEeuPB7Y0O0z-mQ" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_k-oyYFqYEeuPB7Y0O0z-mQ" name="name : EString" tooltipText="">
+        <target xmi:type="ecore:EAttribute" href="DynamicViewMetamodel.ecore#//Role/name"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="DynamicViewMetamodel.ecore#//Role/name"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_rTuFIVqYEeuPB7Y0O0z-mQ" labelAlignment="LEFT">
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+      </ownedElements>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_cRktcFicEeu_m-Uu5b4pfA" name="Permission" tooltipText="" incomingEdges="_cSukCVicEeu_m-Uu5b4pfA _cTR9plicEeu_m-Uu5b4pfA _cTTLwFicEeu_m-Uu5b4pfA _cTTLx1icEeu_m-Uu5b4pfA _cTTy1licEeu_m-Uu5b4pfA _cTUZ5licEeu_m-Uu5b4pfA" width="12" height="10">
       <target xmi:type="ecore:EClass" href="DynamicViewMetamodel.ecore#//Permission"/>
@@ -2388,6 +2400,7 @@
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_cS6xQ1icEeu_m-Uu5b4pfA" description="_cS6xQFicEeu_m-Uu5b4pfA" routingStyle="manhattan" strokeColor="0,0,0">
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_cS6xRVicEeu_m-Uu5b4pfA" showIcon="false">
           <customFeatures>labelSize</customFeatures>
+          <labelFormat>bold</labelFormat>
         </centerLabelStyle>
         <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_cS6xRFicEeu_m-Uu5b4pfA" showIcon="false" labelColor="39,76,114">
           <customFeatures>labelSize</customFeatures>
@@ -2401,6 +2414,7 @@
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_cS7YUVicEeu_m-Uu5b4pfA" description="_cS6xQFicEeu_m-Uu5b4pfA" routingStyle="manhattan" strokeColor="0,0,0">
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_cS7YU1icEeu_m-Uu5b4pfA" showIcon="false">
           <customFeatures>labelSize</customFeatures>
+          <labelFormat>bold</labelFormat>
         </centerLabelStyle>
         <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_cS7YUlicEeu_m-Uu5b4pfA" showIcon="false" labelColor="39,76,114">
           <customFeatures>labelSize</customFeatures>
@@ -2414,6 +2428,7 @@
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_cS8mcFicEeu_m-Uu5b4pfA" description="_cS6xQFicEeu_m-Uu5b4pfA" routingStyle="manhattan" strokeColor="0,0,0">
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_cS8mclicEeu_m-Uu5b4pfA" showIcon="false">
           <customFeatures>labelSize</customFeatures>
+          <labelFormat>bold</labelFormat>
         </centerLabelStyle>
         <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_cS8mcVicEeu_m-Uu5b4pfA" showIcon="false" labelColor="39,76,114">
           <customFeatures>labelSize</customFeatures>
@@ -2427,6 +2442,7 @@
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_cS9NgFicEeu_m-Uu5b4pfA" description="_cS6xQFicEeu_m-Uu5b4pfA" routingStyle="manhattan" strokeColor="0,0,0">
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_cS9NglicEeu_m-Uu5b4pfA" showIcon="false">
           <customFeatures>labelSize</customFeatures>
+          <labelFormat>bold</labelFormat>
         </centerLabelStyle>
         <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_cS9NgVicEeu_m-Uu5b4pfA" showIcon="false" labelColor="39,76,114">
           <customFeatures>labelSize</customFeatures>

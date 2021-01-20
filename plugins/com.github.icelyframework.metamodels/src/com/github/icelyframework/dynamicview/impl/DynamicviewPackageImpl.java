@@ -1329,6 +1329,16 @@ public class DynamicviewPackageImpl extends EPackageImpl implements DynamicviewP
 	 * @generated
 	 */
 	@Override
+	public EAttribute getRole_Name() {
+		return (EAttribute)roleEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getPermission() {
 		return permissionEClass;
 	}
@@ -1605,6 +1615,7 @@ public class DynamicviewPackageImpl extends EPackageImpl implements DynamicviewP
 
 		roleEClass = createEClass(ROLE);
 		createEReference(roleEClass, ROLE__APPLICATION);
+		createEAttribute(roleEClass, ROLE__NAME);
 
 		permissionEClass = createEClass(PERMISSION);
 
@@ -1809,6 +1820,7 @@ public class DynamicviewPackageImpl extends EPackageImpl implements DynamicviewP
 
 		initEClass(roleEClass, Role.class, "Role", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRole_Application(), this.getApplication(), this.getApplication_HasRole(), "application", null, 1, 1, Role.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRole_Name(), ecorePackage.getEString(), "name", null, 0, 1, Role.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(permissionEClass, Permission.class, "Permission", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

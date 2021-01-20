@@ -2260,13 +2260,22 @@ public interface DynamicviewPackage extends EPackage {
 	int ROLE__APPLICATION = 0;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROLE__NAME = 1;
+
+	/**
 	 * The number of structural features of the '<em>Role</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROLE_FEATURE_COUNT = 1;
+	int ROLE_FEATURE_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link com.github.icelyframework.dynamicview.impl.PermissionImpl <em>Permission</em>}' class.
@@ -3406,6 +3415,17 @@ public interface DynamicviewPackage extends EPackage {
 	EReference getRole_Application();
 
 	/**
+	 * Returns the meta object for the attribute '{@link com.github.icelyframework.dynamicview.Role#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see com.github.icelyframework.dynamicview.Role#getName()
+	 * @see #getRole()
+	 * @generated
+	 */
+	EAttribute getRole_Name();
+
+	/**
 	 * Returns the meta object for class '{@link com.github.icelyframework.dynamicview.Permission <em>Permission</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4348,6 +4368,14 @@ public interface DynamicviewPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ROLE__APPLICATION = eINSTANCE.getRole_Application();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ROLE__NAME = eINSTANCE.getRole_Name();
 
 		/**
 		 * The meta object literal for the '{@link com.github.icelyframework.dynamicview.impl.PermissionImpl <em>Permission</em>}' class.

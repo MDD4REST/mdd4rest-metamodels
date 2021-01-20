@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
-    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.github.icelyframework.metamodels/src" modelPluginID="com.github.icelyframework.metamodels"
-    modelName="Dynamicview" importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0"
-    copyrightFields="false">
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="" modelDirectory="/com.github.icelyframework.metamodels/src"
+    modelPluginID="com.github.icelyframework.metamodels" modelName="Dynamicview" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="7.0" copyrightFields="false">
   <foreignModel>DynamicViewMetamodel.ecore</foreignModel>
   <genPackages prefix="Dynamicview" basePackage="com.github.icelyframework" disposableProviderFactory="true"
       fileExtensions="dynamic" ecorePackage="DynamicViewMetamodel.ecore#/">
@@ -129,6 +129,7 @@
     </genClasses>
     <genClasses ecoreClass="DynamicViewMetamodel.ecore#//Role">
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference DynamicViewMetamodel.ecore#//Role/application"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DynamicViewMetamodel.ecore#//Role/name"/>
     </genClasses>
     <genClasses image="false" ecoreClass="DynamicViewMetamodel.ecore#//Permission"/>
     <genClasses ecoreClass="DynamicViewMetamodel.ecore#//HasAuthority">

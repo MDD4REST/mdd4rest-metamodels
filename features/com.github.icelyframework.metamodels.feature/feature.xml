@@ -2,7 +2,7 @@
 <feature
       id="com.github.icelyframework.metamodels.feature"
       label="Icely Metamodels"
-      version="1.0.0"
+      version="1.1.0.qualifier"
       provider-name="Icely Framework Labs">
 
    <description url="https://github.com/IcelyFramework/icely-metamodels">
@@ -127,7 +127,7 @@ You may add additional accurate notices of copyright ownership.
          install-size="0"
          version="0.0.0"
          unpack="false"/>
-         
+
    <plugin
          id="com.github.icelyframework.metamodels.tests"
          download-size="0"
