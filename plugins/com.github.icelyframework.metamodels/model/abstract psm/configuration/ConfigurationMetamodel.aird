@@ -4,7 +4,7 @@
     <semanticResources>ConfigurationMetamodel.ecore</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_Rk0G4Fg7EeucLuzpl875Wg">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_SFtNcVg7EeucLuzpl875Wg" name="configuration class diagram" repPath="#_SFmfwFg7EeucLuzpl875Wg" changeId="9263ed9e-3447-4133-bde0-6df22b841f1e">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_SFtNcVg7EeucLuzpl875Wg" name="configuration class diagram" repPath="#_SFmfwFg7EeucLuzpl875Wg" changeId="816f6682-ddc1-4a2c-b5eb-c1f8e206e4f4">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="ConfigurationMetamodel.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -993,7 +993,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_SteYE1g7EeucLuzpl875Wg" name="applicationType : ApplicationType = JHIPSTER_MICROSERVICE" tooltipText="">
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_SteYE1g7EeucLuzpl875Wg" name="applicationType : ApplicationType = SCULPTOR_MICROSERVICE" tooltipText="">
         <target xmi:type="ecore:EAttribute" href="ConfigurationMetamodel.ecore#//Application/applicationType"/>
         <semanticElements xmi:type="ecore:EAttribute" href="ConfigurationMetamodel.ecore#//Application/applicationType"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_SteYFFg7EeucLuzpl875Wg" labelAlignment="LEFT">

@@ -29,7 +29,8 @@
         eType="#//Project" eOpposite="#//Project/applications"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="basePackage" unique="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="applicationType" eType="#//ApplicationType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="applicationType" eType="#//ApplicationType"
+        defaultValueLiteral="SCULPTOR_MICROSERVICE"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="config" lowerBound="1"
         eType="#//ApplicationConfig" containment="true"/>
   </eClassifiers>
