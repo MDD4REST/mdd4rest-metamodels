@@ -3956,13 +3956,13 @@ public interface ServicePackage extends EPackage {
 	int HAS_ANY_AUTHORITIES = 35;
 
 	/**
-	 * The feature id for the '<em><b>Role</b></em>' reference list.
+	 * The feature id for the '<em><b>Roles</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int HAS_ANY_AUTHORITIES__ROLE = PERMISSION_FEATURE_COUNT + 0;
+	int HAS_ANY_AUTHORITIES__ROLES = PERMISSION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Has Any Authorities</em>' class.
@@ -4059,13 +4059,13 @@ public interface ServicePackage extends EPackage {
 	int PERMIT_ALL = 39;
 
 	/**
-	 * The feature id for the '<em><b>With All Subresource</b></em>' attribute.
+	 * The feature id for the '<em><b>With All Subresources</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PERMIT_ALL__WITH_ALL_SUBRESOURCE = PERMISSION_FEATURE_COUNT + 0;
+	int PERMIT_ALL__WITH_ALL_SUBRESOURCES = PERMISSION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Permit All</em>' class.
@@ -4096,13 +4096,22 @@ public interface ServicePackage extends EPackage {
 	int ROLE__APPLICATION = 0;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROLE__NAME = 1;
+
+	/**
 	 * The number of structural features of the '<em>Role</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROLE_FEATURE_COUNT = 1;
+	int ROLE_FEATURE_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link com.github.icelyframework.service.impl.ResourceParamImpl <em>Resource Param</em>}' class.
@@ -6439,15 +6448,15 @@ public interface ServicePackage extends EPackage {
 	EClass getHasAnyAuthorities();
 
 	/**
-	 * Returns the meta object for the reference list '{@link com.github.icelyframework.service.HasAnyAuthorities#getRole <em>Role</em>}'.
+	 * Returns the meta object for the reference list '{@link com.github.icelyframework.service.HasAnyAuthorities#getRoles <em>Roles</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Role</em>'.
-	 * @see com.github.icelyframework.service.HasAnyAuthorities#getRole()
+	 * @return the meta object for the reference list '<em>Roles</em>'.
+	 * @see com.github.icelyframework.service.HasAnyAuthorities#getRoles()
 	 * @see #getHasAnyAuthorities()
 	 * @generated
 	 */
-	EReference getHasAnyAuthorities_Role();
+	EReference getHasAnyAuthorities_Roles();
 
 	/**
 	 * Returns the meta object for class '{@link com.github.icelyframework.service.HasAuthority <em>Has Authority</em>}'.
@@ -6512,15 +6521,15 @@ public interface ServicePackage extends EPackage {
 	EClass getPermitAll();
 
 	/**
-	 * Returns the meta object for the attribute '{@link com.github.icelyframework.service.PermitAll#isWithAllSubresource <em>With All Subresource</em>}'.
+	 * Returns the meta object for the attribute '{@link com.github.icelyframework.service.PermitAll#isWithAllSubresources <em>With All Subresources</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>With All Subresource</em>'.
-	 * @see com.github.icelyframework.service.PermitAll#isWithAllSubresource()
+	 * @return the meta object for the attribute '<em>With All Subresources</em>'.
+	 * @see com.github.icelyframework.service.PermitAll#isWithAllSubresources()
 	 * @see #getPermitAll()
 	 * @generated
 	 */
-	EAttribute getPermitAll_WithAllSubresource();
+	EAttribute getPermitAll_WithAllSubresources();
 
 	/**
 	 * Returns the meta object for class '{@link com.github.icelyframework.service.Role <em>Role</em>}'.
@@ -6542,6 +6551,17 @@ public interface ServicePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getRole_Application();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.github.icelyframework.service.Role#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see com.github.icelyframework.service.Role#getName()
+	 * @see #getRole()
+	 * @generated
+	 */
+	EAttribute getRole_Name();
 
 	/**
 	 * Returns the meta object for class '{@link com.github.icelyframework.service.Permission <em>Permission</em>}'.
@@ -8410,12 +8430,12 @@ public interface ServicePackage extends EPackage {
 		EClass HAS_ANY_AUTHORITIES = eINSTANCE.getHasAnyAuthorities();
 
 		/**
-		 * The meta object literal for the '<em><b>Role</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Roles</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference HAS_ANY_AUTHORITIES__ROLE = eINSTANCE.getHasAnyAuthorities_Role();
+		EReference HAS_ANY_AUTHORITIES__ROLES = eINSTANCE.getHasAnyAuthorities_Roles();
 
 		/**
 		 * The meta object literal for the '{@link com.github.icelyframework.service.impl.HasAuthorityImpl <em>Has Authority</em>}' class.
@@ -8474,12 +8494,12 @@ public interface ServicePackage extends EPackage {
 		EClass PERMIT_ALL = eINSTANCE.getPermitAll();
 
 		/**
-		 * The meta object literal for the '<em><b>With All Subresource</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>With All Subresources</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PERMIT_ALL__WITH_ALL_SUBRESOURCE = eINSTANCE.getPermitAll_WithAllSubresource();
+		EAttribute PERMIT_ALL__WITH_ALL_SUBRESOURCES = eINSTANCE.getPermitAll_WithAllSubresources();
 
 		/**
 		 * The meta object literal for the '{@link com.github.icelyframework.service.impl.RoleImpl <em>Role</em>}' class.
@@ -8498,6 +8518,14 @@ public interface ServicePackage extends EPackage {
 		 * @generated
 		 */
 		EReference ROLE__APPLICATION = eINSTANCE.getRole_Application();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ROLE__NAME = eINSTANCE.getRole_Name();
 
 		/**
 		 * The meta object literal for the '{@link com.github.icelyframework.service.impl.PermissionImpl <em>Permission</em>}' class.

@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link com.github.icelyframework.service.Role#getApplication <em>Application</em>}</li>
+ *   <li>{@link com.github.icelyframework.service.Role#getName <em>Name</em>}</li>
  * </ul>
  *
  * @see com.github.icelyframework.service.ServicePackage#getRole()
@@ -44,5 +45,27 @@ public interface Role extends EObject {
 	 * @generated
 	 */
 	void setApplication(Application value);
+
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see com.github.icelyframework.service.ServicePackage#getRole_Name()
+	 * @model
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link com.github.icelyframework.service.Role#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
 
 } // Role

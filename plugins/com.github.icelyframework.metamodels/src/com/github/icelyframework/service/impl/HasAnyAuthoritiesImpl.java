@@ -22,22 +22,21 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link com.github.icelyframework.service.impl.HasAnyAuthoritiesImpl#getRole <em>Role</em>}</li>
+ *   <li>{@link com.github.icelyframework.service.impl.HasAnyAuthoritiesImpl#getRoles <em>Roles</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class HasAnyAuthoritiesImpl extends PermissionImpl implements HasAnyAuthorities {
 	/**
-	 * The cached value of the '{@link #getRole() <em>Role</em>}' reference list.
+	 * The cached value of the '{@link #getRoles() <em>Roles</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRole()
+	 * @see #getRoles()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Role> role;
-
+	protected EList<Role> roles;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -63,11 +62,11 @@ public class HasAnyAuthoritiesImpl extends PermissionImpl implements HasAnyAutho
 	 * @generated
 	 */
 	@Override
-	public EList<Role> getRole() {
-		if (role == null) {
-			role = new EObjectResolvingEList<Role>(Role.class, this, ServicePackage.HAS_ANY_AUTHORITIES__ROLE);
+	public EList<Role> getRoles() {
+		if (roles == null) {
+			roles = new EObjectResolvingEList<Role>(Role.class, this, ServicePackage.HAS_ANY_AUTHORITIES__ROLES);
 		}
-		return role;
+		return roles;
 	}
 
 	/**
@@ -78,8 +77,8 @@ public class HasAnyAuthoritiesImpl extends PermissionImpl implements HasAnyAutho
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ServicePackage.HAS_ANY_AUTHORITIES__ROLE:
-				return getRole();
+			case ServicePackage.HAS_ANY_AUTHORITIES__ROLES:
+				return getRoles();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -93,9 +92,9 @@ public class HasAnyAuthoritiesImpl extends PermissionImpl implements HasAnyAutho
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ServicePackage.HAS_ANY_AUTHORITIES__ROLE:
-				getRole().clear();
-				getRole().addAll((Collection<? extends Role>)newValue);
+			case ServicePackage.HAS_ANY_AUTHORITIES__ROLES:
+				getRoles().clear();
+				getRoles().addAll((Collection<? extends Role>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -109,8 +108,8 @@ public class HasAnyAuthoritiesImpl extends PermissionImpl implements HasAnyAutho
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ServicePackage.HAS_ANY_AUTHORITIES__ROLE:
-				getRole().clear();
+			case ServicePackage.HAS_ANY_AUTHORITIES__ROLES:
+				getRoles().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -124,8 +123,8 @@ public class HasAnyAuthoritiesImpl extends PermissionImpl implements HasAnyAutho
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ServicePackage.HAS_ANY_AUTHORITIES__ROLE:
-				return role != null && !role.isEmpty();
+			case ServicePackage.HAS_ANY_AUTHORITIES__ROLES:
+				return roles != null && !roles.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

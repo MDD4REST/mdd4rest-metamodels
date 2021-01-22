@@ -1389,7 +1389,7 @@ public class DynamicviewPackageImpl extends EPackageImpl implements DynamicviewP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getPermitAll_WithAllSubresource() {
+	public EAttribute getPermitAll_WithAllSubresources() {
 		return (EAttribute)permitAllEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1409,7 +1409,7 @@ public class DynamicviewPackageImpl extends EPackageImpl implements DynamicviewP
 	 * @generated
 	 */
 	@Override
-	public EReference getHasAnyAuthorities_Role() {
+	public EReference getHasAnyAuthorities_Roles() {
 		return (EReference)hasAnyAuthoritiesEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1625,10 +1625,10 @@ public class DynamicviewPackageImpl extends EPackageImpl implements DynamicviewP
 		authenticatedEClass = createEClass(AUTHENTICATED);
 
 		permitAllEClass = createEClass(PERMIT_ALL);
-		createEAttribute(permitAllEClass, PERMIT_ALL__WITH_ALL_SUBRESOURCE);
+		createEAttribute(permitAllEClass, PERMIT_ALL__WITH_ALL_SUBRESOURCES);
 
 		hasAnyAuthoritiesEClass = createEClass(HAS_ANY_AUTHORITIES);
-		createEReference(hasAnyAuthoritiesEClass, HAS_ANY_AUTHORITIES__ROLE);
+		createEReference(hasAnyAuthoritiesEClass, HAS_ANY_AUTHORITIES__ROLES);
 
 		accessEClass = createEClass(ACCESS);
 		createEAttribute(accessEClass, ACCESS__ACCESS);
@@ -1830,10 +1830,10 @@ public class DynamicviewPackageImpl extends EPackageImpl implements DynamicviewP
 		initEClass(authenticatedEClass, Authenticated.class, "Authenticated", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(permitAllEClass, PermitAll.class, "PermitAll", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getPermitAll_WithAllSubresource(), ecorePackage.getEBoolean(), "withAllSubresource", null, 0, 1, PermitAll.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPermitAll_WithAllSubresources(), ecorePackage.getEBoolean(), "withAllSubresources", null, 0, 1, PermitAll.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(hasAnyAuthoritiesEClass, HasAnyAuthorities.class, "HasAnyAuthorities", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getHasAnyAuthorities_Role(), this.getRole(), null, "role", null, 1, -1, HasAnyAuthorities.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getHasAnyAuthorities_Roles(), this.getRole(), null, "roles", null, 1, -1, HasAnyAuthorities.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(accessEClass, Access.class, "Access", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAccess_Access(), ecorePackage.getEString(), "access", null, 0, 1, Access.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

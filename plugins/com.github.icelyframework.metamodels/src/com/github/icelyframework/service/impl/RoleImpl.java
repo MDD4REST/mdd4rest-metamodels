@@ -26,11 +26,31 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * </p>
  * <ul>
  *   <li>{@link com.github.icelyframework.service.impl.RoleImpl#getApplication <em>Application</em>}</li>
+ *   <li>{@link com.github.icelyframework.service.impl.RoleImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class RoleImpl extends EObjectImpl implements Role {
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -99,6 +119,29 @@ public class RoleImpl extends EObjectImpl implements Role {
 	 * @generated
 	 */
 	@Override
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ServicePackage.ROLE__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case ServicePackage.ROLE__APPLICATION:
@@ -147,6 +190,8 @@ public class RoleImpl extends EObjectImpl implements Role {
 		switch (featureID) {
 			case ServicePackage.ROLE__APPLICATION:
 				return getApplication();
+			case ServicePackage.ROLE__NAME:
+				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -161,6 +206,9 @@ public class RoleImpl extends EObjectImpl implements Role {
 		switch (featureID) {
 			case ServicePackage.ROLE__APPLICATION:
 				setApplication((Application)newValue);
+				return;
+			case ServicePackage.ROLE__NAME:
+				setName((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -177,6 +225,9 @@ public class RoleImpl extends EObjectImpl implements Role {
 			case ServicePackage.ROLE__APPLICATION:
 				setApplication((Application)null);
 				return;
+			case ServicePackage.ROLE__NAME:
+				setName(NAME_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -191,8 +242,26 @@ public class RoleImpl extends EObjectImpl implements Role {
 		switch (featureID) {
 			case ServicePackage.ROLE__APPLICATION:
 				return getApplication() != null;
+			case ServicePackage.ROLE__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
 	}
 
 } //RoleImpl

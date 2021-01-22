@@ -13,7 +13,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link com.github.icelyframework.dynamicview.HasAnyAuthorities#getRole <em>Role</em>}</li>
+ *   <li>{@link com.github.icelyframework.dynamicview.HasAnyAuthorities#getRoles <em>Roles</em>}</li>
  * </ul>
  *
  * @see com.github.icelyframework.dynamicview.DynamicviewPackage#getHasAnyAuthorities()
@@ -22,15 +22,15 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface HasAnyAuthorities extends Permission {
 	/**
-	 * Returns the value of the '<em><b>Role</b></em>' reference list.
+	 * Returns the value of the '<em><b>Roles</b></em>' reference list.
 	 * The list contents are of type {@link com.github.icelyframework.dynamicview.Role}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Role</em>' reference list.
-	 * @see com.github.icelyframework.dynamicview.DynamicviewPackage#getHasAnyAuthorities_Role()
+	 * @return the value of the '<em>Roles</em>' reference list.
+	 * @see com.github.icelyframework.dynamicview.DynamicviewPackage#getHasAnyAuthorities_Roles()
 	 * @model required="true"
 	 * @generated
 	 */
-	EList<Role> getRole();
+	EList<Role> getRoles();
 
 } // HasAnyAuthorities

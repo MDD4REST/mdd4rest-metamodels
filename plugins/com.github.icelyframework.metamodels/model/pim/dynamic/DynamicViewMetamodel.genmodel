@@ -137,10 +137,10 @@
     </genClasses>
     <genClasses ecoreClass="DynamicViewMetamodel.ecore#//Authenticated"/>
     <genClasses ecoreClass="DynamicViewMetamodel.ecore#//PermitAll">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DynamicViewMetamodel.ecore#//PermitAll/withAllSubresource"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DynamicViewMetamodel.ecore#//PermitAll/withAllSubresources"/>
     </genClasses>
     <genClasses ecoreClass="DynamicViewMetamodel.ecore#//HasAnyAuthorities">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DynamicViewMetamodel.ecore#//HasAnyAuthorities/role"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DynamicViewMetamodel.ecore#//HasAnyAuthorities/roles"/>
     </genClasses>
     <genClasses ecoreClass="DynamicViewMetamodel.ecore#//Access">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DynamicViewMetamodel.ecore#//Access/access"/>

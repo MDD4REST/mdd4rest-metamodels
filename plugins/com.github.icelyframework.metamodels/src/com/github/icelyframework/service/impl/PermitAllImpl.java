@@ -19,31 +19,31 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link com.github.icelyframework.service.impl.PermitAllImpl#isWithAllSubresource <em>With All Subresource</em>}</li>
+ *   <li>{@link com.github.icelyframework.service.impl.PermitAllImpl#isWithAllSubresources <em>With All Subresources</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class PermitAllImpl extends PermissionImpl implements PermitAll {
 	/**
-	 * The default value of the '{@link #isWithAllSubresource() <em>With All Subresource</em>}' attribute.
+	 * The default value of the '{@link #isWithAllSubresources() <em>With All Subresources</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isWithAllSubresource()
+	 * @see #isWithAllSubresources()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean WITH_ALL_SUBRESOURCE_EDEFAULT = false;
+	protected static final boolean WITH_ALL_SUBRESOURCES_EDEFAULT = false;
 
 	/**
-	 * The cached value of the '{@link #isWithAllSubresource() <em>With All Subresource</em>}' attribute.
+	 * The cached value of the '{@link #isWithAllSubresources() <em>With All Subresources</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isWithAllSubresource()
+	 * @see #isWithAllSubresources()
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean withAllSubresource = WITH_ALL_SUBRESOURCE_EDEFAULT;
+	protected boolean withAllSubresources = WITH_ALL_SUBRESOURCES_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -70,8 +70,8 @@ public class PermitAllImpl extends PermissionImpl implements PermitAll {
 	 * @generated
 	 */
 	@Override
-	public boolean isWithAllSubresource() {
-		return withAllSubresource;
+	public boolean isWithAllSubresources() {
+		return withAllSubresources;
 	}
 
 	/**
@@ -80,11 +80,11 @@ public class PermitAllImpl extends PermissionImpl implements PermitAll {
 	 * @generated
 	 */
 	@Override
-	public void setWithAllSubresource(boolean newWithAllSubresource) {
-		boolean oldWithAllSubresource = withAllSubresource;
-		withAllSubresource = newWithAllSubresource;
+	public void setWithAllSubresources(boolean newWithAllSubresources) {
+		boolean oldWithAllSubresources = withAllSubresources;
+		withAllSubresources = newWithAllSubresources;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ServicePackage.PERMIT_ALL__WITH_ALL_SUBRESOURCE, oldWithAllSubresource, withAllSubresource));
+			eNotify(new ENotificationImpl(this, Notification.SET, ServicePackage.PERMIT_ALL__WITH_ALL_SUBRESOURCES, oldWithAllSubresources, withAllSubresources));
 	}
 
 	/**
@@ -95,8 +95,8 @@ public class PermitAllImpl extends PermissionImpl implements PermitAll {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ServicePackage.PERMIT_ALL__WITH_ALL_SUBRESOURCE:
-				return isWithAllSubresource();
+			case ServicePackage.PERMIT_ALL__WITH_ALL_SUBRESOURCES:
+				return isWithAllSubresources();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -109,8 +109,8 @@ public class PermitAllImpl extends PermissionImpl implements PermitAll {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ServicePackage.PERMIT_ALL__WITH_ALL_SUBRESOURCE:
-				setWithAllSubresource((Boolean)newValue);
+			case ServicePackage.PERMIT_ALL__WITH_ALL_SUBRESOURCES:
+				setWithAllSubresources((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -124,8 +124,8 @@ public class PermitAllImpl extends PermissionImpl implements PermitAll {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ServicePackage.PERMIT_ALL__WITH_ALL_SUBRESOURCE:
-				setWithAllSubresource(WITH_ALL_SUBRESOURCE_EDEFAULT);
+			case ServicePackage.PERMIT_ALL__WITH_ALL_SUBRESOURCES:
+				setWithAllSubresources(WITH_ALL_SUBRESOURCES_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -139,8 +139,8 @@ public class PermitAllImpl extends PermissionImpl implements PermitAll {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ServicePackage.PERMIT_ALL__WITH_ALL_SUBRESOURCE:
-				return withAllSubresource != WITH_ALL_SUBRESOURCE_EDEFAULT;
+			case ServicePackage.PERMIT_ALL__WITH_ALL_SUBRESOURCES:
+				return withAllSubresources != WITH_ALL_SUBRESOURCES_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -155,8 +155,8 @@ public class PermitAllImpl extends PermissionImpl implements PermitAll {
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (withAllSubresource: ");
-		result.append(withAllSubresource);
+		result.append(" (withAllSubresources: ");
+		result.append(withAllSubresources);
 		result.append(')');
 		return result.toString();
 	}

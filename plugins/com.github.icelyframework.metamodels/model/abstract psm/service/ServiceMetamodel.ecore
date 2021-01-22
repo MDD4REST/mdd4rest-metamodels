@@ -387,7 +387,7 @@
     <eLiterals name="CQRS"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="HasAnyAuthorities" eSuperTypes="#//Permission">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="role" lowerBound="1" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="roles" lowerBound="1" upperBound="-1"
         eType="#//Role"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="HasAuthority" eSuperTypes="#//Permission">
@@ -402,11 +402,12 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="access" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PermitAll" eSuperTypes="#//Permission">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="withAllSubresource" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="withAllSubresources" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Role">
     <eStructuralFeatures xsi:type="ecore:EReference" name="application" lowerBound="1"
         eType="#//Application" eOpposite="#//Application/roles"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Permission" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="ResourceParam">

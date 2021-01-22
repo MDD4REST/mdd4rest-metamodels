@@ -45,25 +45,25 @@ public class PermitAllItemProvider extends PermissionItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addWithAllSubresourcePropertyDescriptor(object);
+			addWithAllSubresourcesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the With All Subresource feature.
+	 * This adds a property descriptor for the With All Subresources feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addWithAllSubresourcePropertyDescriptor(Object object) {
+	protected void addWithAllSubresourcesPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_PermitAll_withAllSubresource_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_PermitAll_withAllSubresource_feature", "_UI_PermitAll_type"),
-				 ServicePackage.Literals.PERMIT_ALL__WITH_ALL_SUBRESOURCE,
+				 getString("_UI_PermitAll_withAllSubresources_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_PermitAll_withAllSubresources_feature", "_UI_PermitAll_type"),
+				 ServicePackage.Literals.PERMIT_ALL__WITH_ALL_SUBRESOURCES,
 				 true,
 				 false,
 				 false,
@@ -92,7 +92,7 @@ public class PermitAllItemProvider extends PermissionItemProvider {
 	@Override
 	public String getText(Object object) {
 		PermitAll permitAll = (PermitAll)object;
-		return getString("_UI_PermitAll_type") + " " + permitAll.isWithAllSubresource();
+		return getString("_UI_PermitAll_type") + " " + permitAll.isWithAllSubresources();
 	}
 
 
@@ -108,7 +108,7 @@ public class PermitAllItemProvider extends PermissionItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PermitAll.class)) {
-			case ServicePackage.PERMIT_ALL__WITH_ALL_SUBRESOURCE:
+			case ServicePackage.PERMIT_ALL__WITH_ALL_SUBRESOURCES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

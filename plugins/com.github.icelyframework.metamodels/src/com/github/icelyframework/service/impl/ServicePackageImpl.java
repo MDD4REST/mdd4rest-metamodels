@@ -2501,7 +2501,7 @@ public class ServicePackageImpl extends EPackageImpl implements ServicePackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getHasAnyAuthorities_Role() {
+	public EReference getHasAnyAuthorities_Roles() {
 		return (EReference)hasAnyAuthoritiesEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -2571,7 +2571,7 @@ public class ServicePackageImpl extends EPackageImpl implements ServicePackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getPermitAll_WithAllSubresource() {
+	public EAttribute getPermitAll_WithAllSubresources() {
 		return (EAttribute)permitAllEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -2593,6 +2593,16 @@ public class ServicePackageImpl extends EPackageImpl implements ServicePackage {
 	@Override
 	public EReference getRole_Application() {
 		return (EReference)roleEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getRole_Name() {
+		return (EAttribute)roleEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -3055,7 +3065,7 @@ public class ServicePackageImpl extends EPackageImpl implements ServicePackage {
 		createEReference(moduleEClass, MODULE__RESOURCES);
 
 		hasAnyAuthoritiesEClass = createEClass(HAS_ANY_AUTHORITIES);
-		createEReference(hasAnyAuthoritiesEClass, HAS_ANY_AUTHORITIES__ROLE);
+		createEReference(hasAnyAuthoritiesEClass, HAS_ANY_AUTHORITIES__ROLES);
 
 		hasAuthorityEClass = createEClass(HAS_AUTHORITY);
 		createEReference(hasAuthorityEClass, HAS_AUTHORITY__ROLE);
@@ -3066,10 +3076,11 @@ public class ServicePackageImpl extends EPackageImpl implements ServicePackage {
 		createEAttribute(accessEClass, ACCESS__ACCESS);
 
 		permitAllEClass = createEClass(PERMIT_ALL);
-		createEAttribute(permitAllEClass, PERMIT_ALL__WITH_ALL_SUBRESOURCE);
+		createEAttribute(permitAllEClass, PERMIT_ALL__WITH_ALL_SUBRESOURCES);
 
 		roleEClass = createEClass(ROLE);
 		createEReference(roleEClass, ROLE__APPLICATION);
+		createEAttribute(roleEClass, ROLE__NAME);
 
 		permissionEClass = createEClass(PERMISSION);
 
@@ -3380,7 +3391,7 @@ public class ServicePackageImpl extends EPackageImpl implements ServicePackage {
 		initEReference(getModule_Resources(), this.getResource(), this.getResource_Module(), "resources", null, 0, -1, com.github.icelyframework.service.Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(hasAnyAuthoritiesEClass, HasAnyAuthorities.class, "HasAnyAuthorities", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getHasAnyAuthorities_Role(), this.getRole(), null, "role", null, 1, -1, HasAnyAuthorities.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getHasAnyAuthorities_Roles(), this.getRole(), null, "roles", null, 1, -1, HasAnyAuthorities.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(hasAuthorityEClass, HasAuthority.class, "HasAuthority", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getHasAuthority_Role(), this.getRole(), null, "role", null, 1, 1, HasAuthority.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3391,10 +3402,11 @@ public class ServicePackageImpl extends EPackageImpl implements ServicePackage {
 		initEAttribute(getAccess_Access(), ecorePackage.getEString(), "access", null, 0, 1, Access.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(permitAllEClass, PermitAll.class, "PermitAll", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getPermitAll_WithAllSubresource(), ecorePackage.getEBoolean(), "withAllSubresource", null, 0, 1, PermitAll.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPermitAll_WithAllSubresources(), ecorePackage.getEBoolean(), "withAllSubresources", null, 0, 1, PermitAll.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(roleEClass, Role.class, "Role", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRole_Application(), this.getApplication(), this.getApplication_Roles(), "application", null, 1, 1, Role.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRole_Name(), ecorePackage.getEString(), "name", null, 0, 1, Role.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(permissionEClass, Permission.class, "Permission", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

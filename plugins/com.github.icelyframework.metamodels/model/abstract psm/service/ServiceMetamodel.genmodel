@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
-    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.github.icelyframework.metamodels/src" modelPluginID="com.github.icelyframework.metamodels"
-    modelName="Service" importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0"
-    copyrightFields="false">
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="" modelDirectory="/com.github.icelyframework.metamodels/src"
+    modelPluginID="com.github.icelyframework.metamodels" modelName="Service" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="7.0" copyrightFields="false">
   <foreignModel>ServiceMetamodel.ecore</foreignModel>
   <genPackages prefix="Service" basePackage="com.github.icelyframework" disposableProviderFactory="true"
       ecorePackage="ServiceMetamodel.ecore#/">
@@ -301,7 +301,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//Module/resources"/>
     </genClasses>
     <genClasses ecoreClass="ServiceMetamodel.ecore#//HasAnyAuthorities">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//HasAnyAuthorities/role"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//HasAnyAuthorities/roles"/>
     </genClasses>
     <genClasses ecoreClass="ServiceMetamodel.ecore#//HasAuthority">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//HasAuthority/role"/>
@@ -311,10 +311,11 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Access/access"/>
     </genClasses>
     <genClasses ecoreClass="ServiceMetamodel.ecore#//PermitAll">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//PermitAll/withAllSubresource"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//PermitAll/withAllSubresources"/>
     </genClasses>
     <genClasses ecoreClass="ServiceMetamodel.ecore#//Role">
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//Role/application"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Role/name"/>
     </genClasses>
     <genClasses image="false" ecoreClass="ServiceMetamodel.ecore#//Permission"/>
     <genClasses ecoreClass="ServiceMetamodel.ecore#//ResourceParam">

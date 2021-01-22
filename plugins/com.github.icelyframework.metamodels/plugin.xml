@@ -39,7 +39,8 @@
       <!-- @generated ServiceMetamodel -->
       <package
             uri="http://github.com/icelyframework/service"
-            class="com.github.icelyframework.service.ServicePackage"/>
+            class="com.github.icelyframework.service.ServicePackage"
+            genModel="model/abstract%20psm/service/ServiceMetamodel.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">

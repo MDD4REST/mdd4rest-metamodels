@@ -2354,13 +2354,13 @@ public interface DynamicviewPackage extends EPackage {
 	int PERMIT_ALL = 37;
 
 	/**
-	 * The feature id for the '<em><b>With All Subresource</b></em>' attribute.
+	 * The feature id for the '<em><b>With All Subresources</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PERMIT_ALL__WITH_ALL_SUBRESOURCE = PERMISSION_FEATURE_COUNT + 0;
+	int PERMIT_ALL__WITH_ALL_SUBRESOURCES = PERMISSION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Permit All</em>' class.
@@ -2382,13 +2382,13 @@ public interface DynamicviewPackage extends EPackage {
 	int HAS_ANY_AUTHORITIES = 38;
 
 	/**
-	 * The feature id for the '<em><b>Role</b></em>' reference list.
+	 * The feature id for the '<em><b>Roles</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int HAS_ANY_AUTHORITIES__ROLE = PERMISSION_FEATURE_COUNT + 0;
+	int HAS_ANY_AUTHORITIES__ROLES = PERMISSION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Has Any Authorities</em>' class.
@@ -3477,15 +3477,15 @@ public interface DynamicviewPackage extends EPackage {
 	EClass getPermitAll();
 
 	/**
-	 * Returns the meta object for the attribute '{@link com.github.icelyframework.dynamicview.PermitAll#isWithAllSubresource <em>With All Subresource</em>}'.
+	 * Returns the meta object for the attribute '{@link com.github.icelyframework.dynamicview.PermitAll#isWithAllSubresources <em>With All Subresources</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>With All Subresource</em>'.
-	 * @see com.github.icelyframework.dynamicview.PermitAll#isWithAllSubresource()
+	 * @return the meta object for the attribute '<em>With All Subresources</em>'.
+	 * @see com.github.icelyframework.dynamicview.PermitAll#isWithAllSubresources()
 	 * @see #getPermitAll()
 	 * @generated
 	 */
-	EAttribute getPermitAll_WithAllSubresource();
+	EAttribute getPermitAll_WithAllSubresources();
 
 	/**
 	 * Returns the meta object for class '{@link com.github.icelyframework.dynamicview.HasAnyAuthorities <em>Has Any Authorities</em>}'.
@@ -3498,15 +3498,15 @@ public interface DynamicviewPackage extends EPackage {
 	EClass getHasAnyAuthorities();
 
 	/**
-	 * Returns the meta object for the reference list '{@link com.github.icelyframework.dynamicview.HasAnyAuthorities#getRole <em>Role</em>}'.
+	 * Returns the meta object for the reference list '{@link com.github.icelyframework.dynamicview.HasAnyAuthorities#getRoles <em>Roles</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Role</em>'.
-	 * @see com.github.icelyframework.dynamicview.HasAnyAuthorities#getRole()
+	 * @return the meta object for the reference list '<em>Roles</em>'.
+	 * @see com.github.icelyframework.dynamicview.HasAnyAuthorities#getRoles()
 	 * @see #getHasAnyAuthorities()
 	 * @generated
 	 */
-	EReference getHasAnyAuthorities_Role();
+	EReference getHasAnyAuthorities_Roles();
 
 	/**
 	 * Returns the meta object for class '{@link com.github.icelyframework.dynamicview.Access <em>Access</em>}'.
@@ -4426,12 +4426,12 @@ public interface DynamicviewPackage extends EPackage {
 		EClass PERMIT_ALL = eINSTANCE.getPermitAll();
 
 		/**
-		 * The meta object literal for the '<em><b>With All Subresource</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>With All Subresources</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PERMIT_ALL__WITH_ALL_SUBRESOURCE = eINSTANCE.getPermitAll_WithAllSubresource();
+		EAttribute PERMIT_ALL__WITH_ALL_SUBRESOURCES = eINSTANCE.getPermitAll_WithAllSubresources();
 
 		/**
 		 * The meta object literal for the '{@link com.github.icelyframework.dynamicview.impl.HasAnyAuthoritiesImpl <em>Has Any Authorities</em>}' class.
@@ -4444,12 +4444,12 @@ public interface DynamicviewPackage extends EPackage {
 		EClass HAS_ANY_AUTHORITIES = eINSTANCE.getHasAnyAuthorities();
 
 		/**
-		 * The meta object literal for the '<em><b>Role</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Roles</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference HAS_ANY_AUTHORITIES__ROLE = eINSTANCE.getHasAnyAuthorities_Role();
+		EReference HAS_ANY_AUTHORITIES__ROLES = eINSTANCE.getHasAnyAuthorities_Roles();
 
 		/**
 		 * The meta object literal for the '{@link com.github.icelyframework.dynamicview.impl.AccessImpl <em>Access</em>}' class.
