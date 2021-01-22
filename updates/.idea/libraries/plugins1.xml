@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="plugins1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/1.0.0/plugins/com.github.icelyframework.metamodels.tests_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/1.0.0/plugins/com.github.icelyframework.metamodels.editor_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/1.0.0/plugins/com.github.icelyframework.metamodels_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/1.0.0/plugins/com.github.icelyframework.metamodels.edit_1.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

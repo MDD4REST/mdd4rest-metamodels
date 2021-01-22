@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="interm">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/interm/artifacts.jar!/" />
+      <root url="jar://$PROJECT_DIR$/interm/content.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
