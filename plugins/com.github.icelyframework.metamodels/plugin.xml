@@ -25,7 +25,8 @@
       <!-- @generated ConfigurationMetamodel -->
       <package
             uri="http://github.com/icelyframework/configuration"
-            class="com.github.icelyframework.configuration.ConfigurationPackage"/>
+            class="com.github.icelyframework.configuration.ConfigurationPackage"
+            genModel="model/abstract%20psm/configuration/ConfigurationMetamodel.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">

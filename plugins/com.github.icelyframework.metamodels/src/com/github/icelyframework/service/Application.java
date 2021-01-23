@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.github.icelyframework.service.Application#getComplextypes <em>Complextypes</em>}</li>
  *   <li>{@link com.github.icelyframework.service.Application#getModules <em>Modules</em>}</li>
  *   <li>{@link com.github.icelyframework.service.Application#getRoles <em>Roles</em>}</li>
+ *   <li>{@link com.github.icelyframework.service.Application#getApplicationType <em>Application Type</em>}</li>
  * </ul>
  *
  * @see com.github.icelyframework.service.ServicePackage#getApplication()
@@ -135,5 +136,31 @@ public interface Application extends EObject {
 	 * @generated
 	 */
 	EList<Role> getRoles();
+
+	/**
+	 * Returns the value of the '<em><b>Application Type</b></em>' attribute.
+	 * The default value is <code>"SCULPTOR_MICROSERVICE"</code>.
+	 * The literals are from the enumeration {@link com.github.icelyframework.service.ApplicationType}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Application Type</em>' attribute.
+	 * @see com.github.icelyframework.service.ApplicationType
+	 * @see #setApplicationType(ApplicationType)
+	 * @see com.github.icelyframework.service.ServicePackage#getApplication_ApplicationType()
+	 * @model default="SCULPTOR_MICROSERVICE"
+	 * @generated
+	 */
+	ApplicationType getApplicationType();
+
+	/**
+	 * Sets the value of the '{@link com.github.icelyframework.service.Application#getApplicationType <em>Application Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Application Type</em>' attribute.
+	 * @see com.github.icelyframework.service.ApplicationType
+	 * @see #getApplicationType()
+	 * @generated
+	 */
+	void setApplicationType(ApplicationType value);
 
 } // Application

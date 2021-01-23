@@ -3,6 +3,7 @@
 package com.github.icelyframework.service.impl;
 
 import com.github.icelyframework.service.Application;
+import com.github.icelyframework.service.ApplicationType;
 import com.github.icelyframework.service.ComplexType;
 import com.github.icelyframework.service.Project;
 import com.github.icelyframework.service.Role;
@@ -40,6 +41,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.github.icelyframework.service.impl.ApplicationImpl#getComplextypes <em>Complextypes</em>}</li>
  *   <li>{@link com.github.icelyframework.service.impl.ApplicationImpl#getModules <em>Modules</em>}</li>
  *   <li>{@link com.github.icelyframework.service.impl.ApplicationImpl#getRoles <em>Roles</em>}</li>
+ *   <li>{@link com.github.icelyframework.service.impl.ApplicationImpl#getApplicationType <em>Application Type</em>}</li>
  * </ul>
  *
  * @generated
@@ -114,6 +116,26 @@ public class ApplicationImpl extends EObjectImpl implements Application {
 	 * @ordered
 	 */
 	protected EList<Role> roles;
+
+	/**
+	 * The default value of the '{@link #getApplicationType() <em>Application Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getApplicationType()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final ApplicationType APPLICATION_TYPE_EDEFAULT = ApplicationType.SCULPTOR_MICROSERVICE;
+
+	/**
+	 * The cached value of the '{@link #getApplicationType() <em>Application Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getApplicationType()
+	 * @generated
+	 * @ordered
+	 */
+	protected ApplicationType applicationType = APPLICATION_TYPE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -267,6 +289,29 @@ public class ApplicationImpl extends EObjectImpl implements Application {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	public ApplicationType getApplicationType() {
+		return applicationType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setApplicationType(ApplicationType newApplicationType) {
+		ApplicationType oldApplicationType = applicationType;
+		applicationType = newApplicationType == null ? APPLICATION_TYPE_EDEFAULT : newApplicationType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ServicePackage.APPLICATION__APPLICATION_TYPE, oldApplicationType, applicationType));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -337,6 +382,8 @@ public class ApplicationImpl extends EObjectImpl implements Application {
 				return getModules();
 			case ServicePackage.APPLICATION__ROLES:
 				return getRoles();
+			case ServicePackage.APPLICATION__APPLICATION_TYPE:
+				return getApplicationType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -371,6 +418,9 @@ public class ApplicationImpl extends EObjectImpl implements Application {
 				getRoles().clear();
 				getRoles().addAll((Collection<? extends Role>)newValue);
 				return;
+			case ServicePackage.APPLICATION__APPLICATION_TYPE:
+				setApplicationType((ApplicationType)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -401,6 +451,9 @@ public class ApplicationImpl extends EObjectImpl implements Application {
 			case ServicePackage.APPLICATION__ROLES:
 				getRoles().clear();
 				return;
+			case ServicePackage.APPLICATION__APPLICATION_TYPE:
+				setApplicationType(APPLICATION_TYPE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -425,6 +478,8 @@ public class ApplicationImpl extends EObjectImpl implements Application {
 				return modules != null && !modules.isEmpty();
 			case ServicePackage.APPLICATION__ROLES:
 				return roles != null && !roles.isEmpty();
+			case ServicePackage.APPLICATION__APPLICATION_TYPE:
+				return applicationType != APPLICATION_TYPE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -443,6 +498,8 @@ public class ApplicationImpl extends EObjectImpl implements Application {
 		result.append(name);
 		result.append(", basePackage: ");
 		result.append(basePackage);
+		result.append(", applicationType: ");
+		result.append(applicationType);
 		result.append(')');
 		return result.toString();
 	}

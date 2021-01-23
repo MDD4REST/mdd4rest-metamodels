@@ -9,8 +9,12 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="deployments" upperBound="-1"
         eType="#//Deployment" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="dtos" upperBound="-1" eType="#//DTO"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="paginates" eType="#//Paginate"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="services" eType="#//Service"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="paginates" upperBound="-1"
+        eType="#//Paginate"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="services" upperBound="-1"
+        eType="#//Service"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="search" upperBound="-1"
+        eType="#//Search"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Config">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="baseName" lowerBound="1"
@@ -95,6 +99,8 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="service" upperBound="-1"
         eType="#//Service" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="search" upperBound="-1"
+        eType="#//Search" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Deployment">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="deploymentType" eType="#//DeploymentType"/>
@@ -132,15 +138,19 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Paginate">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="entity" lowerBound="1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entities" upperBound="-1"
         eType="#//Entity"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//PaginationValue"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DTO">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="entities" eType="#//Entity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entities" upperBound="-1"
+        eType="#//Entity"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//DTOValue"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Service">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="entities" lowerBound="1"
-        upperBound="-1" eType="#//Entity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entities" upperBound="-1"
+        eType="#//Entity"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//ServiceValue"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="BuildToolType">
     <eLiterals name="MAVEN"/>
@@ -166,7 +176,11 @@
     <eLiterals name="KAFKA"/>
     <eLiterals name="NO" value="1"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Search"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Search">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entities" upperBound="-1"
+        eType="#//Entity"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//SearchEngine"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="AuthenticationType">
     <eLiterals name="JWT"/>
     <eLiterals name="UAA" value="1"/>
@@ -181,5 +195,19 @@
   <eClassifiers xsi:type="ecore:EEnum" name="GatewayType">
     <eLiterals name="ZUUL"/>
     <eLiterals name="TRAEFIK" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ServiceValue">
+    <eLiterals name="SERVICE_CLASS" literal="SERVICE_CLASS"/>
+    <eLiterals name="NO" value="1"/>
+    <eLiterals name="SERVICE_IMPL" value="2" literal="SERVICE_IMPL"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="DTOValue">
+    <eLiterals name="MAPSTRUCT" literal="MAPSTRUCT"/>
+    <eLiterals name="NO" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="PaginationValue">
+    <eLiterals name="PAGINATION" literal="PAGINATION"/>
+    <eLiterals name="NO" value="1"/>
+    <eLiterals name="INFINITE_SCROLL" value="2" literal="INFINITE_SCROLL"/>
   </eClassifiers>
 </ecore:EPackage>

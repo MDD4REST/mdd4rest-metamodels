@@ -7,7 +7,7 @@
     <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
     <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
   </eAnnotations>
-  <eClassifiers xsi:type="ecore:EClass" name="ApplicationConfig">
+  <eClassifiers xsi:type="ecore:EClass" name="ApplicationConfig" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="baseName" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="servicePort" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -84,6 +84,8 @@
         eType="#//PackageName" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="defaultbaseclassnames"
         upperBound="-1" eType="#//DefaultBaseClassName" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cacheoptions" upperBound="-1"
+        eType="#//CacheOptions" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="JhipsterConfig" eSuperTypes="#//ApplicationConfig">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="databaseType" eType="#//DatabaseType"/>
@@ -98,6 +100,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="enableHibernateCache" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="skipClient" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="buildTool" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="authenticationType" eType="#//AuthenticationType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RESTOptions">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="spring_remoting_type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -197,5 +200,11 @@
     <eLiterals name="CASSANDRA" value="2"/>
     <eLiterals name="COUCHBASE" value="3"/>
     <eLiterals name="NO" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="AuthenticationType">
+    <eLiterals name="JWT"/>
+    <eLiterals name="UAA" value="1"/>
+    <eLiterals name="SESSION" value="2"/>
+    <eLiterals name="OAUTH2" value="3"/>
   </eClassifiers>
 </ecore:EPackage>

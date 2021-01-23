@@ -65,6 +65,7 @@ public class ApplicationItemProvider
 
 			addNamePropertyDescriptor(object);
 			addBasePackagePropertyDescriptor(object);
+			addApplicationTypePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -105,6 +106,28 @@ public class ApplicationItemProvider
 				 getString("_UI_Application_basePackage_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Application_basePackage_feature", "_UI_Application_type"),
 				 ServicePackage.Literals.APPLICATION__BASE_PACKAGE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Application Type feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addApplicationTypePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Application_applicationType_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Application_applicationType_feature", "_UI_Application_type"),
+				 ServicePackage.Literals.APPLICATION__APPLICATION_TYPE,
 				 true,
 				 false,
 				 false,
@@ -185,6 +208,7 @@ public class ApplicationItemProvider
 		switch (notification.getFeatureID(Application.class)) {
 			case ServicePackage.APPLICATION__NAME:
 			case ServicePackage.APPLICATION__BASE_PACKAGE:
+			case ServicePackage.APPLICATION__APPLICATION_TYPE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case ServicePackage.APPLICATION__COMPLEXTYPES:

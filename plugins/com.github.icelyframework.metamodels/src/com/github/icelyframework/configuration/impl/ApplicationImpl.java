@@ -85,7 +85,7 @@ public class ApplicationImpl extends EObjectImpl implements Application {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final ApplicationType APPLICATION_TYPE_EDEFAULT = ApplicationType.JHIPSTER_MICROSERVICE;
+	protected static final ApplicationType APPLICATION_TYPE_EDEFAULT = ApplicationType.SCULPTOR_MICROSERVICE;
 
 	/**
 	 * The cached value of the '{@link #getApplicationType() <em>Application Type</em>}' attribute.

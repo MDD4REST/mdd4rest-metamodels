@@ -5,7 +5,7 @@ Bundle-SymbolicName: com.github.icelyframework.metamodels.editor;singleton:=true
 Automatic-Module-Name: com.github.icelyframework.metamodels.editor
 Bundle-Version: 1.1.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: com.github.icelyframework.dynamicview.presentation.DynamicviewEditorPlugin$Implementation
+Bundle-Activator: com.github.icelyframework.configuration.presentation.ConfigurationEditorPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7

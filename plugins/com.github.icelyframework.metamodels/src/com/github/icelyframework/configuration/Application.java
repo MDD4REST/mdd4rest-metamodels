@@ -95,6 +95,7 @@ public interface Application extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Application Type</b></em>' attribute.
+	 * The default value is <code>"SCULPTOR_MICROSERVICE"</code>.
 	 * The literals are from the enumeration {@link com.github.icelyframework.configuration.ApplicationType}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -102,7 +103,7 @@ public interface Application extends EObject {
 	 * @see com.github.icelyframework.configuration.ApplicationType
 	 * @see #setApplicationType(ApplicationType)
 	 * @see com.github.icelyframework.configuration.ConfigurationPackage#getApplication_ApplicationType()
-	 * @model
+	 * @model default="SCULPTOR_MICROSERVICE"
 	 * @generated
 	 */
 	ApplicationType getApplicationType();

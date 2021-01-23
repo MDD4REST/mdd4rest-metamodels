@@ -681,6 +681,16 @@ public class ServicePackageImpl extends EPackageImpl implements ServicePackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getApplication_ApplicationType() {
+		return (EAttribute)applicationEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getProperty() {
 		return propertyEClass;
 	}
@@ -2849,6 +2859,7 @@ public class ServicePackageImpl extends EPackageImpl implements ServicePackage {
 		createEReference(applicationEClass, APPLICATION__COMPLEXTYPES);
 		createEReference(applicationEClass, APPLICATION__MODULES);
 		createEReference(applicationEClass, APPLICATION__ROLES);
+		createEAttribute(applicationEClass, APPLICATION__APPLICATION_TYPE);
 
 		propertyEClass = createEClass(PROPERTY);
 		createEAttribute(propertyEClass, PROPERTY__UNIQUE);
@@ -3175,6 +3186,7 @@ public class ServicePackageImpl extends EPackageImpl implements ServicePackage {
 		initEReference(getApplication_Complextypes(), this.getComplexType(), null, "complextypes", null, 0, -1, Application.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getApplication_Modules(), this.getModule(), this.getModule_Application(), "modules", null, 0, -1, Application.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getApplication_Roles(), this.getRole(), this.getRole_Application(), "roles", null, 0, -1, Application.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getApplication_ApplicationType(), this.getApplicationType(), "applicationType", "SCULPTOR_MICROSERVICE", 0, 1, Application.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(propertyEClass, Property.class, "Property", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getProperty_Unique(), ecorePackage.getEBoolean(), "unique", null, 0, 1, Property.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

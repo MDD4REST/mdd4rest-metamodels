@@ -91,6 +91,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//Application/complextypes"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//Application/modules"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//Application/roles"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Application/applicationType"/>
     </genClasses>
     <genClasses ecoreClass="ServiceMetamodel.ecore#//Property">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Property/unique"/>

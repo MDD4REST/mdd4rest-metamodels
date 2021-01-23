@@ -195,13 +195,22 @@ public interface ServicePackage extends EPackage {
 	int APPLICATION__ROLES = 5;
 
 	/**
+	 * The feature id for the '<em><b>Application Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLICATION__APPLICATION_TYPE = 6;
+
+	/**
 	 * The number of structural features of the '<em>Application</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APPLICATION_FEATURE_COUNT = 6;
+	int APPLICATION_FEATURE_COUNT = 7;
 
 	/**
 	 * The meta object id for the '{@link com.github.icelyframework.service.impl.PropertyImpl <em>Property</em>}' class.
@@ -4480,6 +4489,17 @@ public interface ServicePackage extends EPackage {
 	EReference getApplication_Roles();
 
 	/**
+	 * Returns the meta object for the attribute '{@link com.github.icelyframework.service.Application#getApplicationType <em>Application Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Application Type</em>'.
+	 * @see com.github.icelyframework.service.Application#getApplicationType()
+	 * @see #getApplication()
+	 * @generated
+	 */
+	EAttribute getApplication_ApplicationType();
+
+	/**
 	 * Returns the meta object for class '{@link com.github.icelyframework.service.Property <em>Property</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6904,6 +6924,14 @@ public interface ServicePackage extends EPackage {
 		 * @generated
 		 */
 		EReference APPLICATION__ROLES = eINSTANCE.getApplication_Roles();
+
+		/**
+		 * The meta object literal for the '<em><b>Application Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute APPLICATION__APPLICATION_TYPE = eINSTANCE.getApplication_ApplicationType();
 
 		/**
 		 * The meta object literal for the '{@link com.github.icelyframework.service.impl.PropertyImpl <em>Property</em>}' class.
