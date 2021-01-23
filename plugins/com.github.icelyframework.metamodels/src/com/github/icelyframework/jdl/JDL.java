@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.github.icelyframework.jdl.JDL#getDto <em>Dto</em>}</li>
  *   <li>{@link com.github.icelyframework.jdl.JDL#getService <em>Service</em>}</li>
  *   <li>{@link com.github.icelyframework.jdl.JDL#getSearch <em>Search</em>}</li>
+ *   <li>{@link com.github.icelyframework.jdl.JDL#getDeployments <em>Deployments</em>}</li>
  * </ul>
  *
  * @see com.github.icelyframework.jdl.JdlPackage#getJDL()
@@ -112,5 +113,29 @@ public interface JDL extends EObject {
 	 * @generated
 	 */
 	EList<Search> getSearch();
+
+	/**
+	 * Returns the value of the '<em><b>Deployments</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link com.github.icelyframework.jdl.Deployment#getApplication <em>Application</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Deployments</em>' reference.
+	 * @see #setDeployments(Deployment)
+	 * @see com.github.icelyframework.jdl.JdlPackage#getJDL_Deployments()
+	 * @see com.github.icelyframework.jdl.Deployment#getApplication
+	 * @model opposite="application"
+	 * @generated
+	 */
+	Deployment getDeployments();
+
+	/**
+	 * Sets the value of the '{@link com.github.icelyframework.jdl.JDL#getDeployments <em>Deployments</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Deployments</em>' reference.
+	 * @see #getDeployments()
+	 * @generated
+	 */
+	void setDeployments(Deployment value);
 
 } // JDL

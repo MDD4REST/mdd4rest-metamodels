@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link com.github.icelyframework.configuration.ProjectConfig#getVersion <em>Version</em>}</li>
+ *   <li>{@link com.github.icelyframework.configuration.ProjectConfig#getProject <em>Project</em>}</li>
  * </ul>
  *
  * @see com.github.icelyframework.configuration.ConfigurationPackage#getProjectConfig()
@@ -42,5 +43,29 @@ public interface ProjectConfig extends EObject {
 	 * @generated
 	 */
 	void setVersion(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Project</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link com.github.icelyframework.configuration.Project#getConfig <em>Config</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Project</em>' container reference.
+	 * @see #setProject(Project)
+	 * @see com.github.icelyframework.configuration.ConfigurationPackage#getProjectConfig_Project()
+	 * @see com.github.icelyframework.configuration.Project#getConfig
+	 * @model opposite="config" required="true" transient="false"
+	 * @generated
+	 */
+	Project getProject();
+
+	/**
+	 * Sets the value of the '{@link com.github.icelyframework.configuration.ProjectConfig#getProject <em>Project</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Project</em>' container reference.
+	 * @see #getProject()
+	 * @generated
+	 */
+	void setProject(Project value);
 
 } // ProjectConfig

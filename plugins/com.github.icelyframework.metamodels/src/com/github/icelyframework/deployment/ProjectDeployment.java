@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.github.icelyframework.deployment.ProjectDeployment#getAppsFolders <em>Apps Folders</em>}</li>
  *   <li>{@link com.github.icelyframework.deployment.ProjectDeployment#isMonitoring <em>Monitoring</em>}</li>
  *   <li>{@link com.github.icelyframework.deployment.ProjectDeployment#getKubernetesServiceType <em>Kubernetes Service Type</em>}</li>
+ *   <li>{@link com.github.icelyframework.deployment.ProjectDeployment#getProject <em>Project</em>}</li>
  * </ul>
  *
  * @see com.github.icelyframework.deployment.DeploymentPackage#getProjectDeployment()
@@ -204,5 +205,29 @@ public interface ProjectDeployment extends EObject {
 	 * @generated
 	 */
 	void setKubernetesServiceType(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Project</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link com.github.icelyframework.deployment.Project#getDeployment <em>Deployment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Project</em>' container reference.
+	 * @see #setProject(Project)
+	 * @see com.github.icelyframework.deployment.DeploymentPackage#getProjectDeployment_Project()
+	 * @see com.github.icelyframework.deployment.Project#getDeployment
+	 * @model opposite="deployment" required="true" transient="false"
+	 * @generated
+	 */
+	Project getProject();
+
+	/**
+	 * Sets the value of the '{@link com.github.icelyframework.deployment.ProjectDeployment#getProject <em>Project</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Project</em>' container reference.
+	 * @see #getProject()
+	 * @generated
+	 */
+	void setProject(Project value);
 
 } // ProjectDeployment

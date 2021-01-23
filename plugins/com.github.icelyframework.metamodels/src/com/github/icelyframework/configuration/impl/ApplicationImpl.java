@@ -273,9 +273,9 @@ public class ApplicationImpl extends EObjectImpl implements Application {
 		if (newConfig != config) {
 			NotificationChain msgs = null;
 			if (config != null)
-				msgs = ((InternalEObject)config).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ConfigurationPackage.APPLICATION__CONFIG, null, msgs);
+				msgs = ((InternalEObject)config).eInverseRemove(this, ConfigurationPackage.APPLICATION_CONFIG__APPLICATION, ApplicationConfig.class, msgs);
 			if (newConfig != null)
-				msgs = ((InternalEObject)newConfig).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ConfigurationPackage.APPLICATION__CONFIG, null, msgs);
+				msgs = ((InternalEObject)newConfig).eInverseAdd(this, ConfigurationPackage.APPLICATION_CONFIG__APPLICATION, ApplicationConfig.class, msgs);
 			msgs = basicSetConfig(newConfig, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -295,6 +295,10 @@ public class ApplicationImpl extends EObjectImpl implements Application {
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetProject((Project)otherEnd, msgs);
+			case ConfigurationPackage.APPLICATION__CONFIG:
+				if (config != null)
+					msgs = ((InternalEObject)config).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ConfigurationPackage.APPLICATION__CONFIG, null, msgs);
+				return basicSetConfig((ApplicationConfig)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}

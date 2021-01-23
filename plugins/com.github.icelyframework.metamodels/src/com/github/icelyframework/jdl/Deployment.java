@@ -207,27 +207,27 @@ public interface Deployment extends EObject {
 	void setKubernetesServiceType(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Application</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link com.github.icelyframework.jdl.Application#getDeployments <em>Deployments</em>}'.
+	 * Returns the value of the '<em><b>Application</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link com.github.icelyframework.jdl.JDL#getDeployments <em>Deployments</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Application</em>' container reference.
-	 * @see #setApplication(Application)
+	 * @return the value of the '<em>Application</em>' reference.
+	 * @see #setApplication(JDL)
 	 * @see com.github.icelyframework.jdl.JdlPackage#getDeployment_Application()
-	 * @see com.github.icelyframework.jdl.Application#getDeployments
-	 * @model opposite="deployments" required="true" transient="false"
+	 * @see com.github.icelyframework.jdl.JDL#getDeployments
+	 * @model opposite="deployments" required="true"
 	 * @generated
 	 */
-	Application getApplication();
+	JDL getApplication();
 
 	/**
-	 * Sets the value of the '{@link com.github.icelyframework.jdl.Deployment#getApplication <em>Application</em>}' container reference.
+	 * Sets the value of the '{@link com.github.icelyframework.jdl.Deployment#getApplication <em>Application</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Application</em>' container reference.
+	 * @param value the new value of the '<em>Application</em>' reference.
 	 * @see #getApplication()
 	 * @generated
 	 */
-	void setApplication(Application value);
+	void setApplication(JDL value);
 
 } // Deployment

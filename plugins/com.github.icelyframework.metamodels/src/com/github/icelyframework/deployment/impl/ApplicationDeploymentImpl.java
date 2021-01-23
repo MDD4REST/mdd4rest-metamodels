@@ -2,16 +2,20 @@
  */
 package com.github.icelyframework.deployment.impl;
 
+import com.github.icelyframework.deployment.Application;
 import com.github.icelyframework.deployment.ApplicationDeployment;
 import com.github.icelyframework.deployment.DatabaseType;
 import com.github.icelyframework.deployment.DeploymentPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,6 +33,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  *   <li>{@link com.github.icelyframework.deployment.impl.ApplicationDeploymentImpl#getDbPort <em>Db Port</em>}</li>
  *   <li>{@link com.github.icelyframework.deployment.impl.ApplicationDeploymentImpl#getDbType <em>Db Type</em>}</li>
  *   <li>{@link com.github.icelyframework.deployment.impl.ApplicationDeploymentImpl#getServerType <em>Server Type</em>}</li>
+ *   <li>{@link com.github.icelyframework.deployment.impl.ApplicationDeploymentImpl#getApplication <em>Application</em>}</li>
  * </ul>
  *
  * @generated
@@ -403,6 +408,93 @@ public class ApplicationDeploymentImpl extends EObjectImpl implements Applicatio
 	 * @generated
 	 */
 	@Override
+	public Application getApplication() {
+		if (eContainerFeatureID() != DeploymentPackage.APPLICATION_DEPLOYMENT__APPLICATION) return null;
+		return (Application)eInternalContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetApplication(Application newApplication, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newApplication, DeploymentPackage.APPLICATION_DEPLOYMENT__APPLICATION, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setApplication(Application newApplication) {
+		if (newApplication != eInternalContainer() || (eContainerFeatureID() != DeploymentPackage.APPLICATION_DEPLOYMENT__APPLICATION && newApplication != null)) {
+			if (EcoreUtil.isAncestor(this, newApplication))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newApplication != null)
+				msgs = ((InternalEObject)newApplication).eInverseAdd(this, DeploymentPackage.APPLICATION__DEPLOYMENT, Application.class, msgs);
+			msgs = basicSetApplication(newApplication, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, DeploymentPackage.APPLICATION_DEPLOYMENT__APPLICATION, newApplication, newApplication));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case DeploymentPackage.APPLICATION_DEPLOYMENT__APPLICATION:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetApplication((Application)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case DeploymentPackage.APPLICATION_DEPLOYMENT__APPLICATION:
+				return basicSetApplication(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+			case DeploymentPackage.APPLICATION_DEPLOYMENT__APPLICATION:
+				return eInternalContainer().eInverseRemove(this, DeploymentPackage.APPLICATION__DEPLOYMENT, Application.class, msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case DeploymentPackage.APPLICATION_DEPLOYMENT__DIRECTORY_PATH:
@@ -421,6 +513,8 @@ public class ApplicationDeploymentImpl extends EObjectImpl implements Applicatio
 				return getDbType();
 			case DeploymentPackage.APPLICATION_DEPLOYMENT__SERVER_TYPE:
 				return getServerType();
+			case DeploymentPackage.APPLICATION_DEPLOYMENT__APPLICATION:
+				return getApplication();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -456,6 +550,9 @@ public class ApplicationDeploymentImpl extends EObjectImpl implements Applicatio
 				return;
 			case DeploymentPackage.APPLICATION_DEPLOYMENT__SERVER_TYPE:
 				setServerType((String)newValue);
+				return;
+			case DeploymentPackage.APPLICATION_DEPLOYMENT__APPLICATION:
+				setApplication((Application)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -493,6 +590,9 @@ public class ApplicationDeploymentImpl extends EObjectImpl implements Applicatio
 			case DeploymentPackage.APPLICATION_DEPLOYMENT__SERVER_TYPE:
 				setServerType(SERVER_TYPE_EDEFAULT);
 				return;
+			case DeploymentPackage.APPLICATION_DEPLOYMENT__APPLICATION:
+				setApplication((Application)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -521,6 +621,8 @@ public class ApplicationDeploymentImpl extends EObjectImpl implements Applicatio
 				return dbType != DB_TYPE_EDEFAULT;
 			case DeploymentPackage.APPLICATION_DEPLOYMENT__SERVER_TYPE:
 				return SERVER_TYPE_EDEFAULT == null ? serverType != null : !SERVER_TYPE_EDEFAULT.equals(serverType);
+			case DeploymentPackage.APPLICATION_DEPLOYMENT__APPLICATION:
+				return getApplication() != null;
 		}
 		return super.eIsSet(featureID);
 	}

@@ -46,7 +46,15 @@ public enum ApplicationType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	MONOLITH(2, "MONOLITH", "MONOLITH");
+	MONOLITH(2, "MONOLITH", "MONOLITH"), /**
+	 * The '<em><b>UAA</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #UAA_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	UAA(3, "UAA", "UAA");
 
 	/**
 	 * The '<em><b>MICROSERVICE</b></em>' literal value.
@@ -82,6 +90,17 @@ public enum ApplicationType implements Enumerator {
 	public static final int MONOLITH_VALUE = 2;
 
 	/**
+	 * The '<em><b>UAA</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #UAA
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int UAA_VALUE = 3;
+
+	/**
 	 * An array of all the '<em><b>Application Type</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -92,6 +111,7 @@ public enum ApplicationType implements Enumerator {
 			MICROSERVICE,
 			GATEWAY,
 			MONOLITH,
+			UAA,
 		};
 
 	/**
@@ -151,6 +171,7 @@ public enum ApplicationType implements Enumerator {
 			case MICROSERVICE_VALUE: return MICROSERVICE;
 			case GATEWAY_VALUE: return GATEWAY;
 			case MONOLITH_VALUE: return MONOLITH;
+			case UAA_VALUE: return UAA;
 		}
 		return null;
 	}

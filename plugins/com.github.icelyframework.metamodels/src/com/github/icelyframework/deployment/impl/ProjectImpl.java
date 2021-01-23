@@ -231,7 +231,7 @@ public class ProjectImpl extends EObjectImpl implements Project {
 	@Override
 	public EList<ProjectDeployment> getDeployment() {
 		if (deployment == null) {
-			deployment = new EObjectContainmentEList<ProjectDeployment>(ProjectDeployment.class, this, DeploymentPackage.PROJECT__DEPLOYMENT);
+			deployment = new EObjectContainmentWithInverseEList<ProjectDeployment>(ProjectDeployment.class, this, DeploymentPackage.PROJECT__DEPLOYMENT, DeploymentPackage.PROJECT_DEPLOYMENT__PROJECT);
 		}
 		return deployment;
 	}
@@ -247,6 +247,8 @@ public class ProjectImpl extends EObjectImpl implements Project {
 		switch (featureID) {
 			case DeploymentPackage.PROJECT__APPLICATIONS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getApplications()).basicAdd(otherEnd, msgs);
+			case DeploymentPackage.PROJECT__DEPLOYMENT:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getDeployment()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}

@@ -302,9 +302,9 @@ public class ProjectImpl extends EObjectImpl implements Project {
 		if (newConfig != config) {
 			NotificationChain msgs = null;
 			if (config != null)
-				msgs = ((InternalEObject)config).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ConfigurationPackage.PROJECT__CONFIG, null, msgs);
+				msgs = ((InternalEObject)config).eInverseRemove(this, ConfigurationPackage.PROJECT_CONFIG__PROJECT, ProjectConfig.class, msgs);
 			if (newConfig != null)
-				msgs = ((InternalEObject)newConfig).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ConfigurationPackage.PROJECT__CONFIG, null, msgs);
+				msgs = ((InternalEObject)newConfig).eInverseAdd(this, ConfigurationPackage.PROJECT_CONFIG__PROJECT, ProjectConfig.class, msgs);
 			msgs = basicSetConfig(newConfig, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -323,6 +323,10 @@ public class ProjectImpl extends EObjectImpl implements Project {
 		switch (featureID) {
 			case ConfigurationPackage.PROJECT__APPLICATIONS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getApplications()).basicAdd(otherEnd, msgs);
+			case ConfigurationPackage.PROJECT__CONFIG:
+				if (config != null)
+					msgs = ((InternalEObject)config).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ConfigurationPackage.PROJECT__CONFIG, null, msgs);
+				return basicSetConfig((ProjectConfig)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}

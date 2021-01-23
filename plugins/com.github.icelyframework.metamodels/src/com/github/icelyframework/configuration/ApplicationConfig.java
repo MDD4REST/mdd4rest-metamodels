@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link com.github.icelyframework.configuration.ApplicationConfig#getBaseName <em>Base Name</em>}</li>
  *   <li>{@link com.github.icelyframework.configuration.ApplicationConfig#getServicePort <em>Service Port</em>}</li>
+ *   <li>{@link com.github.icelyframework.configuration.ApplicationConfig#getApplication <em>Application</em>}</li>
  * </ul>
  *
  * @see com.github.icelyframework.configuration.ConfigurationPackage#getApplicationConfig()
@@ -65,5 +66,29 @@ public interface ApplicationConfig extends EObject {
 	 * @generated
 	 */
 	void setServicePort(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Application</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link com.github.icelyframework.configuration.Application#getConfig <em>Config</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Application</em>' container reference.
+	 * @see #setApplication(Application)
+	 * @see com.github.icelyframework.configuration.ConfigurationPackage#getApplicationConfig_Application()
+	 * @see com.github.icelyframework.configuration.Application#getConfig
+	 * @model opposite="config" required="true" transient="false"
+	 * @generated
+	 */
+	Application getApplication();
+
+	/**
+	 * Sets the value of the '{@link com.github.icelyframework.configuration.ApplicationConfig#getApplication <em>Application</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Application</em>' container reference.
+	 * @see #getApplication()
+	 * @generated
+	 */
+	void setApplication(Application value);
 
 } // ApplicationConfig

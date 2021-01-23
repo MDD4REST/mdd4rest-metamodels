@@ -123,11 +123,13 @@ public interface Application extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Deployment</b></em>' containment reference list.
 	 * The list contents are of type {@link com.github.icelyframework.deployment.ApplicationDeployment}.
+	 * It is bidirectional and its opposite is '{@link com.github.icelyframework.deployment.ApplicationDeployment#getApplication <em>Application</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Deployment</em>' containment reference list.
 	 * @see com.github.icelyframework.deployment.DeploymentPackage#getApplication_Deployment()
-	 * @model containment="true"
+	 * @see com.github.icelyframework.deployment.ApplicationDeployment#getApplication
+	 * @model opposite="application" containment="true"
 	 * @generated
 	 */
 	EList<ApplicationDeployment> getDeployment();

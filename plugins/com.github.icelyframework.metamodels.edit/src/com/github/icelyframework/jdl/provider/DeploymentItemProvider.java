@@ -68,6 +68,7 @@ public class DeploymentItemProvider
 			addMonitoringPropertyDescriptor(object);
 			addGatewayTypePropertyDescriptor(object);
 			addKubernetesServiceTypePropertyDescriptor(object);
+			addApplicationPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -244,6 +245,28 @@ public class DeploymentItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Application feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addApplicationPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Deployment_application_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Deployment_application_feature", "_UI_Deployment_type"),
+				 JdlPackage.Literals.DEPLOYMENT__APPLICATION,
+				 true,
+				 false,
+				 true,
+				 null,
 				 null,
 				 null));
 	}

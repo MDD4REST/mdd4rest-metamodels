@@ -110,11 +110,13 @@ public interface Project extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Deployment</b></em>' containment reference list.
 	 * The list contents are of type {@link com.github.icelyframework.deployment.ProjectDeployment}.
+	 * It is bidirectional and its opposite is '{@link com.github.icelyframework.deployment.ProjectDeployment#getProject <em>Project</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Deployment</em>' containment reference list.
 	 * @see com.github.icelyframework.deployment.DeploymentPackage#getProject_Deployment()
-	 * @model containment="true"
+	 * @see com.github.icelyframework.deployment.ProjectDeployment#getProject
+	 * @model opposite="project" containment="true"
 	 * @generated
 	 */
 	EList<ProjectDeployment> getDeployment();

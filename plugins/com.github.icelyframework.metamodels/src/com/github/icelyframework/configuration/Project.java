@@ -135,12 +135,14 @@ public interface Project extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Config</b></em>' containment reference.
+	 * It is bidirectional and its opposite is '{@link com.github.icelyframework.configuration.ProjectConfig#getProject <em>Project</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Config</em>' containment reference.
 	 * @see #setConfig(ProjectConfig)
 	 * @see com.github.icelyframework.configuration.ConfigurationPackage#getProject_Config()
-	 * @model containment="true" required="true"
+	 * @see com.github.icelyframework.configuration.ProjectConfig#getProject
+	 * @model opposite="project" containment="true" required="true"
 	 * @generated
 	 */
 	ProjectConfig getConfig();

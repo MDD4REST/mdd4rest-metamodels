@@ -40,7 +40,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link com.github.icelyframework.jdl.impl.ApplicationImpl#getConfig <em>Config</em>}</li>
  *   <li>{@link com.github.icelyframework.jdl.impl.ApplicationImpl#getEntities <em>Entities</em>}</li>
- *   <li>{@link com.github.icelyframework.jdl.impl.ApplicationImpl#getDeployments <em>Deployments</em>}</li>
  *   <li>{@link com.github.icelyframework.jdl.impl.ApplicationImpl#getDtos <em>Dtos</em>}</li>
  *   <li>{@link com.github.icelyframework.jdl.impl.ApplicationImpl#getPaginates <em>Paginates</em>}</li>
  *   <li>{@link com.github.icelyframework.jdl.impl.ApplicationImpl#getServices <em>Services</em>}</li>
@@ -70,16 +69,6 @@ public class ApplicationImpl extends EObjectImpl implements Application {
 	 * @ordered
 	 */
 	protected EList<Entity> entities;
-
-	/**
-	 * The cached value of the '{@link #getDeployments() <em>Deployments</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDeployments()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Deployment> deployments;
 
 	/**
 	 * The cached value of the '{@link #getDtos() <em>Dtos</em>}' reference list.
@@ -224,19 +213,6 @@ public class ApplicationImpl extends EObjectImpl implements Application {
 	 * @generated
 	 */
 	@Override
-	public EList<Deployment> getDeployments() {
-		if (deployments == null) {
-			deployments = new EObjectContainmentWithInverseEList<Deployment>(Deployment.class, this, JdlPackage.APPLICATION__DEPLOYMENTS, JdlPackage.DEPLOYMENT__APPLICATION);
-		}
-		return deployments;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EList<DTO> getDtos() {
 		if (dtos == null) {
 			dtos = new EObjectResolvingEList<DTO>(DTO.class, this, JdlPackage.APPLICATION__DTOS);
@@ -319,8 +295,6 @@ public class ApplicationImpl extends EObjectImpl implements Application {
 				if (config != null)
 					msgs = ((InternalEObject)config).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - JdlPackage.APPLICATION__CONFIG, null, msgs);
 				return basicSetConfig((Config)otherEnd, msgs);
-			case JdlPackage.APPLICATION__DEPLOYMENTS:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getDeployments()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -335,8 +309,6 @@ public class ApplicationImpl extends EObjectImpl implements Application {
 		switch (featureID) {
 			case JdlPackage.APPLICATION__CONFIG:
 				return basicSetConfig(null, msgs);
-			case JdlPackage.APPLICATION__DEPLOYMENTS:
-				return ((InternalEList<?>)getDeployments()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -353,8 +325,6 @@ public class ApplicationImpl extends EObjectImpl implements Application {
 				return getConfig();
 			case JdlPackage.APPLICATION__ENTITIES:
 				return getEntities();
-			case JdlPackage.APPLICATION__DEPLOYMENTS:
-				return getDeployments();
 			case JdlPackage.APPLICATION__DTOS:
 				return getDtos();
 			case JdlPackage.APPLICATION__PAGINATES:
@@ -384,10 +354,6 @@ public class ApplicationImpl extends EObjectImpl implements Application {
 			case JdlPackage.APPLICATION__ENTITIES:
 				getEntities().clear();
 				getEntities().addAll((Collection<? extends Entity>)newValue);
-				return;
-			case JdlPackage.APPLICATION__DEPLOYMENTS:
-				getDeployments().clear();
-				getDeployments().addAll((Collection<? extends Deployment>)newValue);
 				return;
 			case JdlPackage.APPLICATION__DTOS:
 				getDtos().clear();
@@ -426,9 +392,6 @@ public class ApplicationImpl extends EObjectImpl implements Application {
 			case JdlPackage.APPLICATION__ENTITIES:
 				getEntities().clear();
 				return;
-			case JdlPackage.APPLICATION__DEPLOYMENTS:
-				getDeployments().clear();
-				return;
 			case JdlPackage.APPLICATION__DTOS:
 				getDtos().clear();
 				return;
@@ -460,8 +423,6 @@ public class ApplicationImpl extends EObjectImpl implements Application {
 				return config != null;
 			case JdlPackage.APPLICATION__ENTITIES:
 				return entities != null && !entities.isEmpty();
-			case JdlPackage.APPLICATION__DEPLOYMENTS:
-				return deployments != null && !deployments.isEmpty();
 			case JdlPackage.APPLICATION__DTOS:
 				return dtos != null && !dtos.isEmpty();
 			case JdlPackage.APPLICATION__PAGINATES:

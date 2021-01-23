@@ -35,13 +35,16 @@
       <genEnumLiterals ecoreEnumLiteral="ConfigurationMetamodel.ecore#//JhipsterApplicationType/MICROSERVICE"/>
       <genEnumLiterals ecoreEnumLiteral="ConfigurationMetamodel.ecore#//JhipsterApplicationType/GATEWAY"/>
       <genEnumLiterals ecoreEnumLiteral="ConfigurationMetamodel.ecore#//JhipsterApplicationType/MONOLITH"/>
+      <genEnumLiterals ecoreEnumLiteral="ConfigurationMetamodel.ecore#//JhipsterApplicationType/UAA"/>
     </genEnums>
     <genClasses image="false" ecoreClass="ConfigurationMetamodel.ecore#//ApplicationConfig">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//ApplicationConfig/baseName"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//ApplicationConfig/servicePort"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ConfigurationMetamodel.ecore#//ApplicationConfig/application"/>
     </genClasses>
     <genClasses ecoreClass="ConfigurationMetamodel.ecore#//ProjectConfig">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//ProjectConfig/version"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ConfigurationMetamodel.ecore#//ProjectConfig/project"/>
     </genClasses>
     <genClasses ecoreClass="ConfigurationMetamodel.ecore#//Application">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//Application/name"/>

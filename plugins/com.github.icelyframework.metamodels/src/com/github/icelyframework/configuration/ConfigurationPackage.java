@@ -86,13 +86,22 @@ public interface ConfigurationPackage extends EPackage {
 	int APPLICATION_CONFIG__SERVICE_PORT = 1;
 
 	/**
+	 * The feature id for the '<em><b>Application</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLICATION_CONFIG__APPLICATION = 2;
+
+	/**
 	 * The number of structural features of the '<em>Application Config</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APPLICATION_CONFIG_FEATURE_COUNT = 2;
+	int APPLICATION_CONFIG_FEATURE_COUNT = 3;
 
 	/**
 	 * The meta object id for the '{@link com.github.icelyframework.configuration.impl.ProjectConfigImpl <em>Project Config</em>}' class.
@@ -114,13 +123,22 @@ public interface ConfigurationPackage extends EPackage {
 	int PROJECT_CONFIG__VERSION = 0;
 
 	/**
+	 * The feature id for the '<em><b>Project</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROJECT_CONFIG__PROJECT = 1;
+
+	/**
 	 * The number of structural features of the '<em>Project Config</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROJECT_CONFIG_FEATURE_COUNT = 1;
+	int PROJECT_CONFIG_FEATURE_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link com.github.icelyframework.configuration.impl.ApplicationImpl <em>Application</em>}' class.
@@ -286,6 +304,15 @@ public interface ConfigurationPackage extends EPackage {
 	 * @ordered
 	 */
 	int SCULPTOR_CONFIG__SERVICE_PORT = APPLICATION_CONFIG__SERVICE_PORT;
+
+	/**
+	 * The feature id for the '<em><b>Application</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCULPTOR_CONFIG__APPLICATION = APPLICATION_CONFIG__APPLICATION;
 
 	/**
 	 * The feature id for the '<em><b>Cartridges</b></em>' attribute.
@@ -512,6 +539,15 @@ public interface ConfigurationPackage extends EPackage {
 	 * @ordered
 	 */
 	int JHIPSTER_CONFIG__SERVICE_PORT = APPLICATION_CONFIG__SERVICE_PORT;
+
+	/**
+	 * The feature id for the '<em><b>Application</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JHIPSTER_CONFIG__APPLICATION = APPLICATION_CONFIG__APPLICATION;
 
 	/**
 	 * The feature id for the '<em><b>Database Type</b></em>' attribute.
@@ -1384,6 +1420,17 @@ public interface ConfigurationPackage extends EPackage {
 	EAttribute getApplicationConfig_ServicePort();
 
 	/**
+	 * Returns the meta object for the container reference '{@link com.github.icelyframework.configuration.ApplicationConfig#getApplication <em>Application</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Application</em>'.
+	 * @see com.github.icelyframework.configuration.ApplicationConfig#getApplication()
+	 * @see #getApplicationConfig()
+	 * @generated
+	 */
+	EReference getApplicationConfig_Application();
+
+	/**
 	 * Returns the meta object for class '{@link com.github.icelyframework.configuration.ProjectConfig <em>Project Config</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1403,6 +1450,17 @@ public interface ConfigurationPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getProjectConfig_Version();
+
+	/**
+	 * Returns the meta object for the container reference '{@link com.github.icelyframework.configuration.ProjectConfig#getProject <em>Project</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Project</em>'.
+	 * @see com.github.icelyframework.configuration.ProjectConfig#getProject()
+	 * @see #getProjectConfig()
+	 * @generated
+	 */
+	EReference getProjectConfig_Project();
 
 	/**
 	 * Returns the meta object for class '{@link com.github.icelyframework.configuration.Application <em>Application</em>}'.
@@ -2686,6 +2744,14 @@ public interface ConfigurationPackage extends EPackage {
 		EAttribute APPLICATION_CONFIG__SERVICE_PORT = eINSTANCE.getApplicationConfig_ServicePort();
 
 		/**
+		 * The meta object literal for the '<em><b>Application</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference APPLICATION_CONFIG__APPLICATION = eINSTANCE.getApplicationConfig_Application();
+
+		/**
 		 * The meta object literal for the '{@link com.github.icelyframework.configuration.impl.ProjectConfigImpl <em>Project Config</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2702,6 +2768,14 @@ public interface ConfigurationPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute PROJECT_CONFIG__VERSION = eINSTANCE.getProjectConfig_Version();
+
+		/**
+		 * The meta object literal for the '<em><b>Project</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PROJECT_CONFIG__PROJECT = eINSTANCE.getProjectConfig_Project();
 
 		/**
 		 * The meta object literal for the '{@link com.github.icelyframework.configuration.impl.ApplicationImpl <em>Application</em>}' class.

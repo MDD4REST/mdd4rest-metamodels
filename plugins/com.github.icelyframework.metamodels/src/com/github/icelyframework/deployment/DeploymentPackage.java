@@ -140,13 +140,22 @@ public interface DeploymentPackage extends EPackage {
 	int APPLICATION_DEPLOYMENT__SERVER_TYPE = 7;
 
 	/**
+	 * The feature id for the '<em><b>Application</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLICATION_DEPLOYMENT__APPLICATION = 8;
+
+	/**
 	 * The number of structural features of the '<em>Application Deployment</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APPLICATION_DEPLOYMENT_FEATURE_COUNT = 8;
+	int APPLICATION_DEPLOYMENT_FEATURE_COUNT = 9;
 
 	/**
 	 * The meta object id for the '{@link com.github.icelyframework.deployment.impl.ProjectDeploymentImpl <em>Project Deployment</em>}' class.
@@ -231,13 +240,22 @@ public interface DeploymentPackage extends EPackage {
 	int PROJECT_DEPLOYMENT__KUBERNETES_SERVICE_TYPE = 7;
 
 	/**
+	 * The feature id for the '<em><b>Project</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROJECT_DEPLOYMENT__PROJECT = 8;
+
+	/**
 	 * The number of structural features of the '<em>Project Deployment</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROJECT_DEPLOYMENT_FEATURE_COUNT = 8;
+	int PROJECT_DEPLOYMENT_FEATURE_COUNT = 9;
 
 	/**
 	 * The meta object id for the '{@link com.github.icelyframework.deployment.impl.ProjectImpl <em>Project</em>}' class.
@@ -517,6 +535,17 @@ public interface DeploymentPackage extends EPackage {
 	EAttribute getApplicationDeployment_ServerType();
 
 	/**
+	 * Returns the meta object for the container reference '{@link com.github.icelyframework.deployment.ApplicationDeployment#getApplication <em>Application</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Application</em>'.
+	 * @see com.github.icelyframework.deployment.ApplicationDeployment#getApplication()
+	 * @see #getApplicationDeployment()
+	 * @generated
+	 */
+	EReference getApplicationDeployment_Application();
+
+	/**
 	 * Returns the meta object for class '{@link com.github.icelyframework.deployment.ProjectDeployment <em>Project Deployment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -613,6 +642,17 @@ public interface DeploymentPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getProjectDeployment_KubernetesServiceType();
+
+	/**
+	 * Returns the meta object for the container reference '{@link com.github.icelyframework.deployment.ProjectDeployment#getProject <em>Project</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Project</em>'.
+	 * @see com.github.icelyframework.deployment.ProjectDeployment#getProject()
+	 * @see #getProjectDeployment()
+	 * @generated
+	 */
+	EReference getProjectDeployment_Project();
 
 	/**
 	 * Returns the meta object for class '{@link com.github.icelyframework.deployment.Project <em>Project</em>}'.
@@ -891,6 +931,14 @@ public interface DeploymentPackage extends EPackage {
 		EAttribute APPLICATION_DEPLOYMENT__SERVER_TYPE = eINSTANCE.getApplicationDeployment_ServerType();
 
 		/**
+		 * The meta object literal for the '<em><b>Application</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference APPLICATION_DEPLOYMENT__APPLICATION = eINSTANCE.getApplicationDeployment_Application();
+
+		/**
 		 * The meta object literal for the '{@link com.github.icelyframework.deployment.impl.ProjectDeploymentImpl <em>Project Deployment</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -963,6 +1011,14 @@ public interface DeploymentPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute PROJECT_DEPLOYMENT__KUBERNETES_SERVICE_TYPE = eINSTANCE.getProjectDeployment_KubernetesServiceType();
+
+		/**
+		 * The meta object literal for the '<em><b>Project</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PROJECT_DEPLOYMENT__PROJECT = eINSTANCE.getProjectDeployment_Project();
 
 		/**
 		 * The meta object literal for the '{@link com.github.icelyframework.deployment.impl.ProjectImpl <em>Project</em>}' class.

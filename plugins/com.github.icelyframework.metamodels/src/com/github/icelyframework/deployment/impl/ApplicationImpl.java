@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -252,7 +253,7 @@ public class ApplicationImpl extends EObjectImpl implements Application {
 	@Override
 	public EList<ApplicationDeployment> getDeployment() {
 		if (deployment == null) {
-			deployment = new EObjectContainmentEList<ApplicationDeployment>(ApplicationDeployment.class, this, DeploymentPackage.APPLICATION__DEPLOYMENT);
+			deployment = new EObjectContainmentWithInverseEList<ApplicationDeployment>(ApplicationDeployment.class, this, DeploymentPackage.APPLICATION__DEPLOYMENT, DeploymentPackage.APPLICATION_DEPLOYMENT__APPLICATION);
 		}
 		return deployment;
 	}
@@ -262,6 +263,7 @@ public class ApplicationImpl extends EObjectImpl implements Application {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -269,6 +271,8 @@ public class ApplicationImpl extends EObjectImpl implements Application {
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetProject((Project)otherEnd, msgs);
+			case DeploymentPackage.APPLICATION__DEPLOYMENT:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getDeployment()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}

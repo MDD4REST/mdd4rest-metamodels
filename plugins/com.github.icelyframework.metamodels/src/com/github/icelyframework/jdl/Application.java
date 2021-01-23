@@ -17,7 +17,6 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link com.github.icelyframework.jdl.Application#getConfig <em>Config</em>}</li>
  *   <li>{@link com.github.icelyframework.jdl.Application#getEntities <em>Entities</em>}</li>
- *   <li>{@link com.github.icelyframework.jdl.Application#getDeployments <em>Deployments</em>}</li>
  *   <li>{@link com.github.icelyframework.jdl.Application#getDtos <em>Dtos</em>}</li>
  *   <li>{@link com.github.icelyframework.jdl.Application#getPaginates <em>Paginates</em>}</li>
  *   <li>{@link com.github.icelyframework.jdl.Application#getServices <em>Services</em>}</li>
@@ -65,20 +64,6 @@ public interface Application extends EObject {
 	 * @generated
 	 */
 	EList<Entity> getEntities();
-
-	/**
-	 * Returns the value of the '<em><b>Deployments</b></em>' containment reference list.
-	 * The list contents are of type {@link com.github.icelyframework.jdl.Deployment}.
-	 * It is bidirectional and its opposite is '{@link com.github.icelyframework.jdl.Deployment#getApplication <em>Application</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Deployments</em>' containment reference list.
-	 * @see com.github.icelyframework.jdl.JdlPackage#getApplication_Deployments()
-	 * @see com.github.icelyframework.jdl.Deployment#getApplication
-	 * @model opposite="application" containment="true"
-	 * @generated
-	 */
-	EList<Deployment> getDeployments();
 
 	/**
 	 * Returns the value of the '<em><b>Dtos</b></em>' reference list.

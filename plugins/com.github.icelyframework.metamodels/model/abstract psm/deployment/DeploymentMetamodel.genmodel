@@ -44,6 +44,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DeploymentMetamodel.ecore#//ApplicationDeployment/dbPort"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DeploymentMetamodel.ecore#//ApplicationDeployment/dbType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DeploymentMetamodel.ecore#//ApplicationDeployment/serverType"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference DeploymentMetamodel.ecore#//ApplicationDeployment/application"/>
     </genClasses>
     <genClasses ecoreClass="DeploymentMetamodel.ecore#//ProjectDeployment">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DeploymentMetamodel.ecore#//ProjectDeployment/dockerRepositoryName"/>
@@ -54,6 +55,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DeploymentMetamodel.ecore#//ProjectDeployment/appsFolders"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DeploymentMetamodel.ecore#//ProjectDeployment/monitoring"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DeploymentMetamodel.ecore#//ProjectDeployment/kubernetesServiceType"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference DeploymentMetamodel.ecore#//ProjectDeployment/project"/>
     </genClasses>
     <genClasses ecoreClass="DeploymentMetamodel.ecore#//Project">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DeploymentMetamodel.ecore#//Project/applications"/>

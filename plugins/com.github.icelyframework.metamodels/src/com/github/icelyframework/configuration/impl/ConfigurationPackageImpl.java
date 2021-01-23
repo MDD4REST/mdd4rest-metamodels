@@ -301,6 +301,16 @@ public class ConfigurationPackageImpl extends EPackageImpl implements Configurat
 	 * @generated
 	 */
 	@Override
+	public EReference getApplicationConfig_Application() {
+		return (EReference)applicationConfigEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getProjectConfig() {
 		return projectConfigEClass;
 	}
@@ -313,6 +323,16 @@ public class ConfigurationPackageImpl extends EPackageImpl implements Configurat
 	@Override
 	public EAttribute getProjectConfig_Version() {
 		return (EAttribute)projectConfigEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getProjectConfig_Project() {
+		return (EReference)projectConfigEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1487,9 +1507,11 @@ public class ConfigurationPackageImpl extends EPackageImpl implements Configurat
 		applicationConfigEClass = createEClass(APPLICATION_CONFIG);
 		createEAttribute(applicationConfigEClass, APPLICATION_CONFIG__BASE_NAME);
 		createEAttribute(applicationConfigEClass, APPLICATION_CONFIG__SERVICE_PORT);
+		createEReference(applicationConfigEClass, APPLICATION_CONFIG__APPLICATION);
 
 		projectConfigEClass = createEClass(PROJECT_CONFIG);
 		createEAttribute(projectConfigEClass, PROJECT_CONFIG__VERSION);
+		createEReference(projectConfigEClass, PROJECT_CONFIG__PROJECT);
 
 		applicationEClass = createEClass(APPLICATION);
 		createEAttribute(applicationEClass, APPLICATION__NAME);
@@ -1659,16 +1681,18 @@ public class ConfigurationPackageImpl extends EPackageImpl implements Configurat
 		initEClass(applicationConfigEClass, ApplicationConfig.class, "ApplicationConfig", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getApplicationConfig_BaseName(), ecorePackage.getEString(), "baseName", null, 1, 1, ApplicationConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getApplicationConfig_ServicePort(), ecorePackage.getEString(), "servicePort", null, 0, 1, ApplicationConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getApplicationConfig_Application(), this.getApplication(), this.getApplication_Config(), "application", null, 1, 1, ApplicationConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(projectConfigEClass, ProjectConfig.class, "ProjectConfig", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getProjectConfig_Version(), ecorePackage.getEString(), "version", null, 0, 1, ProjectConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProjectConfig_Project(), this.getProject(), this.getProject_Config(), "project", null, 1, 1, ProjectConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(applicationEClass, Application.class, "Application", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getApplication_Name(), ecorePackage.getEString(), "name", null, 1, 1, Application.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getApplication_Project(), this.getProject(), this.getProject_Applications(), "project", null, 1, 1, Application.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getApplication_BasePackage(), ecorePackage.getEString(), "basePackage", null, 0, 1, Application.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getApplication_ApplicationType(), this.getApplicationType(), "applicationType", "SCULPTOR_MICROSERVICE", 0, 1, Application.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getApplication_Config(), this.getApplicationConfig(), null, "config", null, 1, 1, Application.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getApplication_Config(), this.getApplicationConfig(), this.getApplicationConfig_Application(), "config", null, 1, 1, Application.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(projectEClass, Project.class, "Project", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getProject_Applications(), this.getApplication(), this.getApplication_Project(), "applications", null, 0, -1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1676,7 +1700,7 @@ public class ConfigurationPackageImpl extends EPackageImpl implements Configurat
 		initEAttribute(getProject_BasePath(), ecorePackage.getEString(), "basePath", null, 0, 1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getProject_BasePackage(), ecorePackage.getEString(), "basePackage", null, 0, 1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getProject_Architecture(), this.getArchitectureType(), "architecture", null, 1, 1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProject_Config(), this.getProjectConfig(), null, "config", null, 1, 1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProject_Config(), this.getProjectConfig(), this.getProjectConfig_Project(), "config", null, 1, 1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(sculptorConfigEClass, SculptorConfig.class, "SculptorConfig", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSculptorConfig_Cartridges(), ecorePackage.getEString(), "cartridges", null, 0, 1, SculptorConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1818,6 +1842,7 @@ public class ConfigurationPackageImpl extends EPackageImpl implements Configurat
 		addEEnumLiteral(jhipsterApplicationTypeEEnum, JhipsterApplicationType.MICROSERVICE);
 		addEEnumLiteral(jhipsterApplicationTypeEEnum, JhipsterApplicationType.GATEWAY);
 		addEEnumLiteral(jhipsterApplicationTypeEEnum, JhipsterApplicationType.MONOLITH);
+		addEEnumLiteral(jhipsterApplicationTypeEEnum, JhipsterApplicationType.UAA);
 
 		// Create resource
 		createResource(eNS_URI);

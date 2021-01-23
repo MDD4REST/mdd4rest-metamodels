@@ -370,7 +370,7 @@ public class JdlPackageImpl extends EPackageImpl implements JdlPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getApplication_Deployments() {
+	public EReference getApplication_Dtos() {
 		return (EReference)applicationEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -380,7 +380,7 @@ public class JdlPackageImpl extends EPackageImpl implements JdlPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getApplication_Dtos() {
+	public EReference getApplication_Paginates() {
 		return (EReference)applicationEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -390,7 +390,7 @@ public class JdlPackageImpl extends EPackageImpl implements JdlPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getApplication_Paginates() {
+	public EReference getApplication_Services() {
 		return (EReference)applicationEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -400,7 +400,7 @@ public class JdlPackageImpl extends EPackageImpl implements JdlPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getApplication_Services() {
+	public EReference getApplication_Search() {
 		return (EReference)applicationEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -410,18 +410,8 @@ public class JdlPackageImpl extends EPackageImpl implements JdlPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getApplication_Search() {
-		return (EReference)applicationEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EAttribute getApplication_Name() {
-		return (EAttribute)applicationEClass.getEStructuralFeatures().get(7);
+		return (EAttribute)applicationEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -892,6 +882,16 @@ public class JdlPackageImpl extends EPackageImpl implements JdlPackage {
 	@Override
 	public EReference getJDL_Search() {
 		return (EReference)jdlEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getJDL_Deployments() {
+		return (EReference)jdlEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -1406,7 +1406,6 @@ public class JdlPackageImpl extends EPackageImpl implements JdlPackage {
 		applicationEClass = createEClass(APPLICATION);
 		createEReference(applicationEClass, APPLICATION__CONFIG);
 		createEReference(applicationEClass, APPLICATION__ENTITIES);
-		createEReference(applicationEClass, APPLICATION__DEPLOYMENTS);
 		createEReference(applicationEClass, APPLICATION__DTOS);
 		createEReference(applicationEClass, APPLICATION__PAGINATES);
 		createEReference(applicationEClass, APPLICATION__SERVICES);
@@ -1465,6 +1464,7 @@ public class JdlPackageImpl extends EPackageImpl implements JdlPackage {
 		createEReference(jdlEClass, JDL__DTO);
 		createEReference(jdlEClass, JDL__SERVICE);
 		createEReference(jdlEClass, JDL__SEARCH);
+		createEReference(jdlEClass, JDL__DEPLOYMENTS);
 
 		deploymentEClass = createEClass(DEPLOYMENT);
 		createEAttribute(deploymentEClass, DEPLOYMENT__DEPLOYMENT_TYPE);
@@ -1561,7 +1561,6 @@ public class JdlPackageImpl extends EPackageImpl implements JdlPackage {
 		initEClass(applicationEClass, Application.class, "Application", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getApplication_Config(), this.getConfig(), this.getConfig_Application(), "config", null, 1, 1, Application.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getApplication_Entities(), this.getEntity(), null, "entities", null, 0, -1, Application.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getApplication_Deployments(), this.getDeployment(), this.getDeployment_Application(), "deployments", null, 0, -1, Application.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getApplication_Dtos(), this.getDTO(), null, "dtos", null, 0, -1, Application.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getApplication_Paginates(), this.getPaginate(), null, "paginates", null, 0, -1, Application.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getApplication_Services(), this.getService(), null, "services", null, 0, -1, Application.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1620,6 +1619,7 @@ public class JdlPackageImpl extends EPackageImpl implements JdlPackage {
 		initEReference(getJDL_Dto(), this.getDTO(), null, "dto", null, 0, -1, com.github.icelyframework.jdl.JDL.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getJDL_Service(), this.getService(), null, "service", null, 0, -1, com.github.icelyframework.jdl.JDL.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getJDL_Search(), this.getSearch(), null, "search", null, 0, -1, com.github.icelyframework.jdl.JDL.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getJDL_Deployments(), this.getDeployment(), this.getDeployment_Application(), "deployments", null, 0, 1, com.github.icelyframework.jdl.JDL.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(deploymentEClass, Deployment.class, "Deployment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDeployment_DeploymentType(), this.getDeploymentType(), "deploymentType", null, 0, 1, Deployment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1630,7 +1630,7 @@ public class JdlPackageImpl extends EPackageImpl implements JdlPackage {
 		initEAttribute(getDeployment_Monitoring(), ecorePackage.getEBoolean(), "monitoring", null, 0, 1, Deployment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDeployment_GatewayType(), this.getGatewayType(), "gatewayType", null, 0, 1, Deployment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDeployment_KubernetesServiceType(), ecorePackage.getEString(), "kubernetesServiceType", null, 0, 1, Deployment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDeployment_Application(), this.getApplication(), this.getApplication_Deployments(), "application", null, 1, 1, Deployment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDeployment_Application(), this.getJDL(), this.getJDL_Deployments(), "application", null, 1, 1, Deployment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(unidirectionalRelationshipEClass, UnidirectionalRelationship.class, "UnidirectionalRelationship", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getUnidirectionalRelationship_ToEntity(), this.getEntity(), null, "toEntity", null, 1, 1, UnidirectionalRelationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1667,6 +1667,7 @@ public class JdlPackageImpl extends EPackageImpl implements JdlPackage {
 		addEEnumLiteral(applicationTypeEEnum, ApplicationType.MICROSERVICE);
 		addEEnumLiteral(applicationTypeEEnum, ApplicationType.GATEWAY);
 		addEEnumLiteral(applicationTypeEEnum, ApplicationType.MONOLITH);
+		addEEnumLiteral(applicationTypeEEnum, ApplicationType.UAA);
 
 		initEEnum(databaseTypeEEnum, DatabaseType.class, "DatabaseType");
 		addEEnumLiteral(databaseTypeEEnum, DatabaseType.SQL);

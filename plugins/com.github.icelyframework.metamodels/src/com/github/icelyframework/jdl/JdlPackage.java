@@ -85,22 +85,13 @@ public interface JdlPackage extends EPackage {
 	int APPLICATION__ENTITIES = 1;
 
 	/**
-	 * The feature id for the '<em><b>Deployments</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APPLICATION__DEPLOYMENTS = 2;
-
-	/**
 	 * The feature id for the '<em><b>Dtos</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APPLICATION__DTOS = 3;
+	int APPLICATION__DTOS = 2;
 
 	/**
 	 * The feature id for the '<em><b>Paginates</b></em>' reference list.
@@ -109,7 +100,7 @@ public interface JdlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APPLICATION__PAGINATES = 4;
+	int APPLICATION__PAGINATES = 3;
 
 	/**
 	 * The feature id for the '<em><b>Services</b></em>' reference list.
@@ -118,7 +109,7 @@ public interface JdlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APPLICATION__SERVICES = 5;
+	int APPLICATION__SERVICES = 4;
 
 	/**
 	 * The feature id for the '<em><b>Search</b></em>' reference list.
@@ -127,7 +118,7 @@ public interface JdlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APPLICATION__SEARCH = 6;
+	int APPLICATION__SEARCH = 5;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -136,7 +127,7 @@ public interface JdlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APPLICATION__NAME = 7;
+	int APPLICATION__NAME = 6;
 
 	/**
 	 * The number of structural features of the '<em>Application</em>' class.
@@ -145,7 +136,7 @@ public interface JdlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APPLICATION_FEATURE_COUNT = 8;
+	int APPLICATION_FEATURE_COUNT = 7;
 
 	/**
 	 * The meta object id for the '{@link com.github.icelyframework.jdl.impl.ConfigImpl <em>Config</em>}' class.
@@ -622,13 +613,22 @@ public interface JdlPackage extends EPackage {
 	int JDL__SEARCH = 6;
 
 	/**
+	 * The feature id for the '<em><b>Deployments</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JDL__DEPLOYMENTS = 7;
+
+	/**
 	 * The number of structural features of the '<em>JDL</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int JDL_FEATURE_COUNT = 7;
+	int JDL_FEATURE_COUNT = 8;
 
 	/**
 	 * The meta object id for the '{@link com.github.icelyframework.jdl.impl.DeploymentImpl <em>Deployment</em>}' class.
@@ -713,7 +713,7 @@ public interface JdlPackage extends EPackage {
 	int DEPLOYMENT__KUBERNETES_SERVICE_TYPE = 7;
 
 	/**
-	 * The feature id for the '<em><b>Application</b></em>' container reference.
+	 * The feature id for the '<em><b>Application</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1273,17 +1273,6 @@ public interface JdlPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getApplication_Entities();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link com.github.icelyframework.jdl.Application#getDeployments <em>Deployments</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Deployments</em>'.
-	 * @see com.github.icelyframework.jdl.Application#getDeployments()
-	 * @see #getApplication()
-	 * @generated
-	 */
-	EReference getApplication_Deployments();
 
 	/**
 	 * Returns the meta object for the reference list '{@link com.github.icelyframework.jdl.Application#getDtos <em>Dtos</em>}'.
@@ -1852,6 +1841,17 @@ public interface JdlPackage extends EPackage {
 	EReference getJDL_Search();
 
 	/**
+	 * Returns the meta object for the reference '{@link com.github.icelyframework.jdl.JDL#getDeployments <em>Deployments</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Deployments</em>'.
+	 * @see com.github.icelyframework.jdl.JDL#getDeployments()
+	 * @see #getJDL()
+	 * @generated
+	 */
+	EReference getJDL_Deployments();
+
+	/**
 	 * Returns the meta object for class '{@link com.github.icelyframework.jdl.Deployment <em>Deployment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1950,10 +1950,10 @@ public interface JdlPackage extends EPackage {
 	EAttribute getDeployment_KubernetesServiceType();
 
 	/**
-	 * Returns the meta object for the container reference '{@link com.github.icelyframework.jdl.Deployment#getApplication <em>Application</em>}'.
+	 * Returns the meta object for the reference '{@link com.github.icelyframework.jdl.Deployment#getApplication <em>Application</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Application</em>'.
+	 * @return the meta object for the reference '<em>Application</em>'.
 	 * @see com.github.icelyframework.jdl.Deployment#getApplication()
 	 * @see #getDeployment()
 	 * @generated
@@ -2403,14 +2403,6 @@ public interface JdlPackage extends EPackage {
 		EReference APPLICATION__ENTITIES = eINSTANCE.getApplication_Entities();
 
 		/**
-		 * The meta object literal for the '<em><b>Deployments</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference APPLICATION__DEPLOYMENTS = eINSTANCE.getApplication_Deployments();
-
-		/**
 		 * The meta object literal for the '<em><b>Dtos</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2839,6 +2831,14 @@ public interface JdlPackage extends EPackage {
 		EReference JDL__SEARCH = eINSTANCE.getJDL_Search();
 
 		/**
+		 * The meta object literal for the '<em><b>Deployments</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference JDL__DEPLOYMENTS = eINSTANCE.getJDL_Deployments();
+
+		/**
 		 * The meta object literal for the '{@link com.github.icelyframework.jdl.impl.DeploymentImpl <em>Deployment</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2913,7 +2913,7 @@ public interface JdlPackage extends EPackage {
 		EAttribute DEPLOYMENT__KUBERNETES_SERVICE_TYPE = eINSTANCE.getDeployment_KubernetesServiceType();
 
 		/**
-		 * The meta object literal for the '<em><b>Application</b></em>' container reference feature.
+		 * The meta object literal for the '<em><b>Application</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

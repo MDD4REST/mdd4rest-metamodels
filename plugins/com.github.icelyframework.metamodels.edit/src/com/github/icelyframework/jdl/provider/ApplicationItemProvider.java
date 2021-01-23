@@ -218,7 +218,6 @@ public class ApplicationItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(JdlPackage.Literals.APPLICATION__CONFIG);
-			childrenFeatures.add(JdlPackage.Literals.APPLICATION__DEPLOYMENTS);
 		}
 		return childrenFeatures;
 	}
@@ -278,7 +277,6 @@ public class ApplicationItemProvider
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case JdlPackage.APPLICATION__CONFIG:
-			case JdlPackage.APPLICATION__DEPLOYMENTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -300,11 +298,6 @@ public class ApplicationItemProvider
 			(createChildParameter
 				(JdlPackage.Literals.APPLICATION__CONFIG,
 				 JdlFactory.eINSTANCE.createConfig()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(JdlPackage.Literals.APPLICATION__DEPLOYMENTS,
-				 JdlFactory.eINSTANCE.createDeployment()));
 	}
 
 	/**

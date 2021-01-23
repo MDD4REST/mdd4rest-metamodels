@@ -121,12 +121,14 @@ public interface Application extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Config</b></em>' containment reference.
+	 * It is bidirectional and its opposite is '{@link com.github.icelyframework.configuration.ApplicationConfig#getApplication <em>Application</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Config</em>' containment reference.
 	 * @see #setConfig(ApplicationConfig)
 	 * @see com.github.icelyframework.configuration.ConfigurationPackage#getApplication_Config()
-	 * @model containment="true" required="true"
+	 * @see com.github.icelyframework.configuration.ApplicationConfig#getApplication
+	 * @model opposite="application" containment="true" required="true"
 	 * @generated
 	 */
 	ApplicationConfig getConfig();

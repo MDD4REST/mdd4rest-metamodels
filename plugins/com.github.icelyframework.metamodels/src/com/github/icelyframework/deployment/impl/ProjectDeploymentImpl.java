@@ -5,6 +5,7 @@ package com.github.icelyframework.deployment.impl;
 import com.github.icelyframework.deployment.DeploymentPackage;
 import com.github.icelyframework.deployment.DeploymentType;
 import com.github.icelyframework.deployment.GatewayType;
+import com.github.icelyframework.deployment.Project;
 import com.github.icelyframework.deployment.ProjectDeployment;
 import com.github.icelyframework.deployment.ServiceDiscoveryType;
 
@@ -12,14 +13,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 
 /**
  * <!-- begin-user-doc -->
@@ -37,6 +41,7 @@ import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
  *   <li>{@link com.github.icelyframework.deployment.impl.ProjectDeploymentImpl#getAppsFolders <em>Apps Folders</em>}</li>
  *   <li>{@link com.github.icelyframework.deployment.impl.ProjectDeploymentImpl#isMonitoring <em>Monitoring</em>}</li>
  *   <li>{@link com.github.icelyframework.deployment.impl.ProjectDeploymentImpl#getKubernetesServiceType <em>Kubernetes Service Type</em>}</li>
+ *   <li>{@link com.github.icelyframework.deployment.impl.ProjectDeploymentImpl#getProject <em>Project</em>}</li>
  * </ul>
  *
  * @generated
@@ -391,6 +396,93 @@ public class ProjectDeploymentImpl extends EObjectImpl implements ProjectDeploym
 	 * @generated
 	 */
 	@Override
+	public Project getProject() {
+		if (eContainerFeatureID() != DeploymentPackage.PROJECT_DEPLOYMENT__PROJECT) return null;
+		return (Project)eInternalContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetProject(Project newProject, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newProject, DeploymentPackage.PROJECT_DEPLOYMENT__PROJECT, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setProject(Project newProject) {
+		if (newProject != eInternalContainer() || (eContainerFeatureID() != DeploymentPackage.PROJECT_DEPLOYMENT__PROJECT && newProject != null)) {
+			if (EcoreUtil.isAncestor(this, newProject))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newProject != null)
+				msgs = ((InternalEObject)newProject).eInverseAdd(this, DeploymentPackage.PROJECT__DEPLOYMENT, Project.class, msgs);
+			msgs = basicSetProject(newProject, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, DeploymentPackage.PROJECT_DEPLOYMENT__PROJECT, newProject, newProject));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case DeploymentPackage.PROJECT_DEPLOYMENT__PROJECT:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetProject((Project)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case DeploymentPackage.PROJECT_DEPLOYMENT__PROJECT:
+				return basicSetProject(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+			case DeploymentPackage.PROJECT_DEPLOYMENT__PROJECT:
+				return eInternalContainer().eInverseRemove(this, DeploymentPackage.PROJECT__DEPLOYMENT, Project.class, msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case DeploymentPackage.PROJECT_DEPLOYMENT__DOCKER_REPOSITORY_NAME:
@@ -409,6 +501,8 @@ public class ProjectDeploymentImpl extends EObjectImpl implements ProjectDeploym
 				return isMonitoring();
 			case DeploymentPackage.PROJECT_DEPLOYMENT__KUBERNETES_SERVICE_TYPE:
 				return getKubernetesServiceType();
+			case DeploymentPackage.PROJECT_DEPLOYMENT__PROJECT:
+				return getProject();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -447,6 +541,9 @@ public class ProjectDeploymentImpl extends EObjectImpl implements ProjectDeploym
 			case DeploymentPackage.PROJECT_DEPLOYMENT__KUBERNETES_SERVICE_TYPE:
 				setKubernetesServiceType((String)newValue);
 				return;
+			case DeploymentPackage.PROJECT_DEPLOYMENT__PROJECT:
+				setProject((Project)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -483,6 +580,9 @@ public class ProjectDeploymentImpl extends EObjectImpl implements ProjectDeploym
 			case DeploymentPackage.PROJECT_DEPLOYMENT__KUBERNETES_SERVICE_TYPE:
 				setKubernetesServiceType(KUBERNETES_SERVICE_TYPE_EDEFAULT);
 				return;
+			case DeploymentPackage.PROJECT_DEPLOYMENT__PROJECT:
+				setProject((Project)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -511,6 +611,8 @@ public class ProjectDeploymentImpl extends EObjectImpl implements ProjectDeploym
 				return monitoring != MONITORING_EDEFAULT;
 			case DeploymentPackage.PROJECT_DEPLOYMENT__KUBERNETES_SERVICE_TYPE:
 				return KUBERNETES_SERVICE_TYPE_EDEFAULT == null ? kubernetesServiceType != null : !KUBERNETES_SERVICE_TYPE_EDEFAULT.equals(kubernetesServiceType);
+			case DeploymentPackage.PROJECT_DEPLOYMENT__PROJECT:
+				return getProject() != null;
 		}
 		return super.eIsSet(featureID);
 	}

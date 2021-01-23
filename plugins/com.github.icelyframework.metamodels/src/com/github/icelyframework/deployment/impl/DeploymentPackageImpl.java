@@ -249,6 +249,16 @@ public class DeploymentPackageImpl extends EPackageImpl implements DeploymentPac
 	 * @generated
 	 */
 	@Override
+	public EReference getApplicationDeployment_Application() {
+		return (EReference)applicationDeploymentEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getProjectDeployment() {
 		return projectDeploymentEClass;
 	}
@@ -331,6 +341,16 @@ public class DeploymentPackageImpl extends EPackageImpl implements DeploymentPac
 	@Override
 	public EAttribute getProjectDeployment_KubernetesServiceType() {
 		return (EAttribute)projectDeploymentEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getProjectDeployment_Project() {
+		return (EReference)projectDeploymentEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -541,6 +561,7 @@ public class DeploymentPackageImpl extends EPackageImpl implements DeploymentPac
 		createEAttribute(applicationDeploymentEClass, APPLICATION_DEPLOYMENT__DB_PORT);
 		createEAttribute(applicationDeploymentEClass, APPLICATION_DEPLOYMENT__DB_TYPE);
 		createEAttribute(applicationDeploymentEClass, APPLICATION_DEPLOYMENT__SERVER_TYPE);
+		createEReference(applicationDeploymentEClass, APPLICATION_DEPLOYMENT__APPLICATION);
 
 		projectDeploymentEClass = createEClass(PROJECT_DEPLOYMENT);
 		createEAttribute(projectDeploymentEClass, PROJECT_DEPLOYMENT__DOCKER_REPOSITORY_NAME);
@@ -551,6 +572,7 @@ public class DeploymentPackageImpl extends EPackageImpl implements DeploymentPac
 		createEAttribute(projectDeploymentEClass, PROJECT_DEPLOYMENT__APPS_FOLDERS);
 		createEAttribute(projectDeploymentEClass, PROJECT_DEPLOYMENT__MONITORING);
 		createEAttribute(projectDeploymentEClass, PROJECT_DEPLOYMENT__KUBERNETES_SERVICE_TYPE);
+		createEReference(projectDeploymentEClass, PROJECT_DEPLOYMENT__PROJECT);
 
 		projectEClass = createEClass(PROJECT);
 		createEReference(projectEClass, PROJECT__APPLICATIONS);
@@ -613,6 +635,7 @@ public class DeploymentPackageImpl extends EPackageImpl implements DeploymentPac
 		initEAttribute(getApplicationDeployment_DbPort(), ecorePackage.getEString(), "dbPort", null, 0, 1, ApplicationDeployment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getApplicationDeployment_DbType(), this.getDatabaseType(), "dbType", null, 0, 1, ApplicationDeployment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getApplicationDeployment_ServerType(), ecorePackage.getEString(), "serverType", null, 0, 1, ApplicationDeployment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getApplicationDeployment_Application(), this.getApplication(), this.getApplication_Deployment(), "application", null, 1, 1, ApplicationDeployment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(projectDeploymentEClass, ProjectDeployment.class, "ProjectDeployment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getProjectDeployment_DockerRepositoryName(), ecorePackage.getEString(), "dockerRepositoryName", null, 0, 1, ProjectDeployment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -623,20 +646,21 @@ public class DeploymentPackageImpl extends EPackageImpl implements DeploymentPac
 		initEAttribute(getProjectDeployment_AppsFolders(), ecorePackage.getEString(), "appsFolders", null, 0, -1, ProjectDeployment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getProjectDeployment_Monitoring(), ecorePackage.getEBoolean(), "monitoring", null, 0, 1, ProjectDeployment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getProjectDeployment_KubernetesServiceType(), ecorePackage.getEString(), "kubernetesServiceType", null, 0, 1, ProjectDeployment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProjectDeployment_Project(), this.getProject(), this.getProject_Deployment(), "project", null, 1, 1, ProjectDeployment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(projectEClass, Project.class, "Project", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getProject_Applications(), this.getApplication(), this.getApplication_Project(), "applications", null, 0, -1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getProject_Name(), ecorePackage.getEString(), "name", null, 1, 1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getProject_BasePath(), ecorePackage.getEString(), "basePath", null, 0, 1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getProject_BasePackage(), ecorePackage.getEString(), "basePackage", null, 0, 1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProject_Deployment(), this.getProjectDeployment(), null, "deployment", null, 0, -1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProject_Deployment(), this.getProjectDeployment(), this.getProjectDeployment_Project(), "deployment", null, 0, -1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(applicationEClass, Application.class, "Application", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getApplication_Name(), ecorePackage.getEString(), "name", null, 1, 1, Application.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getApplication_Project(), this.getProject(), this.getProject_Applications(), "project", null, 1, 1, Application.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getApplication_BasePackage(), ecorePackage.getEString(), "basePackage", null, 0, 1, Application.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getApplication_ApplicationType(), this.getApplicationType(), "applicationType", null, 0, 1, Application.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getApplication_Deployment(), this.getApplicationDeployment(), null, "deployment", null, 0, -1, Application.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getApplication_Deployment(), this.getApplicationDeployment(), this.getApplicationDeployment_Application(), "deployment", null, 0, -1, Application.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(databaseTypeEEnum, DatabaseType.class, "DatabaseType");

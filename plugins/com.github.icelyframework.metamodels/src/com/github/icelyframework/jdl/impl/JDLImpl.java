@@ -4,6 +4,7 @@ package com.github.icelyframework.jdl.impl;
 
 import com.github.icelyframework.jdl.Application;
 import com.github.icelyframework.jdl.DTO;
+import com.github.icelyframework.jdl.Deployment;
 import com.github.icelyframework.jdl.Entity;
 import com.github.icelyframework.jdl.JDL;
 import com.github.icelyframework.jdl.JdlPackage;
@@ -13,6 +14,7 @@ import com.github.icelyframework.jdl.Service;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -20,6 +22,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
@@ -40,6 +43,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.github.icelyframework.jdl.impl.JDLImpl#getDto <em>Dto</em>}</li>
  *   <li>{@link com.github.icelyframework.jdl.impl.JDLImpl#getService <em>Service</em>}</li>
  *   <li>{@link com.github.icelyframework.jdl.impl.JDLImpl#getSearch <em>Search</em>}</li>
+ *   <li>{@link com.github.icelyframework.jdl.impl.JDLImpl#getDeployments <em>Deployments</em>}</li>
  * </ul>
  *
  * @generated
@@ -114,6 +118,16 @@ public class JDLImpl extends EObjectImpl implements JDL {
 	 * @ordered
 	 */
 	protected EList<Search> search;
+
+	/**
+	 * The cached value of the '{@link #getDeployments() <em>Deployments</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDeployments()
+	 * @generated
+	 * @ordered
+	 */
+	protected Deployment deployments;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -231,6 +245,84 @@ public class JDLImpl extends EObjectImpl implements JDL {
 	 * @generated
 	 */
 	@Override
+	public Deployment getDeployments() {
+		if (deployments != null && deployments.eIsProxy()) {
+			InternalEObject oldDeployments = (InternalEObject)deployments;
+			deployments = (Deployment)eResolveProxy(oldDeployments);
+			if (deployments != oldDeployments) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, JdlPackage.JDL__DEPLOYMENTS, oldDeployments, deployments));
+			}
+		}
+		return deployments;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Deployment basicGetDeployments() {
+		return deployments;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetDeployments(Deployment newDeployments, NotificationChain msgs) {
+		Deployment oldDeployments = deployments;
+		deployments = newDeployments;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, JdlPackage.JDL__DEPLOYMENTS, oldDeployments, newDeployments);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDeployments(Deployment newDeployments) {
+		if (newDeployments != deployments) {
+			NotificationChain msgs = null;
+			if (deployments != null)
+				msgs = ((InternalEObject)deployments).eInverseRemove(this, JdlPackage.DEPLOYMENT__APPLICATION, Deployment.class, msgs);
+			if (newDeployments != null)
+				msgs = ((InternalEObject)newDeployments).eInverseAdd(this, JdlPackage.DEPLOYMENT__APPLICATION, Deployment.class, msgs);
+			msgs = basicSetDeployments(newDeployments, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, JdlPackage.JDL__DEPLOYMENTS, newDeployments, newDeployments));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case JdlPackage.JDL__DEPLOYMENTS:
+				if (deployments != null)
+					msgs = ((InternalEObject)deployments).eInverseRemove(this, JdlPackage.DEPLOYMENT__APPLICATION, Deployment.class, msgs);
+				return basicSetDeployments((Deployment)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case JdlPackage.JDL__APPLICATIONS:
@@ -247,6 +339,8 @@ public class JDLImpl extends EObjectImpl implements JDL {
 				return ((InternalEList<?>)getService()).basicRemove(otherEnd, msgs);
 			case JdlPackage.JDL__SEARCH:
 				return ((InternalEList<?>)getSearch()).basicRemove(otherEnd, msgs);
+			case JdlPackage.JDL__DEPLOYMENTS:
+				return basicSetDeployments(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -273,6 +367,9 @@ public class JDLImpl extends EObjectImpl implements JDL {
 				return getService();
 			case JdlPackage.JDL__SEARCH:
 				return getSearch();
+			case JdlPackage.JDL__DEPLOYMENTS:
+				if (resolve) return getDeployments();
+				return basicGetDeployments();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -314,6 +411,9 @@ public class JDLImpl extends EObjectImpl implements JDL {
 				getSearch().clear();
 				getSearch().addAll((Collection<? extends Search>)newValue);
 				return;
+			case JdlPackage.JDL__DEPLOYMENTS:
+				setDeployments((Deployment)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -347,6 +447,9 @@ public class JDLImpl extends EObjectImpl implements JDL {
 			case JdlPackage.JDL__SEARCH:
 				getSearch().clear();
 				return;
+			case JdlPackage.JDL__DEPLOYMENTS:
+				setDeployments((Deployment)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -373,6 +476,8 @@ public class JDLImpl extends EObjectImpl implements JDL {
 				return service != null && !service.isEmpty();
 			case JdlPackage.JDL__SEARCH:
 				return search != null && !search.isEmpty();
+			case JdlPackage.JDL__DEPLOYMENTS:
+				return deployments != null;
 		}
 		return super.eIsSet(featureID);
 	}
