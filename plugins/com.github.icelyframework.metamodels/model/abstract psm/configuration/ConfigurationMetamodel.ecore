@@ -101,6 +101,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="skipClient" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="buildTool" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="authenticationType" eType="#//AuthenticationType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="applicationType" eType="#//JhipsterApplicationType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RESTOptions">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="spring_remoting_type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -206,5 +207,10 @@
     <eLiterals name="UAA" value="1"/>
     <eLiterals name="SESSION" value="2"/>
     <eLiterals name="OAUTH2" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="JhipsterApplicationType">
+    <eLiterals name="MICROSERVICE"/>
+    <eLiterals name="GATEWAY" value="1"/>
+    <eLiterals name="MONOLITH" value="2"/>
   </eClassifiers>
 </ecore:EPackage>

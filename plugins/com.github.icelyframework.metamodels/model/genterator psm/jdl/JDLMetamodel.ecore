@@ -3,11 +3,11 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="jdl" nsURI="http://github.com/icelyframework/jdl" nsPrefix="icely">
   <eClassifiers xsi:type="ecore:EClass" name="Application">
     <eStructuralFeatures xsi:type="ecore:EReference" name="config" lowerBound="1"
-        eType="#//Config" containment="true"/>
+        eType="#//Config" containment="true" eOpposite="#//Config/application"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="entities" upperBound="-1"
         eType="#//Entity"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="deployments" upperBound="-1"
-        eType="#//Deployment" containment="true"/>
+        eType="#//Deployment" containment="true" eOpposite="#//Deployment/application"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="dtos" upperBound="-1" eType="#//DTO"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="paginates" upperBound="-1"
         eType="#//Paginate"/>
@@ -36,6 +36,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="testFrameworks" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="authenticationType" eType="#//AuthenticationType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="cacheProvider" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="application" lowerBound="1"
+        eType="#//Application" eOpposite="#//Application/config"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Entity">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -114,6 +116,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="gatewayType" eType="#//GatewayType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="kubernetesServiceType"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="application" lowerBound="1"
+        eType="#//Application" eOpposite="#//Application/deployments"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="DeploymentType">
     <eLiterals name="DOCKER_COMPOSE"/>
