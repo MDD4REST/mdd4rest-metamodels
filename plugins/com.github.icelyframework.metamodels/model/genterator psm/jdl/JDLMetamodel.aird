@@ -4,7 +4,7 @@
     <semanticResources>JDLMetamodel.ecore</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_FiB4sKwcEeqaqLjgT5GnwA">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_GCVwcKwcEeqaqLjgT5GnwA" name="JDLMetamodel class diagram" repPath="#_GB_yMKwcEeqaqLjgT5GnwA" changeId="07146b94-bda6-43eb-85d0-97d5ca2ad21a">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_GCVwcKwcEeqaqLjgT5GnwA" name="JDLMetamodel class diagram" repPath="#_GB_yMKwcEeqaqLjgT5GnwA" changeId="1be03dd7-af38-4fbb-b3d7-586bbb08b202">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="JDLMetamodel.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -64,6 +64,10 @@
         <children xmi:type="notation:Node" xmi:id="_HvxioKwcEeqaqLjgT5GnwA" type="2003" element="_Hvo_wKwcEeqaqLjgT5GnwA">
           <children xmi:type="notation:Node" xmi:id="_HwIvAKwcEeqaqLjgT5GnwA" type="5007"/>
           <children xmi:type="notation:Node" xmi:id="_HwJ9IKwcEeqaqLjgT5GnwA" type="7004">
+            <children xmi:type="notation:Node" xmi:id="_AbFTEF1PEeucsM0lvqRC7w" type="3010" element="_AaxxEF1PEeucsM0lvqRC7w">
+              <styles xmi:type="notation:FontStyle" xmi:id="_AbFTEV1PEeucsM0lvqRC7w" fontColor="2697711" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_AbFTEl1PEeucsM0lvqRC7w"/>
+            </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_HwJ9IawcEeqaqLjgT5GnwA"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_HwJ9IqwcEeqaqLjgT5GnwA"/>
           </children>
@@ -1158,12 +1162,20 @@
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_fCS9waynEeqij7FhILCPzQ" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" backgroundColor="128,128,128" foregroundColor="128,128,128">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_Ca7D4V1PEeucsM0lvqRC7w" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" backgroundColor="128,128,128" foregroundColor="128,128,128">
         <customFeatures>backgroundColor</customFeatures>
         <customFeatures>foregroundColor</customFeatures>
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_AaxxEF1PEeucsM0lvqRC7w" name="name : EString" tooltipText="">
+        <target xmi:type="ecore:EAttribute" href="JDLMetamodel.ecore#//Application/name"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="JDLMetamodel.ecore#//Application/name"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_DvMINl1PEeucsM0lvqRC7w" labelAlignment="LEFT" description="_6_LvkKwcEeqaqLjgT5GnwA">
+          <labelFormat>bold</labelFormat>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+      </ownedElements>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_jzz1IKwcEeqaqLjgT5GnwA" name="Config" tooltipText="" incomingEdges="_RVkSkKyoEeqij7FhILCPzQ" width="12" height="10">
       <target xmi:type="ecore:EClass" href="JDLMetamodel.ecore#//Config"/>

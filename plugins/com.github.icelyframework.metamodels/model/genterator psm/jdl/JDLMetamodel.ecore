@@ -15,6 +15,7 @@
         eType="#//Service"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="search" upperBound="-1"
         eType="#//Search"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Config">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="baseName" lowerBound="1"
