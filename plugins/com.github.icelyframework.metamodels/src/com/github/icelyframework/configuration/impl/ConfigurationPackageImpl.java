@@ -6,6 +6,7 @@ import com.github.icelyframework.configuration.Application;
 import com.github.icelyframework.configuration.ApplicationConfig;
 import com.github.icelyframework.configuration.ApplicationType;
 import com.github.icelyframework.configuration.ArchitectureType;
+import com.github.icelyframework.configuration.AuthenticationType;
 import com.github.icelyframework.configuration.CacheOptions;
 import com.github.icelyframework.configuration.CascadeOptions;
 import com.github.icelyframework.configuration.ConfigurationFactory;
@@ -19,6 +20,7 @@ import com.github.icelyframework.configuration.GenerateOptions;
 import com.github.icelyframework.configuration.HibernateType;
 import com.github.icelyframework.configuration.JPAOptions;
 import com.github.icelyframework.configuration.JavaType;
+import com.github.icelyframework.configuration.JhipsterApplicationType;
 import com.github.icelyframework.configuration.JhipsterConfig;
 import com.github.icelyframework.configuration.PackageName;
 import com.github.icelyframework.configuration.Project;
@@ -187,6 +189,20 @@ public class ConfigurationPackageImpl extends EPackageImpl implements Configurat
 	 * @generated
 	 */
 	private EEnum databaseTypeEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum authenticationTypeEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum jhipsterApplicationTypeEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -645,6 +661,16 @@ public class ConfigurationPackageImpl extends EPackageImpl implements Configurat
 	 * @generated
 	 */
 	@Override
+	public EReference getSculptorConfig_Cacheoptions() {
+		return (EReference)sculptorConfigEClass.getEStructuralFeatures().get(20);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getJhipsterConfig() {
 		return jhipsterConfigEClass;
 	}
@@ -767,6 +793,26 @@ public class ConfigurationPackageImpl extends EPackageImpl implements Configurat
 	@Override
 	public EAttribute getJhipsterConfig_BuildTool() {
 		return (EAttribute)jhipsterConfigEClass.getEStructuralFeatures().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getJhipsterConfig_AuthenticationType() {
+		return (EAttribute)jhipsterConfigEClass.getEStructuralFeatures().get(12);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getJhipsterConfig_ApplicationType() {
+		return (EAttribute)jhipsterConfigEClass.getEStructuralFeatures().get(13);
 	}
 
 	/**
@@ -1395,6 +1441,26 @@ public class ConfigurationPackageImpl extends EPackageImpl implements Configurat
 	 * @generated
 	 */
 	@Override
+	public EEnum getAuthenticationType() {
+		return authenticationTypeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EEnum getJhipsterApplicationType() {
+		return jhipsterApplicationTypeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public ConfigurationFactory getConfigurationFactory() {
 		return (ConfigurationFactory)getEFactoryInstance();
 	}
@@ -1461,6 +1527,7 @@ public class ConfigurationPackageImpl extends EPackageImpl implements Configurat
 		createEReference(sculptorConfigEClass, SCULPTOR_CONFIG__JAVATYPES);
 		createEReference(sculptorConfigEClass, SCULPTOR_CONFIG__PACKAGENAMES);
 		createEReference(sculptorConfigEClass, SCULPTOR_CONFIG__DEFAULTBASECLASSNAMES);
+		createEReference(sculptorConfigEClass, SCULPTOR_CONFIG__CACHEOPTIONS);
 
 		jhipsterConfigEClass = createEClass(JHIPSTER_CONFIG);
 		createEAttribute(jhipsterConfigEClass, JHIPSTER_CONFIG__DATABASE_TYPE);
@@ -1475,6 +1542,8 @@ public class ConfigurationPackageImpl extends EPackageImpl implements Configurat
 		createEAttribute(jhipsterConfigEClass, JHIPSTER_CONFIG__ENABLE_HIBERNATE_CACHE);
 		createEAttribute(jhipsterConfigEClass, JHIPSTER_CONFIG__SKIP_CLIENT);
 		createEAttribute(jhipsterConfigEClass, JHIPSTER_CONFIG__BUILD_TOOL);
+		createEAttribute(jhipsterConfigEClass, JHIPSTER_CONFIG__AUTHENTICATION_TYPE);
+		createEAttribute(jhipsterConfigEClass, JHIPSTER_CONFIG__APPLICATION_TYPE);
 
 		restOptionsEClass = createEClass(REST_OPTIONS);
 		createEAttribute(restOptionsEClass, REST_OPTIONS__SPRING_REMOTING_TYPE);
@@ -1551,6 +1620,8 @@ public class ConfigurationPackageImpl extends EPackageImpl implements Configurat
 		applicationTypeEEnum = createEEnum(APPLICATION_TYPE);
 		architectureTypeEEnum = createEEnum(ARCHITECTURE_TYPE);
 		databaseTypeEEnum = createEEnum(DATABASE_TYPE);
+		authenticationTypeEEnum = createEEnum(AUTHENTICATION_TYPE);
+		jhipsterApplicationTypeEEnum = createEEnum(JHIPSTER_APPLICATION_TYPE);
 	}
 
 	/**
@@ -1585,7 +1656,7 @@ public class ConfigurationPackageImpl extends EPackageImpl implements Configurat
 		jhipsterConfigEClass.getESuperTypes().add(this.getApplicationConfig());
 
 		// Initialize classes and features; add operations and parameters
-		initEClass(applicationConfigEClass, ApplicationConfig.class, "ApplicationConfig", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(applicationConfigEClass, ApplicationConfig.class, "ApplicationConfig", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getApplicationConfig_BaseName(), ecorePackage.getEString(), "baseName", null, 1, 1, ApplicationConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getApplicationConfig_ServicePort(), ecorePackage.getEString(), "servicePort", null, 0, 1, ApplicationConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1628,6 +1699,7 @@ public class ConfigurationPackageImpl extends EPackageImpl implements Configurat
 		initEReference(getSculptorConfig_Javatypes(), this.getJavaType(), null, "javatypes", null, 0, -1, SculptorConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSculptorConfig_Packagenames(), this.getPackageName(), null, "packagenames", null, 0, -1, SculptorConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSculptorConfig_Defaultbaseclassnames(), this.getDefaultBaseClassName(), null, "defaultbaseclassnames", null, 0, -1, SculptorConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSculptorConfig_Cacheoptions(), this.getCacheOptions(), null, "cacheoptions", null, 0, -1, SculptorConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(jhipsterConfigEClass, JhipsterConfig.class, "JhipsterConfig", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getJhipsterConfig_DatabaseType(), this.getDatabaseType(), "databaseType", null, 0, 1, JhipsterConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1642,6 +1714,8 @@ public class ConfigurationPackageImpl extends EPackageImpl implements Configurat
 		initEAttribute(getJhipsterConfig_EnableHibernateCache(), ecorePackage.getEBoolean(), "enableHibernateCache", null, 0, 1, JhipsterConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getJhipsterConfig_SkipClient(), ecorePackage.getEBoolean(), "skipClient", null, 0, 1, JhipsterConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getJhipsterConfig_BuildTool(), ecorePackage.getEString(), "buildTool", null, 0, 1, JhipsterConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getJhipsterConfig_AuthenticationType(), this.getAuthenticationType(), "authenticationType", null, 0, 1, JhipsterConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getJhipsterConfig_ApplicationType(), this.getJhipsterApplicationType(), "applicationType", null, 0, 1, JhipsterConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(restOptionsEClass, RESTOptions.class, "RESTOptions", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRESTOptions_Spring_remoting_type(), ecorePackage.getEString(), "spring_remoting_type", null, 0, 1, RESTOptions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1733,6 +1807,17 @@ public class ConfigurationPackageImpl extends EPackageImpl implements Configurat
 		addEEnumLiteral(databaseTypeEEnum, DatabaseType.CASSANDRA);
 		addEEnumLiteral(databaseTypeEEnum, DatabaseType.COUCHBASE);
 		addEEnumLiteral(databaseTypeEEnum, DatabaseType.NO);
+
+		initEEnum(authenticationTypeEEnum, AuthenticationType.class, "AuthenticationType");
+		addEEnumLiteral(authenticationTypeEEnum, AuthenticationType.JWT);
+		addEEnumLiteral(authenticationTypeEEnum, AuthenticationType.UAA);
+		addEEnumLiteral(authenticationTypeEEnum, AuthenticationType.SESSION);
+		addEEnumLiteral(authenticationTypeEEnum, AuthenticationType.OAUTH2);
+
+		initEEnum(jhipsterApplicationTypeEEnum, JhipsterApplicationType.class, "JhipsterApplicationType");
+		addEEnumLiteral(jhipsterApplicationTypeEEnum, JhipsterApplicationType.MICROSERVICE);
+		addEEnumLiteral(jhipsterApplicationTypeEEnum, JhipsterApplicationType.GATEWAY);
+		addEEnumLiteral(jhipsterApplicationTypeEEnum, JhipsterApplicationType.MONOLITH);
 
 		// Create resource
 		createResource(eNS_URI);

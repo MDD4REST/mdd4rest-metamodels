@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  *
  * @generated
  */
-public class ApplicationConfigImpl extends EObjectImpl implements ApplicationConfig {
+public abstract class ApplicationConfigImpl extends EObjectImpl implements ApplicationConfig {
 	/**
 	 * The default value of the '{@link #getBaseName() <em>Base Name</em>}' attribute.
 	 * <!-- begin-user-doc -->

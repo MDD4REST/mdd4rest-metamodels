@@ -57,6 +57,8 @@ public class JhipsterConfigItemProvider extends ApplicationConfigItemProvider {
 			addEnableHibernateCachePropertyDescriptor(object);
 			addSkipClientPropertyDescriptor(object);
 			addBuildToolPropertyDescriptor(object);
+			addAuthenticationTypePropertyDescriptor(object);
+			addApplicationTypePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -326,6 +328,50 @@ public class JhipsterConfigItemProvider extends ApplicationConfigItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Authentication Type feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAuthenticationTypePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_JhipsterConfig_authenticationType_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_JhipsterConfig_authenticationType_feature", "_UI_JhipsterConfig_type"),
+				 ConfigurationPackage.Literals.JHIPSTER_CONFIG__AUTHENTICATION_TYPE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Application Type feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addApplicationTypePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_JhipsterConfig_applicationType_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_JhipsterConfig_applicationType_feature", "_UI_JhipsterConfig_type"),
+				 ConfigurationPackage.Literals.JHIPSTER_CONFIG__APPLICATION_TYPE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns JhipsterConfig.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -375,6 +421,8 @@ public class JhipsterConfigItemProvider extends ApplicationConfigItemProvider {
 			case ConfigurationPackage.JHIPSTER_CONFIG__ENABLE_HIBERNATE_CACHE:
 			case ConfigurationPackage.JHIPSTER_CONFIG__SKIP_CLIENT:
 			case ConfigurationPackage.JHIPSTER_CONFIG__BUILD_TOOL:
+			case ConfigurationPackage.JHIPSTER_CONFIG__AUTHENTICATION_TYPE:
+			case ConfigurationPackage.JHIPSTER_CONFIG__APPLICATION_TYPE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

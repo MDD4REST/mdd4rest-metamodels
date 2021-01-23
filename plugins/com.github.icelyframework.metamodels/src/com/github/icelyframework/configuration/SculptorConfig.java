@@ -33,6 +33,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link com.github.icelyframework.configuration.SculptorConfig#getJavatypes <em>Javatypes</em>}</li>
  *   <li>{@link com.github.icelyframework.configuration.SculptorConfig#getPackagenames <em>Packagenames</em>}</li>
  *   <li>{@link com.github.icelyframework.configuration.SculptorConfig#getDefaultbaseclassnames <em>Defaultbaseclassnames</em>}</li>
+ *   <li>{@link com.github.icelyframework.configuration.SculptorConfig#getCacheoptions <em>Cacheoptions</em>}</li>
  * </ul>
  *
  * @see com.github.icelyframework.configuration.ConfigurationPackage#getSculptorConfig()
@@ -399,5 +400,17 @@ public interface SculptorConfig extends ApplicationConfig {
 	 * @generated
 	 */
 	EList<DefaultBaseClassName> getDefaultbaseclassnames();
+
+	/**
+	 * Returns the value of the '<em><b>Cacheoptions</b></em>' containment reference list.
+	 * The list contents are of type {@link com.github.icelyframework.configuration.CacheOptions}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Cacheoptions</em>' containment reference list.
+	 * @see com.github.icelyframework.configuration.ConfigurationPackage#getSculptorConfig_Cacheoptions()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<CacheOptions> getCacheoptions();
 
 } // SculptorConfig

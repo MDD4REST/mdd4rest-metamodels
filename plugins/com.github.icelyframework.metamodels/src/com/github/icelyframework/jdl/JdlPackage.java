@@ -103,7 +103,7 @@ public interface JdlPackage extends EPackage {
 	int APPLICATION__DTOS = 3;
 
 	/**
-	 * The feature id for the '<em><b>Paginates</b></em>' reference.
+	 * The feature id for the '<em><b>Paginates</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -112,7 +112,7 @@ public interface JdlPackage extends EPackage {
 	int APPLICATION__PAGINATES = 4;
 
 	/**
-	 * The feature id for the '<em><b>Services</b></em>' reference.
+	 * The feature id for the '<em><b>Services</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -121,13 +121,31 @@ public interface JdlPackage extends EPackage {
 	int APPLICATION__SERVICES = 5;
 
 	/**
+	 * The feature id for the '<em><b>Search</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLICATION__SEARCH = 6;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLICATION__NAME = 7;
+
+	/**
 	 * The number of structural features of the '<em>Application</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APPLICATION_FEATURE_COUNT = 6;
+	int APPLICATION_FEATURE_COUNT = 8;
 
 	/**
 	 * The meta object id for the '{@link com.github.icelyframework.jdl.impl.ConfigImpl <em>Config</em>}' class.
@@ -293,13 +311,22 @@ public interface JdlPackage extends EPackage {
 	int CONFIG__CACHE_PROVIDER = 16;
 
 	/**
+	 * The feature id for the '<em><b>Application</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONFIG__APPLICATION = 17;
+
+	/**
 	 * The number of structural features of the '<em>Config</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONFIG_FEATURE_COUNT = 17;
+	int CONFIG_FEATURE_COUNT = 18;
 
 	/**
 	 * The meta object id for the '{@link com.github.icelyframework.jdl.impl.EntityImpl <em>Entity</em>}' class.
@@ -586,13 +613,22 @@ public interface JdlPackage extends EPackage {
 	int JDL__SERVICE = 5;
 
 	/**
+	 * The feature id for the '<em><b>Search</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JDL__SEARCH = 6;
+
+	/**
 	 * The number of structural features of the '<em>JDL</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int JDL_FEATURE_COUNT = 6;
+	int JDL_FEATURE_COUNT = 7;
 
 	/**
 	 * The meta object id for the '{@link com.github.icelyframework.jdl.impl.DeploymentImpl <em>Deployment</em>}' class.
@@ -677,13 +713,22 @@ public interface JdlPackage extends EPackage {
 	int DEPLOYMENT__KUBERNETES_SERVICE_TYPE = 7;
 
 	/**
+	 * The feature id for the '<em><b>Application</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEPLOYMENT__APPLICATION = 8;
+
+	/**
 	 * The number of structural features of the '<em>Deployment</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DEPLOYMENT_FEATURE_COUNT = 8;
+	int DEPLOYMENT_FEATURE_COUNT = 9;
 
 	/**
 	 * The meta object id for the '{@link com.github.icelyframework.jdl.impl.UnidirectionalRelationshipImpl <em>Unidirectional Relationship</em>}' class.
@@ -898,13 +943,22 @@ public interface JdlPackage extends EPackage {
 	int PAGINATE = 12;
 
 	/**
-	 * The feature id for the '<em><b>Entity</b></em>' reference.
+	 * The feature id for the '<em><b>Entities</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PAGINATE__ENTITY = 0;
+	int PAGINATE__ENTITIES = 0;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAGINATE__VALUE = 1;
 
 	/**
 	 * The number of structural features of the '<em>Paginate</em>' class.
@@ -913,7 +967,7 @@ public interface JdlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PAGINATE_FEATURE_COUNT = 1;
+	int PAGINATE_FEATURE_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link com.github.icelyframework.jdl.impl.DTOImpl <em>DTO</em>}' class.
@@ -926,7 +980,7 @@ public interface JdlPackage extends EPackage {
 	int DTO = 13;
 
 	/**
-	 * The feature id for the '<em><b>Entities</b></em>' reference.
+	 * The feature id for the '<em><b>Entities</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -935,13 +989,22 @@ public interface JdlPackage extends EPackage {
 	int DTO__ENTITIES = 0;
 
 	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DTO__VALUE = 1;
+
+	/**
 	 * The number of structural features of the '<em>DTO</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DTO_FEATURE_COUNT = 1;
+	int DTO_FEATURE_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link com.github.icelyframework.jdl.impl.ServiceImpl <em>Service</em>}' class.
@@ -963,13 +1026,22 @@ public interface JdlPackage extends EPackage {
 	int SERVICE__ENTITIES = 0;
 
 	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVICE__VALUE = 1;
+
+	/**
 	 * The number of structural features of the '<em>Service</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_FEATURE_COUNT = 1;
+	int SERVICE_FEATURE_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link com.github.icelyframework.jdl.impl.SearchImpl <em>Search</em>}' class.
@@ -982,13 +1054,31 @@ public interface JdlPackage extends EPackage {
 	int SEARCH = 15;
 
 	/**
+	 * The feature id for the '<em><b>Entities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEARCH__ENTITIES = 0;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEARCH__VALUE = 1;
+
+	/**
 	 * The number of structural features of the '<em>Search</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SEARCH_FEATURE_COUNT = 0;
+	int SEARCH_FEATURE_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link com.github.icelyframework.jdl.ApplicationType <em>Application Type</em>}' enum.
@@ -1122,6 +1212,37 @@ public interface JdlPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link com.github.icelyframework.jdl.ServiceValue <em>Service Value</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.github.icelyframework.jdl.ServiceValue
+	 * @see com.github.icelyframework.jdl.impl.JdlPackageImpl#getServiceValue()
+	 * @generated
+	 */
+	int SERVICE_VALUE = 29;
+
+	/**
+	 * The meta object id for the '{@link com.github.icelyframework.jdl.DTOValue <em>DTO Value</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.github.icelyframework.jdl.DTOValue
+	 * @see com.github.icelyframework.jdl.impl.JdlPackageImpl#getDTOValue()
+	 * @generated
+	 */
+	int DTO_VALUE = 30;
+
+	/**
+	 * The meta object id for the '{@link com.github.icelyframework.jdl.PaginationValue <em>Pagination Value</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.github.icelyframework.jdl.PaginationValue
+	 * @see com.github.icelyframework.jdl.impl.JdlPackageImpl#getPaginationValue()
+	 * @generated
+	 */
+	int PAGINATION_VALUE = 31;
+
+
+	/**
 	 * Returns the meta object for class '{@link com.github.icelyframework.jdl.Application <em>Application</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1176,10 +1297,10 @@ public interface JdlPackage extends EPackage {
 	EReference getApplication_Dtos();
 
 	/**
-	 * Returns the meta object for the reference '{@link com.github.icelyframework.jdl.Application#getPaginates <em>Paginates</em>}'.
+	 * Returns the meta object for the reference list '{@link com.github.icelyframework.jdl.Application#getPaginates <em>Paginates</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Paginates</em>'.
+	 * @return the meta object for the reference list '<em>Paginates</em>'.
 	 * @see com.github.icelyframework.jdl.Application#getPaginates()
 	 * @see #getApplication()
 	 * @generated
@@ -1187,15 +1308,37 @@ public interface JdlPackage extends EPackage {
 	EReference getApplication_Paginates();
 
 	/**
-	 * Returns the meta object for the reference '{@link com.github.icelyframework.jdl.Application#getServices <em>Services</em>}'.
+	 * Returns the meta object for the reference list '{@link com.github.icelyframework.jdl.Application#getServices <em>Services</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Services</em>'.
+	 * @return the meta object for the reference list '<em>Services</em>'.
 	 * @see com.github.icelyframework.jdl.Application#getServices()
 	 * @see #getApplication()
 	 * @generated
 	 */
 	EReference getApplication_Services();
+
+	/**
+	 * Returns the meta object for the reference list '{@link com.github.icelyframework.jdl.Application#getSearch <em>Search</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Search</em>'.
+	 * @see com.github.icelyframework.jdl.Application#getSearch()
+	 * @see #getApplication()
+	 * @generated
+	 */
+	EReference getApplication_Search();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.github.icelyframework.jdl.Application#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see com.github.icelyframework.jdl.Application#getName()
+	 * @see #getApplication()
+	 * @generated
+	 */
+	EAttribute getApplication_Name();
 
 	/**
 	 * Returns the meta object for class '{@link com.github.icelyframework.jdl.Config <em>Config</em>}'.
@@ -1393,6 +1536,17 @@ public interface JdlPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getConfig_CacheProvider();
+
+	/**
+	 * Returns the meta object for the container reference '{@link com.github.icelyframework.jdl.Config#getApplication <em>Application</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Application</em>'.
+	 * @see com.github.icelyframework.jdl.Config#getApplication()
+	 * @see #getConfig()
+	 * @generated
+	 */
+	EReference getConfig_Application();
 
 	/**
 	 * Returns the meta object for class '{@link com.github.icelyframework.jdl.Entity <em>Entity</em>}'.
@@ -1687,6 +1841,17 @@ public interface JdlPackage extends EPackage {
 	EReference getJDL_Service();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link com.github.icelyframework.jdl.JDL#getSearch <em>Search</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Search</em>'.
+	 * @see com.github.icelyframework.jdl.JDL#getSearch()
+	 * @see #getJDL()
+	 * @generated
+	 */
+	EReference getJDL_Search();
+
+	/**
 	 * Returns the meta object for class '{@link com.github.icelyframework.jdl.Deployment <em>Deployment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1783,6 +1948,17 @@ public interface JdlPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getDeployment_KubernetesServiceType();
+
+	/**
+	 * Returns the meta object for the container reference '{@link com.github.icelyframework.jdl.Deployment#getApplication <em>Application</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Application</em>'.
+	 * @see com.github.icelyframework.jdl.Deployment#getApplication()
+	 * @see #getDeployment()
+	 * @generated
+	 */
+	EReference getDeployment_Application();
 
 	/**
 	 * Returns the meta object for class '{@link com.github.icelyframework.jdl.UnidirectionalRelationship <em>Unidirectional Relationship</em>}'.
@@ -1901,15 +2077,26 @@ public interface JdlPackage extends EPackage {
 	EClass getPaginate();
 
 	/**
-	 * Returns the meta object for the reference '{@link com.github.icelyframework.jdl.Paginate#getEntity <em>Entity</em>}'.
+	 * Returns the meta object for the reference list '{@link com.github.icelyframework.jdl.Paginate#getEntities <em>Entities</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Entity</em>'.
-	 * @see com.github.icelyframework.jdl.Paginate#getEntity()
+	 * @return the meta object for the reference list '<em>Entities</em>'.
+	 * @see com.github.icelyframework.jdl.Paginate#getEntities()
 	 * @see #getPaginate()
 	 * @generated
 	 */
-	EReference getPaginate_Entity();
+	EReference getPaginate_Entities();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.github.icelyframework.jdl.Paginate#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see com.github.icelyframework.jdl.Paginate#getValue()
+	 * @see #getPaginate()
+	 * @generated
+	 */
+	EAttribute getPaginate_Value();
 
 	/**
 	 * Returns the meta object for class '{@link com.github.icelyframework.jdl.DTO <em>DTO</em>}'.
@@ -1922,15 +2109,26 @@ public interface JdlPackage extends EPackage {
 	EClass getDTO();
 
 	/**
-	 * Returns the meta object for the reference '{@link com.github.icelyframework.jdl.DTO#getEntities <em>Entities</em>}'.
+	 * Returns the meta object for the reference list '{@link com.github.icelyframework.jdl.DTO#getEntities <em>Entities</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Entities</em>'.
+	 * @return the meta object for the reference list '<em>Entities</em>'.
 	 * @see com.github.icelyframework.jdl.DTO#getEntities()
 	 * @see #getDTO()
 	 * @generated
 	 */
 	EReference getDTO_Entities();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.github.icelyframework.jdl.DTO#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see com.github.icelyframework.jdl.DTO#getValue()
+	 * @see #getDTO()
+	 * @generated
+	 */
+	EAttribute getDTO_Value();
 
 	/**
 	 * Returns the meta object for class '{@link com.github.icelyframework.jdl.Service <em>Service</em>}'.
@@ -1954,6 +2152,17 @@ public interface JdlPackage extends EPackage {
 	EReference getService_Entities();
 
 	/**
+	 * Returns the meta object for the attribute '{@link com.github.icelyframework.jdl.Service#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see com.github.icelyframework.jdl.Service#getValue()
+	 * @see #getService()
+	 * @generated
+	 */
+	EAttribute getService_Value();
+
+	/**
 	 * Returns the meta object for class '{@link com.github.icelyframework.jdl.Search <em>Search</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1962,6 +2171,28 @@ public interface JdlPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getSearch();
+
+	/**
+	 * Returns the meta object for the reference list '{@link com.github.icelyframework.jdl.Search#getEntities <em>Entities</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Entities</em>'.
+	 * @see com.github.icelyframework.jdl.Search#getEntities()
+	 * @see #getSearch()
+	 * @generated
+	 */
+	EReference getSearch_Entities();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.github.icelyframework.jdl.Search#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see com.github.icelyframework.jdl.Search#getValue()
+	 * @see #getSearch()
+	 * @generated
+	 */
+	EAttribute getSearch_Value();
 
 	/**
 	 * Returns the meta object for enum '{@link com.github.icelyframework.jdl.ApplicationType <em>Application Type</em>}'.
@@ -2094,6 +2325,36 @@ public interface JdlPackage extends EPackage {
 	EEnum getGatewayType();
 
 	/**
+	 * Returns the meta object for enum '{@link com.github.icelyframework.jdl.ServiceValue <em>Service Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Service Value</em>'.
+	 * @see com.github.icelyframework.jdl.ServiceValue
+	 * @generated
+	 */
+	EEnum getServiceValue();
+
+	/**
+	 * Returns the meta object for enum '{@link com.github.icelyframework.jdl.DTOValue <em>DTO Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>DTO Value</em>'.
+	 * @see com.github.icelyframework.jdl.DTOValue
+	 * @generated
+	 */
+	EEnum getDTOValue();
+
+	/**
+	 * Returns the meta object for enum '{@link com.github.icelyframework.jdl.PaginationValue <em>Pagination Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Pagination Value</em>'.
+	 * @see com.github.icelyframework.jdl.PaginationValue
+	 * @generated
+	 */
+	EEnum getPaginationValue();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2158,7 +2419,7 @@ public interface JdlPackage extends EPackage {
 		EReference APPLICATION__DTOS = eINSTANCE.getApplication_Dtos();
 
 		/**
-		 * The meta object literal for the '<em><b>Paginates</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Paginates</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -2166,12 +2427,28 @@ public interface JdlPackage extends EPackage {
 		EReference APPLICATION__PAGINATES = eINSTANCE.getApplication_Paginates();
 
 		/**
-		 * The meta object literal for the '<em><b>Services</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Services</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference APPLICATION__SERVICES = eINSTANCE.getApplication_Services();
+
+		/**
+		 * The meta object literal for the '<em><b>Search</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference APPLICATION__SEARCH = eINSTANCE.getApplication_Search();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute APPLICATION__NAME = eINSTANCE.getApplication_Name();
 
 		/**
 		 * The meta object literal for the '{@link com.github.icelyframework.jdl.impl.ConfigImpl <em>Config</em>}' class.
@@ -2318,6 +2595,14 @@ public interface JdlPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute CONFIG__CACHE_PROVIDER = eINSTANCE.getConfig_CacheProvider();
+
+		/**
+		 * The meta object literal for the '<em><b>Application</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONFIG__APPLICATION = eINSTANCE.getConfig_Application();
 
 		/**
 		 * The meta object literal for the '{@link com.github.icelyframework.jdl.impl.EntityImpl <em>Entity</em>}' class.
@@ -2546,6 +2831,14 @@ public interface JdlPackage extends EPackage {
 		EReference JDL__SERVICE = eINSTANCE.getJDL_Service();
 
 		/**
+		 * The meta object literal for the '<em><b>Search</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference JDL__SEARCH = eINSTANCE.getJDL_Search();
+
+		/**
 		 * The meta object literal for the '{@link com.github.icelyframework.jdl.impl.DeploymentImpl <em>Deployment</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2618,6 +2911,14 @@ public interface JdlPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute DEPLOYMENT__KUBERNETES_SERVICE_TYPE = eINSTANCE.getDeployment_KubernetesServiceType();
+
+		/**
+		 * The meta object literal for the '<em><b>Application</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DEPLOYMENT__APPLICATION = eINSTANCE.getDeployment_Application();
 
 		/**
 		 * The meta object literal for the '{@link com.github.icelyframework.jdl.impl.UnidirectionalRelationshipImpl <em>Unidirectional Relationship</em>}' class.
@@ -2718,12 +3019,20 @@ public interface JdlPackage extends EPackage {
 		EClass PAGINATE = eINSTANCE.getPaginate();
 
 		/**
-		 * The meta object literal for the '<em><b>Entity</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Entities</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PAGINATE__ENTITY = eINSTANCE.getPaginate_Entity();
+		EReference PAGINATE__ENTITIES = eINSTANCE.getPaginate_Entities();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PAGINATE__VALUE = eINSTANCE.getPaginate_Value();
 
 		/**
 		 * The meta object literal for the '{@link com.github.icelyframework.jdl.impl.DTOImpl <em>DTO</em>}' class.
@@ -2736,12 +3045,20 @@ public interface JdlPackage extends EPackage {
 		EClass DTO = eINSTANCE.getDTO();
 
 		/**
-		 * The meta object literal for the '<em><b>Entities</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Entities</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference DTO__ENTITIES = eINSTANCE.getDTO_Entities();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DTO__VALUE = eINSTANCE.getDTO_Value();
 
 		/**
 		 * The meta object literal for the '{@link com.github.icelyframework.jdl.impl.ServiceImpl <em>Service</em>}' class.
@@ -2762,6 +3079,14 @@ public interface JdlPackage extends EPackage {
 		EReference SERVICE__ENTITIES = eINSTANCE.getService_Entities();
 
 		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SERVICE__VALUE = eINSTANCE.getService_Value();
+
+		/**
 		 * The meta object literal for the '{@link com.github.icelyframework.jdl.impl.SearchImpl <em>Search</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2770,6 +3095,22 @@ public interface JdlPackage extends EPackage {
 		 * @generated
 		 */
 		EClass SEARCH = eINSTANCE.getSearch();
+
+		/**
+		 * The meta object literal for the '<em><b>Entities</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SEARCH__ENTITIES = eINSTANCE.getSearch_Entities();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SEARCH__VALUE = eINSTANCE.getSearch_Value();
 
 		/**
 		 * The meta object literal for the '{@link com.github.icelyframework.jdl.ApplicationType <em>Application Type</em>}' enum.
@@ -2900,6 +3241,36 @@ public interface JdlPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum GATEWAY_TYPE = eINSTANCE.getGatewayType();
+
+		/**
+		 * The meta object literal for the '{@link com.github.icelyframework.jdl.ServiceValue <em>Service Value</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.github.icelyframework.jdl.ServiceValue
+		 * @see com.github.icelyframework.jdl.impl.JdlPackageImpl#getServiceValue()
+		 * @generated
+		 */
+		EEnum SERVICE_VALUE = eINSTANCE.getServiceValue();
+
+		/**
+		 * The meta object literal for the '{@link com.github.icelyframework.jdl.DTOValue <em>DTO Value</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.github.icelyframework.jdl.DTOValue
+		 * @see com.github.icelyframework.jdl.impl.JdlPackageImpl#getDTOValue()
+		 * @generated
+		 */
+		EEnum DTO_VALUE = eINSTANCE.getDTOValue();
+
+		/**
+		 * The meta object literal for the '{@link com.github.icelyframework.jdl.PaginationValue <em>Pagination Value</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.github.icelyframework.jdl.PaginationValue
+		 * @see com.github.icelyframework.jdl.impl.JdlPackageImpl#getPaginationValue()
+		 * @generated
+		 */
+		EEnum PAGINATION_VALUE = eINSTANCE.getPaginationValue();
 
 	}
 

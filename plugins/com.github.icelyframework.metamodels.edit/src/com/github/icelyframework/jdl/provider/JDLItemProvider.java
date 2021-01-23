@@ -83,6 +83,7 @@ public class JDLItemProvider
 			childrenFeatures.add(JdlPackage.Literals.JDL__PAGINATE);
 			childrenFeatures.add(JdlPackage.Literals.JDL__DTO);
 			childrenFeatures.add(JdlPackage.Literals.JDL__SERVICE);
+			childrenFeatures.add(JdlPackage.Literals.JDL__SEARCH);
 		}
 		return childrenFeatures;
 	}
@@ -141,6 +142,7 @@ public class JDLItemProvider
 			case JdlPackage.JDL__PAGINATE:
 			case JdlPackage.JDL__DTO:
 			case JdlPackage.JDL__SERVICE:
+			case JdlPackage.JDL__SEARCH:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -187,6 +189,11 @@ public class JDLItemProvider
 			(createChildParameter
 				(JdlPackage.Literals.JDL__SERVICE,
 				 JdlFactory.eINSTANCE.createService()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(JdlPackage.Literals.JDL__SEARCH,
+				 JdlFactory.eINSTANCE.createSearch()));
 	}
 
 	/**

@@ -23,6 +23,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="dbPort" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="dbType" eType="#//DatabaseType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="serverType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="application" lowerBound="1"
+        eType="#//Application" eOpposite="#//Application/deployment"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ProjectDeployment">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="dockerRepositoryName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -35,6 +37,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="monitoring" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="kubernetesServiceType"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="project" lowerBound="1"
+        eType="#//Project" eOpposite="#//Project/deployment"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ServiceDiscoveryType">
     <eLiterals name="EUREKA"/>
@@ -58,7 +62,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="basePackage" unique="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="deployment" upperBound="-1"
-        eType="#//ProjectDeployment" containment="true"/>
+        eType="#//ProjectDeployment" containment="true" eOpposite="#//ProjectDeployment/project"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Application">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -68,7 +72,7 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="applicationType" eType="#//ApplicationType"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="deployment" upperBound="-1"
-        eType="#//ApplicationDeployment" containment="true"/>
+        eType="#//ApplicationDeployment" containment="true" eOpposite="#//ApplicationDeployment/application"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ApplicationType">
     <eLiterals name="JHIPSTER_MICROSERVICE"/>

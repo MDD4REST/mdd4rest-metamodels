@@ -50,6 +50,7 @@
     <eLiterals name="MICROSERVICE"/>
     <eLiterals name="GATEWAY" value="1"/>
     <eLiterals name="MONOLITH" value="2"/>
+    <eLiterals name="UAA" value="3" literal="UAA"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="DatabaseType">
     <eLiterals name="SQL"/>

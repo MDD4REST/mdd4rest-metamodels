@@ -6,6 +6,7 @@ import com.github.icelyframework.configuration.ApplicationConfig;
 import com.github.icelyframework.configuration.ConfigurationFactory;
 import com.github.icelyframework.configuration.ConfigurationPackage;
 
+import com.github.icelyframework.configuration.ProjectConfig;
 import java.io.File;
 import java.io.IOException;
 
@@ -60,7 +61,7 @@ public class ConfigurationExample {
 			System.out.println("Enter a list of file paths or URIs that have content like this:");
 			try {
 				Resource resource = resourceSet.createResource(URI.createURI("http:///My.configuration"));
-				ApplicationConfig root = ConfigurationFactory.eINSTANCE.createApplicationConfig();
+				ProjectConfig root = ConfigurationFactory.eINSTANCE.createProjectConfig();
 				resource.getContents().add(root);
 				resource.save(System.out, null);
 			}

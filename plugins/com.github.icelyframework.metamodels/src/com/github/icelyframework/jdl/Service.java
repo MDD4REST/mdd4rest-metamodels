@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link com.github.icelyframework.jdl.Service#getEntities <em>Entities</em>}</li>
+ *   <li>{@link com.github.icelyframework.jdl.Service#getValue <em>Value</em>}</li>
  * </ul>
  *
  * @see com.github.icelyframework.jdl.JdlPackage#getService()
@@ -30,9 +31,34 @@ public interface Service extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Entities</em>' reference list.
 	 * @see com.github.icelyframework.jdl.JdlPackage#getService_Entities()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
 	EList<Entity> getEntities();
+
+	/**
+	 * Returns the value of the '<em><b>Value</b></em>' attribute.
+	 * The literals are from the enumeration {@link com.github.icelyframework.jdl.ServiceValue}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Value</em>' attribute.
+	 * @see com.github.icelyframework.jdl.ServiceValue
+	 * @see #setValue(ServiceValue)
+	 * @see com.github.icelyframework.jdl.JdlPackage#getService_Value()
+	 * @model
+	 * @generated
+	 */
+	ServiceValue getValue();
+
+	/**
+	 * Sets the value of the '{@link com.github.icelyframework.jdl.Service#getValue <em>Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Value</em>' attribute.
+	 * @see com.github.icelyframework.jdl.ServiceValue
+	 * @see #getValue()
+	 * @generated
+	 */
+	void setValue(ServiceValue value);
 
 } // Service

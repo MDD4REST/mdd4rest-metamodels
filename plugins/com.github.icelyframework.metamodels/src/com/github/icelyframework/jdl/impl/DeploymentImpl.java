@@ -2,6 +2,7 @@
  */
 package com.github.icelyframework.jdl.impl;
 
+import com.github.icelyframework.jdl.Application;
 import com.github.icelyframework.jdl.Deployment;
 import com.github.icelyframework.jdl.DeploymentType;
 import com.github.icelyframework.jdl.GatewayType;
@@ -12,14 +13,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 
 /**
  * <!-- begin-user-doc -->
@@ -37,6 +41,7 @@ import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
  *   <li>{@link com.github.icelyframework.jdl.impl.DeploymentImpl#isMonitoring <em>Monitoring</em>}</li>
  *   <li>{@link com.github.icelyframework.jdl.impl.DeploymentImpl#getGatewayType <em>Gateway Type</em>}</li>
  *   <li>{@link com.github.icelyframework.jdl.impl.DeploymentImpl#getKubernetesServiceType <em>Kubernetes Service Type</em>}</li>
+ *   <li>{@link com.github.icelyframework.jdl.impl.DeploymentImpl#getApplication <em>Application</em>}</li>
  * </ul>
  *
  * @generated
@@ -391,6 +396,93 @@ public class DeploymentImpl extends EObjectImpl implements Deployment {
 	 * @generated
 	 */
 	@Override
+	public Application getApplication() {
+		if (eContainerFeatureID() != JdlPackage.DEPLOYMENT__APPLICATION) return null;
+		return (Application)eInternalContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetApplication(Application newApplication, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newApplication, JdlPackage.DEPLOYMENT__APPLICATION, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setApplication(Application newApplication) {
+		if (newApplication != eInternalContainer() || (eContainerFeatureID() != JdlPackage.DEPLOYMENT__APPLICATION && newApplication != null)) {
+			if (EcoreUtil.isAncestor(this, newApplication))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newApplication != null)
+				msgs = ((InternalEObject)newApplication).eInverseAdd(this, JdlPackage.APPLICATION__DEPLOYMENTS, Application.class, msgs);
+			msgs = basicSetApplication(newApplication, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, JdlPackage.DEPLOYMENT__APPLICATION, newApplication, newApplication));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case JdlPackage.DEPLOYMENT__APPLICATION:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetApplication((Application)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case JdlPackage.DEPLOYMENT__APPLICATION:
+				return basicSetApplication(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+			case JdlPackage.DEPLOYMENT__APPLICATION:
+				return eInternalContainer().eInverseRemove(this, JdlPackage.APPLICATION__DEPLOYMENTS, Application.class, msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case JdlPackage.DEPLOYMENT__DEPLOYMENT_TYPE:
@@ -409,6 +501,8 @@ public class DeploymentImpl extends EObjectImpl implements Deployment {
 				return getGatewayType();
 			case JdlPackage.DEPLOYMENT__KUBERNETES_SERVICE_TYPE:
 				return getKubernetesServiceType();
+			case JdlPackage.DEPLOYMENT__APPLICATION:
+				return getApplication();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -447,6 +541,9 @@ public class DeploymentImpl extends EObjectImpl implements Deployment {
 			case JdlPackage.DEPLOYMENT__KUBERNETES_SERVICE_TYPE:
 				setKubernetesServiceType((String)newValue);
 				return;
+			case JdlPackage.DEPLOYMENT__APPLICATION:
+				setApplication((Application)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -483,6 +580,9 @@ public class DeploymentImpl extends EObjectImpl implements Deployment {
 			case JdlPackage.DEPLOYMENT__KUBERNETES_SERVICE_TYPE:
 				setKubernetesServiceType(KUBERNETES_SERVICE_TYPE_EDEFAULT);
 				return;
+			case JdlPackage.DEPLOYMENT__APPLICATION:
+				setApplication((Application)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -511,6 +611,8 @@ public class DeploymentImpl extends EObjectImpl implements Deployment {
 				return gatewayType != GATEWAY_TYPE_EDEFAULT;
 			case JdlPackage.DEPLOYMENT__KUBERNETES_SERVICE_TYPE:
 				return KUBERNETES_SERVICE_TYPE_EDEFAULT == null ? kubernetesServiceType != null : !KUBERNETES_SERVICE_TYPE_EDEFAULT.equals(kubernetesServiceType);
+			case JdlPackage.DEPLOYMENT__APPLICATION:
+				return getApplication() != null;
 		}
 		return super.eIsSet(featureID);
 	}

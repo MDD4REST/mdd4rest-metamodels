@@ -72,29 +72,6 @@ public class ConfigurationItemProviderAdapterFactory extends ConfigurationAdapte
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link com.github.icelyframework.configuration.ApplicationConfig} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ApplicationConfigItemProvider applicationConfigItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link com.github.icelyframework.configuration.ApplicationConfig}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createApplicationConfigAdapter() {
-		if (applicationConfigItemProvider == null) {
-			applicationConfigItemProvider = new ApplicationConfigItemProvider(this);
-		}
-
-		return applicationConfigItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link com.github.icelyframework.configuration.ProjectConfig} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -590,7 +567,6 @@ public class ConfigurationItemProviderAdapterFactory extends ConfigurationAdapte
 	 */
 	@Override
 	public void dispose() {
-		if (applicationConfigItemProvider != null) applicationConfigItemProvider.dispose();
 		if (projectConfigItemProvider != null) projectConfigItemProvider.dispose();
 		if (applicationItemProvider != null) applicationItemProvider.dispose();
 		if (projectItemProvider != null) projectItemProvider.dispose();

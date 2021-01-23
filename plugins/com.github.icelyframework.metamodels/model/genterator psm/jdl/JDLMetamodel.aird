@@ -4,7 +4,7 @@
     <semanticResources>JDLMetamodel.ecore</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_FiB4sKwcEeqaqLjgT5GnwA">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_GCVwcKwcEeqaqLjgT5GnwA" name="JDLMetamodel class diagram" repPath="#_GB_yMKwcEeqaqLjgT5GnwA" changeId="119b7c20-66e6-49bf-9b38-252db065275e">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_GCVwcKwcEeqaqLjgT5GnwA" name="JDLMetamodel class diagram" repPath="#_GB_yMKwcEeqaqLjgT5GnwA" changeId="69e8923c-ac6e-4633-8ca1-2f65b177ef68">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="JDLMetamodel.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -198,6 +198,10 @@
             <children xmi:type="notation:Node" xmi:id="_2mYt4KwdEeqaqLjgT5GnwA" type="3010" element="_2mT1YKwdEeqaqLjgT5GnwA">
               <styles xmi:type="notation:FontStyle" xmi:id="_2mYt4awdEeqaqLjgT5GnwA" fontName="Segoe UI" fontHeight="8"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_2mYt4qwdEeqaqLjgT5GnwA"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_LKqS0F1dEeue44BtLJgVrg" type="3010" element="_LKZ0IF1dEeue44BtLJgVrg">
+              <styles xmi:type="notation:FontStyle" xmi:id="_LKqS0V1dEeue44BtLJgVrg" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_LKqS0l1dEeue44BtLJgVrg"/>
             </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_x1hm8qwdEeqaqLjgT5GnwA"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_x1hm86wdEeqaqLjgT5GnwA"/>
@@ -642,7 +646,7 @@
             <styles xmi:type="notation:FilteringStyle" xmi:id="_vCS74lHVEeuOppIWGhLL_g"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_vCSU0VHVEeuOppIWGhLL_g" fontName="Segoe UI" fontHeight="8" fillColor="12632256"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vCSU0lHVEeuOppIWGhLL_g" x="642" y="930" width="137" height="136"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vCSU0lHVEeuOppIWGhLL_g" x="642" y="930" width="143" height="136"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_wRKQ0FHXEeuOppIWGhLL_g" type="2003" element="_wRC8EFHXEeuOppIWGhLL_g">
           <children xmi:type="notation:Node" xmi:id="_wRK34FHXEeuOppIWGhLL_g" type="5007"/>
@@ -1418,6 +1422,14 @@
         <semanticElements xmi:type="ecore:EEnumLiteral" href="JDLMetamodel.ecore#//ApplicationType/MONOLITH"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_2mUccKwdEeqaqLjgT5GnwA" labelAlignment="LEFT">
           <customFeatures>labelColor</customFeatures>
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_LKZ0IF1dEeue44BtLJgVrg" name="UAA" tooltipText="">
+        <target xmi:type="ecore:EEnumLiteral" href="JDLMetamodel.ecore#//ApplicationType/UAA"/>
+        <semanticElements xmi:type="ecore:EEnumLiteral" href="JDLMetamodel.ecore#//ApplicationType/UAA"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_LKZ0IV1dEeue44BtLJgVrg" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>

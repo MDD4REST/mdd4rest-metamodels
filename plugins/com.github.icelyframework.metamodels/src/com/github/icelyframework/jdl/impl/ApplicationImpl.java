@@ -9,6 +9,7 @@ import com.github.icelyframework.jdl.Deployment;
 import com.github.icelyframework.jdl.Entity;
 import com.github.icelyframework.jdl.JdlPackage;
 import com.github.icelyframework.jdl.Paginate;
+import com.github.icelyframework.jdl.Search;
 import com.github.icelyframework.jdl.Service;
 
 import java.util.Collection;
@@ -25,6 +26,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -42,6 +44,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.github.icelyframework.jdl.impl.ApplicationImpl#getDtos <em>Dtos</em>}</li>
  *   <li>{@link com.github.icelyframework.jdl.impl.ApplicationImpl#getPaginates <em>Paginates</em>}</li>
  *   <li>{@link com.github.icelyframework.jdl.impl.ApplicationImpl#getServices <em>Services</em>}</li>
+ *   <li>{@link com.github.icelyframework.jdl.impl.ApplicationImpl#getSearch <em>Search</em>}</li>
+ *   <li>{@link com.github.icelyframework.jdl.impl.ApplicationImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -88,24 +92,54 @@ public class ApplicationImpl extends EObjectImpl implements Application {
 	protected EList<DTO> dtos;
 
 	/**
-	 * The cached value of the '{@link #getPaginates() <em>Paginates</em>}' reference.
+	 * The cached value of the '{@link #getPaginates() <em>Paginates</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getPaginates()
 	 * @generated
 	 * @ordered
 	 */
-	protected Paginate paginates;
+	protected EList<Paginate> paginates;
 
 	/**
-	 * The cached value of the '{@link #getServices() <em>Services</em>}' reference.
+	 * The cached value of the '{@link #getServices() <em>Services</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getServices()
 	 * @generated
 	 * @ordered
 	 */
-	protected Service services;
+	protected EList<Service> services;
+
+	/**
+	 * The cached value of the '{@link #getSearch() <em>Search</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSearch()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Search> search;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -161,9 +195,9 @@ public class ApplicationImpl extends EObjectImpl implements Application {
 		if (newConfig != config) {
 			NotificationChain msgs = null;
 			if (config != null)
-				msgs = ((InternalEObject)config).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - JdlPackage.APPLICATION__CONFIG, null, msgs);
+				msgs = ((InternalEObject)config).eInverseRemove(this, JdlPackage.CONFIG__APPLICATION, Config.class, msgs);
 			if (newConfig != null)
-				msgs = ((InternalEObject)newConfig).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - JdlPackage.APPLICATION__CONFIG, null, msgs);
+				msgs = ((InternalEObject)newConfig).eInverseAdd(this, JdlPackage.CONFIG__APPLICATION, Config.class, msgs);
 			msgs = basicSetConfig(newConfig, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -192,7 +226,7 @@ public class ApplicationImpl extends EObjectImpl implements Application {
 	@Override
 	public EList<Deployment> getDeployments() {
 		if (deployments == null) {
-			deployments = new EObjectContainmentEList<Deployment>(Deployment.class, this, JdlPackage.APPLICATION__DEPLOYMENTS);
+			deployments = new EObjectContainmentWithInverseEList<Deployment>(Deployment.class, this, JdlPackage.APPLICATION__DEPLOYMENTS, JdlPackage.DEPLOYMENT__APPLICATION);
 		}
 		return deployments;
 	}
@@ -216,14 +250,9 @@ public class ApplicationImpl extends EObjectImpl implements Application {
 	 * @generated
 	 */
 	@Override
-	public Paginate getPaginates() {
-		if (paginates != null && paginates.eIsProxy()) {
-			InternalEObject oldPaginates = (InternalEObject)paginates;
-			paginates = (Paginate)eResolveProxy(oldPaginates);
-			if (paginates != oldPaginates) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, JdlPackage.APPLICATION__PAGINATES, oldPaginates, paginates));
-			}
+	public EList<Paginate> getPaginates() {
+		if (paginates == null) {
+			paginates = new EObjectResolvingEList<Paginate>(Paginate.class, this, JdlPackage.APPLICATION__PAGINATES);
 		}
 		return paginates;
 	}
@@ -233,37 +262,10 @@ public class ApplicationImpl extends EObjectImpl implements Application {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Paginate basicGetPaginates() {
-		return paginates;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setPaginates(Paginate newPaginates) {
-		Paginate oldPaginates = paginates;
-		paginates = newPaginates;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, JdlPackage.APPLICATION__PAGINATES, oldPaginates, paginates));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Service getServices() {
-		if (services != null && services.eIsProxy()) {
-			InternalEObject oldServices = (InternalEObject)services;
-			services = (Service)eResolveProxy(oldServices);
-			if (services != oldServices) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, JdlPackage.APPLICATION__SERVICES, oldServices, services));
-			}
+	public EList<Service> getServices() {
+		if (services == null) {
+			services = new EObjectResolvingEList<Service>(Service.class, this, JdlPackage.APPLICATION__SERVICES);
 		}
 		return services;
 	}
@@ -273,8 +275,12 @@ public class ApplicationImpl extends EObjectImpl implements Application {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Service basicGetServices() {
-		return services;
+	@Override
+	public EList<Search> getSearch() {
+		if (search == null) {
+			search = new EObjectResolvingEList<Search>(Search.class, this, JdlPackage.APPLICATION__SEARCH);
+		}
+		return search;
 	}
 
 	/**
@@ -283,11 +289,40 @@ public class ApplicationImpl extends EObjectImpl implements Application {
 	 * @generated
 	 */
 	@Override
-	public void setServices(Service newServices) {
-		Service oldServices = services;
-		services = newServices;
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, JdlPackage.APPLICATION__SERVICES, oldServices, services));
+			eNotify(new ENotificationImpl(this, Notification.SET, JdlPackage.APPLICATION__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case JdlPackage.APPLICATION__CONFIG:
+				if (config != null)
+					msgs = ((InternalEObject)config).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - JdlPackage.APPLICATION__CONFIG, null, msgs);
+				return basicSetConfig((Config)otherEnd, msgs);
+			case JdlPackage.APPLICATION__DEPLOYMENTS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getDeployments()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -323,11 +358,13 @@ public class ApplicationImpl extends EObjectImpl implements Application {
 			case JdlPackage.APPLICATION__DTOS:
 				return getDtos();
 			case JdlPackage.APPLICATION__PAGINATES:
-				if (resolve) return getPaginates();
-				return basicGetPaginates();
+				return getPaginates();
 			case JdlPackage.APPLICATION__SERVICES:
-				if (resolve) return getServices();
-				return basicGetServices();
+				return getServices();
+			case JdlPackage.APPLICATION__SEARCH:
+				return getSearch();
+			case JdlPackage.APPLICATION__NAME:
+				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -357,10 +394,19 @@ public class ApplicationImpl extends EObjectImpl implements Application {
 				getDtos().addAll((Collection<? extends DTO>)newValue);
 				return;
 			case JdlPackage.APPLICATION__PAGINATES:
-				setPaginates((Paginate)newValue);
+				getPaginates().clear();
+				getPaginates().addAll((Collection<? extends Paginate>)newValue);
 				return;
 			case JdlPackage.APPLICATION__SERVICES:
-				setServices((Service)newValue);
+				getServices().clear();
+				getServices().addAll((Collection<? extends Service>)newValue);
+				return;
+			case JdlPackage.APPLICATION__SEARCH:
+				getSearch().clear();
+				getSearch().addAll((Collection<? extends Search>)newValue);
+				return;
+			case JdlPackage.APPLICATION__NAME:
+				setName((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -387,10 +433,16 @@ public class ApplicationImpl extends EObjectImpl implements Application {
 				getDtos().clear();
 				return;
 			case JdlPackage.APPLICATION__PAGINATES:
-				setPaginates((Paginate)null);
+				getPaginates().clear();
 				return;
 			case JdlPackage.APPLICATION__SERVICES:
-				setServices((Service)null);
+				getServices().clear();
+				return;
+			case JdlPackage.APPLICATION__SEARCH:
+				getSearch().clear();
+				return;
+			case JdlPackage.APPLICATION__NAME:
+				setName(NAME_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -413,11 +465,31 @@ public class ApplicationImpl extends EObjectImpl implements Application {
 			case JdlPackage.APPLICATION__DTOS:
 				return dtos != null && !dtos.isEmpty();
 			case JdlPackage.APPLICATION__PAGINATES:
-				return paginates != null;
+				return paginates != null && !paginates.isEmpty();
 			case JdlPackage.APPLICATION__SERVICES:
-				return services != null;
+				return services != null && !services.isEmpty();
+			case JdlPackage.APPLICATION__SEARCH:
+				return search != null && !search.isEmpty();
+			case JdlPackage.APPLICATION__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
 	}
 
 } //ApplicationImpl

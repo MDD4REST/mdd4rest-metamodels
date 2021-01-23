@@ -21,6 +21,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.github.icelyframework.jdl.Application#getDtos <em>Dtos</em>}</li>
  *   <li>{@link com.github.icelyframework.jdl.Application#getPaginates <em>Paginates</em>}</li>
  *   <li>{@link com.github.icelyframework.jdl.Application#getServices <em>Services</em>}</li>
+ *   <li>{@link com.github.icelyframework.jdl.Application#getSearch <em>Search</em>}</li>
+ *   <li>{@link com.github.icelyframework.jdl.Application#getName <em>Name</em>}</li>
  * </ul>
  *
  * @see com.github.icelyframework.jdl.JdlPackage#getApplication()
@@ -30,12 +32,14 @@ import org.eclipse.emf.ecore.EObject;
 public interface Application extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Config</b></em>' containment reference.
+	 * It is bidirectional and its opposite is '{@link com.github.icelyframework.jdl.Config#getApplication <em>Application</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Config</em>' containment reference.
 	 * @see #setConfig(Config)
 	 * @see com.github.icelyframework.jdl.JdlPackage#getApplication_Config()
-	 * @model containment="true" required="true"
+	 * @see com.github.icelyframework.jdl.Config#getApplication
+	 * @model opposite="application" containment="true" required="true"
 	 * @generated
 	 */
 	Config getConfig();
@@ -65,11 +69,13 @@ public interface Application extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Deployments</b></em>' containment reference list.
 	 * The list contents are of type {@link com.github.icelyframework.jdl.Deployment}.
+	 * It is bidirectional and its opposite is '{@link com.github.icelyframework.jdl.Deployment#getApplication <em>Application</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Deployments</em>' containment reference list.
 	 * @see com.github.icelyframework.jdl.JdlPackage#getApplication_Deployments()
-	 * @model containment="true"
+	 * @see com.github.icelyframework.jdl.Deployment#getApplication
+	 * @model opposite="application" containment="true"
 	 * @generated
 	 */
 	EList<Deployment> getDeployments();
@@ -87,47 +93,61 @@ public interface Application extends EObject {
 	EList<DTO> getDtos();
 
 	/**
-	 * Returns the value of the '<em><b>Paginates</b></em>' reference.
+	 * Returns the value of the '<em><b>Paginates</b></em>' reference list.
+	 * The list contents are of type {@link com.github.icelyframework.jdl.Paginate}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Paginates</em>' reference.
-	 * @see #setPaginates(Paginate)
+	 * @return the value of the '<em>Paginates</em>' reference list.
 	 * @see com.github.icelyframework.jdl.JdlPackage#getApplication_Paginates()
 	 * @model
 	 * @generated
 	 */
-	Paginate getPaginates();
+	EList<Paginate> getPaginates();
 
 	/**
-	 * Sets the value of the '{@link com.github.icelyframework.jdl.Application#getPaginates <em>Paginates</em>}' reference.
+	 * Returns the value of the '<em><b>Services</b></em>' reference list.
+	 * The list contents are of type {@link com.github.icelyframework.jdl.Service}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Paginates</em>' reference.
-	 * @see #getPaginates()
-	 * @generated
-	 */
-	void setPaginates(Paginate value);
-
-	/**
-	 * Returns the value of the '<em><b>Services</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Services</em>' reference.
-	 * @see #setServices(Service)
+	 * @return the value of the '<em>Services</em>' reference list.
 	 * @see com.github.icelyframework.jdl.JdlPackage#getApplication_Services()
 	 * @model
 	 * @generated
 	 */
-	Service getServices();
+	EList<Service> getServices();
 
 	/**
-	 * Sets the value of the '{@link com.github.icelyframework.jdl.Application#getServices <em>Services</em>}' reference.
+	 * Returns the value of the '<em><b>Search</b></em>' reference list.
+	 * The list contents are of type {@link com.github.icelyframework.jdl.Search}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Services</em>' reference.
-	 * @see #getServices()
+	 * @return the value of the '<em>Search</em>' reference list.
+	 * @see com.github.icelyframework.jdl.JdlPackage#getApplication_Search()
+	 * @model
 	 * @generated
 	 */
-	void setServices(Service value);
+	EList<Search> getSearch();
+
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see com.github.icelyframework.jdl.JdlPackage#getApplication_Name()
+	 * @model required="true"
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link com.github.icelyframework.jdl.Application#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
 
 } // Application

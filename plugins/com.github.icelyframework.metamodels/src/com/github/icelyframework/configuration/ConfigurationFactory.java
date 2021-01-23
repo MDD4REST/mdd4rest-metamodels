@@ -22,15 +22,6 @@ public interface ConfigurationFactory extends EFactory {
 	ConfigurationFactory eINSTANCE = com.github.icelyframework.configuration.impl.ConfigurationFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Application Config</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Application Config</em>'.
-	 * @generated
-	 */
-	ApplicationConfig createApplicationConfig();
-
-	/**
 	 * Returns a new object of class '<em>Project Config</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

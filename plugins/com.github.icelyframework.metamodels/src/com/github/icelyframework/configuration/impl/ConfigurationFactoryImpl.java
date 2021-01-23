@@ -57,7 +57,6 @@ public class ConfigurationFactoryImpl extends EFactoryImpl implements Configurat
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case ConfigurationPackage.APPLICATION_CONFIG: return createApplicationConfig();
 			case ConfigurationPackage.PROJECT_CONFIG: return createProjectConfig();
 			case ConfigurationPackage.APPLICATION: return createApplication();
 			case ConfigurationPackage.PROJECT: return createProject();
@@ -94,6 +93,10 @@ public class ConfigurationFactoryImpl extends EFactoryImpl implements Configurat
 				return createArchitectureTypeFromString(eDataType, initialValue);
 			case ConfigurationPackage.DATABASE_TYPE:
 				return createDatabaseTypeFromString(eDataType, initialValue);
+			case ConfigurationPackage.AUTHENTICATION_TYPE:
+				return createAuthenticationTypeFromString(eDataType, initialValue);
+			case ConfigurationPackage.JHIPSTER_APPLICATION_TYPE:
+				return createJhipsterApplicationTypeFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -113,20 +116,13 @@ public class ConfigurationFactoryImpl extends EFactoryImpl implements Configurat
 				return convertArchitectureTypeToString(eDataType, instanceValue);
 			case ConfigurationPackage.DATABASE_TYPE:
 				return convertDatabaseTypeToString(eDataType, instanceValue);
+			case ConfigurationPackage.AUTHENTICATION_TYPE:
+				return convertAuthenticationTypeToString(eDataType, instanceValue);
+			case ConfigurationPackage.JHIPSTER_APPLICATION_TYPE:
+				return convertJhipsterApplicationTypeToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ApplicationConfig createApplicationConfig() {
-		ApplicationConfigImpl applicationConfig = new ApplicationConfigImpl();
-		return applicationConfig;
 	}
 
 	/**
@@ -373,6 +369,46 @@ public class ConfigurationFactoryImpl extends EFactoryImpl implements Configurat
 	 * @generated
 	 */
 	public String convertDatabaseTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AuthenticationType createAuthenticationTypeFromString(EDataType eDataType, String initialValue) {
+		AuthenticationType result = AuthenticationType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertAuthenticationTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public JhipsterApplicationType createJhipsterApplicationTypeFromString(EDataType eDataType, String initialValue) {
+		JhipsterApplicationType result = JhipsterApplicationType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertJhipsterApplicationTypeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

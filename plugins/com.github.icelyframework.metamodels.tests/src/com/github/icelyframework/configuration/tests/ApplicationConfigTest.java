@@ -15,7 +15,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ApplicationConfigTest extends TestCase {
+public abstract class ApplicationConfigTest extends TestCase {
 
 	/**
 	 * The fixture for this Application Config test case.
@@ -24,15 +24,6 @@ public class ApplicationConfigTest extends TestCase {
 	 * @generated
 	 */
 	protected ApplicationConfig fixture = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static void main(String[] args) {
-		TestRunner.run(ApplicationConfigTest.class);
-	}
 
 	/**
 	 * Constructs a new Application Config test case with the given name.
@@ -62,28 +53,6 @@ public class ApplicationConfigTest extends TestCase {
 	 */
 	protected ApplicationConfig getFixture() {
 		return fixture;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#setUp()
-	 * @generated
-	 */
-	@Override
-	protected void setUp() throws Exception {
-		setFixture(ConfigurationFactory.eINSTANCE.createApplicationConfig());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#tearDown()
-	 * @generated
-	 */
-	@Override
-	protected void tearDown() throws Exception {
-		setFixture(null);
 	}
 
 } //ApplicationConfigTest

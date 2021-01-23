@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.github.icelyframework.jdl.JDL#getPaginate <em>Paginate</em>}</li>
  *   <li>{@link com.github.icelyframework.jdl.JDL#getDto <em>Dto</em>}</li>
  *   <li>{@link com.github.icelyframework.jdl.JDL#getService <em>Service</em>}</li>
+ *   <li>{@link com.github.icelyframework.jdl.JDL#getSearch <em>Search</em>}</li>
  * </ul>
  *
  * @see com.github.icelyframework.jdl.JdlPackage#getJDL()
@@ -99,5 +100,17 @@ public interface JDL extends EObject {
 	 * @generated
 	 */
 	EList<Service> getService();
+
+	/**
+	 * Returns the value of the '<em><b>Search</b></em>' containment reference list.
+	 * The list contents are of type {@link com.github.icelyframework.jdl.Search}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Search</em>' containment reference list.
+	 * @see com.github.icelyframework.jdl.JdlPackage#getJDL_Search()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Search> getSearch();
 
 } // JDL

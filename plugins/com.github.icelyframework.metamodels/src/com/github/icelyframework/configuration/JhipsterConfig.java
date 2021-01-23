@@ -24,6 +24,8 @@ package com.github.icelyframework.configuration;
  *   <li>{@link com.github.icelyframework.configuration.JhipsterConfig#isEnableHibernateCache <em>Enable Hibernate Cache</em>}</li>
  *   <li>{@link com.github.icelyframework.configuration.JhipsterConfig#isSkipClient <em>Skip Client</em>}</li>
  *   <li>{@link com.github.icelyframework.configuration.JhipsterConfig#getBuildTool <em>Build Tool</em>}</li>
+ *   <li>{@link com.github.icelyframework.configuration.JhipsterConfig#getAuthenticationType <em>Authentication Type</em>}</li>
+ *   <li>{@link com.github.icelyframework.configuration.JhipsterConfig#getApplicationType <em>Application Type</em>}</li>
  * </ul>
  *
  * @see com.github.icelyframework.configuration.ConfigurationPackage#getJhipsterConfig()
@@ -297,5 +299,55 @@ public interface JhipsterConfig extends ApplicationConfig {
 	 * @generated
 	 */
 	void setBuildTool(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Authentication Type</b></em>' attribute.
+	 * The literals are from the enumeration {@link com.github.icelyframework.configuration.AuthenticationType}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Authentication Type</em>' attribute.
+	 * @see com.github.icelyframework.configuration.AuthenticationType
+	 * @see #setAuthenticationType(AuthenticationType)
+	 * @see com.github.icelyframework.configuration.ConfigurationPackage#getJhipsterConfig_AuthenticationType()
+	 * @model
+	 * @generated
+	 */
+	AuthenticationType getAuthenticationType();
+
+	/**
+	 * Sets the value of the '{@link com.github.icelyframework.configuration.JhipsterConfig#getAuthenticationType <em>Authentication Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Authentication Type</em>' attribute.
+	 * @see com.github.icelyframework.configuration.AuthenticationType
+	 * @see #getAuthenticationType()
+	 * @generated
+	 */
+	void setAuthenticationType(AuthenticationType value);
+
+	/**
+	 * Returns the value of the '<em><b>Application Type</b></em>' attribute.
+	 * The literals are from the enumeration {@link com.github.icelyframework.configuration.JhipsterApplicationType}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Application Type</em>' attribute.
+	 * @see com.github.icelyframework.configuration.JhipsterApplicationType
+	 * @see #setApplicationType(JhipsterApplicationType)
+	 * @see com.github.icelyframework.configuration.ConfigurationPackage#getJhipsterConfig_ApplicationType()
+	 * @model
+	 * @generated
+	 */
+	JhipsterApplicationType getApplicationType();
+
+	/**
+	 * Sets the value of the '{@link com.github.icelyframework.configuration.JhipsterConfig#getApplicationType <em>Application Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Application Type</em>' attribute.
+	 * @see com.github.icelyframework.configuration.JhipsterApplicationType
+	 * @see #getApplicationType()
+	 * @generated
+	 */
+	void setApplicationType(JhipsterApplicationType value);
 
 } // JhipsterConfig

@@ -33,7 +33,8 @@
       <!-- @generated DeploymentMetamodel -->
       <package
             uri="http://github.com/icelyframework/deployment"
-            class="com.github.icelyframework.deployment.DeploymentPackage"/>
+            class="com.github.icelyframework.deployment.DeploymentPackage"
+            genModel="model/abstract%20psm/deployment/DeploymentMetamodel.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
@@ -48,7 +49,8 @@
       <!-- @generated JDLMetamodel -->
       <package
             uri="http://github.com/icelyframework/jdl"
-            class="com.github.icelyframework.jdl.JdlPackage"/>
+            class="com.github.icelyframework.jdl.JdlPackage"
+            genModel="model/genterator%20psm/jdl/JDLMetamodel.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">

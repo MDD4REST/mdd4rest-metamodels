@@ -282,6 +282,7 @@ public class SculptorConfigItemProvider extends ApplicationConfigItemProvider {
 			childrenFeatures.add(ConfigurationPackage.Literals.SCULPTOR_CONFIG__JAVATYPES);
 			childrenFeatures.add(ConfigurationPackage.Literals.SCULPTOR_CONFIG__PACKAGENAMES);
 			childrenFeatures.add(ConfigurationPackage.Literals.SCULPTOR_CONFIG__DEFAULTBASECLASSNAMES);
+			childrenFeatures.add(ConfigurationPackage.Literals.SCULPTOR_CONFIG__CACHEOPTIONS);
 		}
 		return childrenFeatures;
 	}
@@ -359,6 +360,7 @@ public class SculptorConfigItemProvider extends ApplicationConfigItemProvider {
 			case ConfigurationPackage.SCULPTOR_CONFIG__JAVATYPES:
 			case ConfigurationPackage.SCULPTOR_CONFIG__PACKAGENAMES:
 			case ConfigurationPackage.SCULPTOR_CONFIG__DEFAULTBASECLASSNAMES:
+			case ConfigurationPackage.SCULPTOR_CONFIG__CACHEOPTIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -430,6 +432,11 @@ public class SculptorConfigItemProvider extends ApplicationConfigItemProvider {
 			(createChildParameter
 				(ConfigurationPackage.Literals.SCULPTOR_CONFIG__DEFAULTBASECLASSNAMES,
 				 ConfigurationFactory.eINSTANCE.createDefaultBaseClassName()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ConfigurationPackage.Literals.SCULPTOR_CONFIG__CACHEOPTIONS,
+				 ConfigurationFactory.eINSTANCE.createCacheOptions()));
 	}
 
 }

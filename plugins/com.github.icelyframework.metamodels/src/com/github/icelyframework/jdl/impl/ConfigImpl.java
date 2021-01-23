@@ -2,6 +2,7 @@
  */
 package com.github.icelyframework.jdl.impl;
 
+import com.github.icelyframework.jdl.Application;
 import com.github.icelyframework.jdl.ApplicationType;
 import com.github.icelyframework.jdl.AuthenticationType;
 import com.github.icelyframework.jdl.Config;
@@ -10,10 +11,13 @@ import com.github.icelyframework.jdl.JdlPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 
 /**
  * <!-- begin-user-doc -->
@@ -40,6 +44,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  *   <li>{@link com.github.icelyframework.jdl.impl.ConfigImpl#getTestFrameworks <em>Test Frameworks</em>}</li>
  *   <li>{@link com.github.icelyframework.jdl.impl.ConfigImpl#getAuthenticationType <em>Authentication Type</em>}</li>
  *   <li>{@link com.github.icelyframework.jdl.impl.ConfigImpl#getCacheProvider <em>Cache Provider</em>}</li>
+ *   <li>{@link com.github.icelyframework.jdl.impl.ConfigImpl#getApplication <em>Application</em>}</li>
  * </ul>
  *
  * @generated
@@ -801,6 +806,93 @@ public class ConfigImpl extends EObjectImpl implements Config {
 	 * @generated
 	 */
 	@Override
+	public Application getApplication() {
+		if (eContainerFeatureID() != JdlPackage.CONFIG__APPLICATION) return null;
+		return (Application)eInternalContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetApplication(Application newApplication, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newApplication, JdlPackage.CONFIG__APPLICATION, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setApplication(Application newApplication) {
+		if (newApplication != eInternalContainer() || (eContainerFeatureID() != JdlPackage.CONFIG__APPLICATION && newApplication != null)) {
+			if (EcoreUtil.isAncestor(this, newApplication))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newApplication != null)
+				msgs = ((InternalEObject)newApplication).eInverseAdd(this, JdlPackage.APPLICATION__CONFIG, Application.class, msgs);
+			msgs = basicSetApplication(newApplication, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, JdlPackage.CONFIG__APPLICATION, newApplication, newApplication));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case JdlPackage.CONFIG__APPLICATION:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetApplication((Application)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case JdlPackage.CONFIG__APPLICATION:
+				return basicSetApplication(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+			case JdlPackage.CONFIG__APPLICATION:
+				return eInternalContainer().eInverseRemove(this, JdlPackage.APPLICATION__CONFIG, Application.class, msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case JdlPackage.CONFIG__BASE_NAME:
@@ -837,6 +929,8 @@ public class ConfigImpl extends EObjectImpl implements Config {
 				return getAuthenticationType();
 			case JdlPackage.CONFIG__CACHE_PROVIDER:
 				return getCacheProvider();
+			case JdlPackage.CONFIG__APPLICATION:
+				return getApplication();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -899,6 +993,9 @@ public class ConfigImpl extends EObjectImpl implements Config {
 				return;
 			case JdlPackage.CONFIG__CACHE_PROVIDER:
 				setCacheProvider((String)newValue);
+				return;
+			case JdlPackage.CONFIG__APPLICATION:
+				setApplication((Application)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -963,6 +1060,9 @@ public class ConfigImpl extends EObjectImpl implements Config {
 			case JdlPackage.CONFIG__CACHE_PROVIDER:
 				setCacheProvider(CACHE_PROVIDER_EDEFAULT);
 				return;
+			case JdlPackage.CONFIG__APPLICATION:
+				setApplication((Application)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -1009,6 +1109,8 @@ public class ConfigImpl extends EObjectImpl implements Config {
 				return authenticationType != AUTHENTICATION_TYPE_EDEFAULT;
 			case JdlPackage.CONFIG__CACHE_PROVIDER:
 				return CACHE_PROVIDER_EDEFAULT == null ? cacheProvider != null : !CACHE_PROVIDER_EDEFAULT.equals(cacheProvider);
+			case JdlPackage.CONFIG__APPLICATION:
+				return getApplication() != null;
 		}
 		return super.eIsSet(featureID);
 	}

@@ -8,6 +8,7 @@ import com.github.icelyframework.jdl.Entity;
 import com.github.icelyframework.jdl.JDL;
 import com.github.icelyframework.jdl.JdlPackage;
 import com.github.icelyframework.jdl.Paginate;
+import com.github.icelyframework.jdl.Search;
 import com.github.icelyframework.jdl.Service;
 
 import java.util.Collection;
@@ -38,6 +39,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.github.icelyframework.jdl.impl.JDLImpl#getPaginate <em>Paginate</em>}</li>
  *   <li>{@link com.github.icelyframework.jdl.impl.JDLImpl#getDto <em>Dto</em>}</li>
  *   <li>{@link com.github.icelyframework.jdl.impl.JDLImpl#getService <em>Service</em>}</li>
+ *   <li>{@link com.github.icelyframework.jdl.impl.JDLImpl#getSearch <em>Search</em>}</li>
  * </ul>
  *
  * @generated
@@ -102,6 +104,16 @@ public class JDLImpl extends EObjectImpl implements JDL {
 	 * @ordered
 	 */
 	protected EList<Service> service;
+
+	/**
+	 * The cached value of the '{@link #getSearch() <em>Search</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSearch()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Search> search;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -206,6 +218,19 @@ public class JDLImpl extends EObjectImpl implements JDL {
 	 * @generated
 	 */
 	@Override
+	public EList<Search> getSearch() {
+		if (search == null) {
+			search = new EObjectContainmentEList<Search>(Search.class, this, JdlPackage.JDL__SEARCH);
+		}
+		return search;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case JdlPackage.JDL__APPLICATIONS:
@@ -220,6 +245,8 @@ public class JDLImpl extends EObjectImpl implements JDL {
 				return ((InternalEList<?>)getDto()).basicRemove(otherEnd, msgs);
 			case JdlPackage.JDL__SERVICE:
 				return ((InternalEList<?>)getService()).basicRemove(otherEnd, msgs);
+			case JdlPackage.JDL__SEARCH:
+				return ((InternalEList<?>)getSearch()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -244,6 +271,8 @@ public class JDLImpl extends EObjectImpl implements JDL {
 				return getDto();
 			case JdlPackage.JDL__SERVICE:
 				return getService();
+			case JdlPackage.JDL__SEARCH:
+				return getSearch();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -281,6 +310,10 @@ public class JDLImpl extends EObjectImpl implements JDL {
 				getService().clear();
 				getService().addAll((Collection<? extends Service>)newValue);
 				return;
+			case JdlPackage.JDL__SEARCH:
+				getSearch().clear();
+				getSearch().addAll((Collection<? extends Search>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -311,6 +344,9 @@ public class JDLImpl extends EObjectImpl implements JDL {
 			case JdlPackage.JDL__SERVICE:
 				getService().clear();
 				return;
+			case JdlPackage.JDL__SEARCH:
+				getSearch().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -335,6 +371,8 @@ public class JDLImpl extends EObjectImpl implements JDL {
 				return dto != null && !dto.isEmpty();
 			case JdlPackage.JDL__SERVICE:
 				return service != null && !service.isEmpty();
+			case JdlPackage.JDL__SEARCH:
+				return search != null && !search.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

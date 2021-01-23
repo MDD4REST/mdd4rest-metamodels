@@ -230,11 +230,6 @@ public class ApplicationItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(ConfigurationPackage.Literals.APPLICATION__CONFIG,
-				 ConfigurationFactory.eINSTANCE.createApplicationConfig()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ConfigurationPackage.Literals.APPLICATION__CONFIG,
 				 ConfigurationFactory.eINSTANCE.createSculptorConfig()));
 
 		newChildDescriptors.add

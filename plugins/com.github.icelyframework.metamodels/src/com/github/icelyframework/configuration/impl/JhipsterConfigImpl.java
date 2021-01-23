@@ -2,8 +2,10 @@
  */
 package com.github.icelyframework.configuration.impl;
 
+import com.github.icelyframework.configuration.AuthenticationType;
 import com.github.icelyframework.configuration.ConfigurationPackage;
 import com.github.icelyframework.configuration.DatabaseType;
+import com.github.icelyframework.configuration.JhipsterApplicationType;
 import com.github.icelyframework.configuration.JhipsterConfig;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -32,6 +34,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link com.github.icelyframework.configuration.impl.JhipsterConfigImpl#isEnableHibernateCache <em>Enable Hibernate Cache</em>}</li>
  *   <li>{@link com.github.icelyframework.configuration.impl.JhipsterConfigImpl#isSkipClient <em>Skip Client</em>}</li>
  *   <li>{@link com.github.icelyframework.configuration.impl.JhipsterConfigImpl#getBuildTool <em>Build Tool</em>}</li>
+ *   <li>{@link com.github.icelyframework.configuration.impl.JhipsterConfigImpl#getAuthenticationType <em>Authentication Type</em>}</li>
+ *   <li>{@link com.github.icelyframework.configuration.impl.JhipsterConfigImpl#getApplicationType <em>Application Type</em>}</li>
  * </ul>
  *
  * @generated
@@ -276,6 +280,46 @@ public class JhipsterConfigImpl extends ApplicationConfigImpl implements Jhipste
 	 * @ordered
 	 */
 	protected String buildTool = BUILD_TOOL_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getAuthenticationType() <em>Authentication Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAuthenticationType()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final AuthenticationType AUTHENTICATION_TYPE_EDEFAULT = AuthenticationType.JWT;
+
+	/**
+	 * The cached value of the '{@link #getAuthenticationType() <em>Authentication Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAuthenticationType()
+	 * @generated
+	 * @ordered
+	 */
+	protected AuthenticationType authenticationType = AUTHENTICATION_TYPE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getApplicationType() <em>Application Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getApplicationType()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final JhipsterApplicationType APPLICATION_TYPE_EDEFAULT = JhipsterApplicationType.MICROSERVICE;
+
+	/**
+	 * The cached value of the '{@link #getApplicationType() <em>Application Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getApplicationType()
+	 * @generated
+	 * @ordered
+	 */
+	protected JhipsterApplicationType applicationType = APPLICATION_TYPE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -578,6 +622,52 @@ public class JhipsterConfigImpl extends ApplicationConfigImpl implements Jhipste
 	 * @generated
 	 */
 	@Override
+	public AuthenticationType getAuthenticationType() {
+		return authenticationType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setAuthenticationType(AuthenticationType newAuthenticationType) {
+		AuthenticationType oldAuthenticationType = authenticationType;
+		authenticationType = newAuthenticationType == null ? AUTHENTICATION_TYPE_EDEFAULT : newAuthenticationType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ConfigurationPackage.JHIPSTER_CONFIG__AUTHENTICATION_TYPE, oldAuthenticationType, authenticationType));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public JhipsterApplicationType getApplicationType() {
+		return applicationType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setApplicationType(JhipsterApplicationType newApplicationType) {
+		JhipsterApplicationType oldApplicationType = applicationType;
+		applicationType = newApplicationType == null ? APPLICATION_TYPE_EDEFAULT : newApplicationType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ConfigurationPackage.JHIPSTER_CONFIG__APPLICATION_TYPE, oldApplicationType, applicationType));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case ConfigurationPackage.JHIPSTER_CONFIG__DATABASE_TYPE:
@@ -604,6 +694,10 @@ public class JhipsterConfigImpl extends ApplicationConfigImpl implements Jhipste
 				return isSkipClient();
 			case ConfigurationPackage.JHIPSTER_CONFIG__BUILD_TOOL:
 				return getBuildTool();
+			case ConfigurationPackage.JHIPSTER_CONFIG__AUTHENTICATION_TYPE:
+				return getAuthenticationType();
+			case ConfigurationPackage.JHIPSTER_CONFIG__APPLICATION_TYPE:
+				return getApplicationType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -651,6 +745,12 @@ public class JhipsterConfigImpl extends ApplicationConfigImpl implements Jhipste
 				return;
 			case ConfigurationPackage.JHIPSTER_CONFIG__BUILD_TOOL:
 				setBuildTool((String)newValue);
+				return;
+			case ConfigurationPackage.JHIPSTER_CONFIG__AUTHENTICATION_TYPE:
+				setAuthenticationType((AuthenticationType)newValue);
+				return;
+			case ConfigurationPackage.JHIPSTER_CONFIG__APPLICATION_TYPE:
+				setApplicationType((JhipsterApplicationType)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -700,6 +800,12 @@ public class JhipsterConfigImpl extends ApplicationConfigImpl implements Jhipste
 			case ConfigurationPackage.JHIPSTER_CONFIG__BUILD_TOOL:
 				setBuildTool(BUILD_TOOL_EDEFAULT);
 				return;
+			case ConfigurationPackage.JHIPSTER_CONFIG__AUTHENTICATION_TYPE:
+				setAuthenticationType(AUTHENTICATION_TYPE_EDEFAULT);
+				return;
+			case ConfigurationPackage.JHIPSTER_CONFIG__APPLICATION_TYPE:
+				setApplicationType(APPLICATION_TYPE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -736,6 +842,10 @@ public class JhipsterConfigImpl extends ApplicationConfigImpl implements Jhipste
 				return skipClient != SKIP_CLIENT_EDEFAULT;
 			case ConfigurationPackage.JHIPSTER_CONFIG__BUILD_TOOL:
 				return BUILD_TOOL_EDEFAULT == null ? buildTool != null : !BUILD_TOOL_EDEFAULT.equals(buildTool);
+			case ConfigurationPackage.JHIPSTER_CONFIG__AUTHENTICATION_TYPE:
+				return authenticationType != AUTHENTICATION_TYPE_EDEFAULT;
+			case ConfigurationPackage.JHIPSTER_CONFIG__APPLICATION_TYPE:
+				return applicationType != APPLICATION_TYPE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -774,6 +884,10 @@ public class JhipsterConfigImpl extends ApplicationConfigImpl implements Jhipste
 		result.append(skipClient);
 		result.append(", buildTool: ");
 		result.append(buildTool);
+		result.append(", authenticationType: ");
+		result.append(authenticationType);
+		result.append(", applicationType: ");
+		result.append(applicationType);
 		result.append(')');
 		return result.toString();
 	}

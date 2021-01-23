@@ -468,13 +468,22 @@ public interface ConfigurationPackage extends EPackage {
 	int SCULPTOR_CONFIG__DEFAULTBASECLASSNAMES = APPLICATION_CONFIG_FEATURE_COUNT + 19;
 
 	/**
+	 * The feature id for the '<em><b>Cacheoptions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCULPTOR_CONFIG__CACHEOPTIONS = APPLICATION_CONFIG_FEATURE_COUNT + 20;
+
+	/**
 	 * The number of structural features of the '<em>Sculptor Config</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCULPTOR_CONFIG_FEATURE_COUNT = APPLICATION_CONFIG_FEATURE_COUNT + 20;
+	int SCULPTOR_CONFIG_FEATURE_COUNT = APPLICATION_CONFIG_FEATURE_COUNT + 21;
 
 	/**
 	 * The meta object id for the '{@link com.github.icelyframework.configuration.impl.JhipsterConfigImpl <em>Jhipster Config</em>}' class.
@@ -613,13 +622,31 @@ public interface ConfigurationPackage extends EPackage {
 	int JHIPSTER_CONFIG__BUILD_TOOL = APPLICATION_CONFIG_FEATURE_COUNT + 11;
 
 	/**
+	 * The feature id for the '<em><b>Authentication Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JHIPSTER_CONFIG__AUTHENTICATION_TYPE = APPLICATION_CONFIG_FEATURE_COUNT + 12;
+
+	/**
+	 * The feature id for the '<em><b>Application Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JHIPSTER_CONFIG__APPLICATION_TYPE = APPLICATION_CONFIG_FEATURE_COUNT + 13;
+
+	/**
 	 * The number of structural features of the '<em>Jhipster Config</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int JHIPSTER_CONFIG_FEATURE_COUNT = APPLICATION_CONFIG_FEATURE_COUNT + 12;
+	int JHIPSTER_CONFIG_FEATURE_COUNT = APPLICATION_CONFIG_FEATURE_COUNT + 14;
 
 	/**
 	 * The meta object id for the '{@link com.github.icelyframework.configuration.impl.RESTOptionsImpl <em>REST Options</em>}' class.
@@ -1304,6 +1331,27 @@ public interface ConfigurationPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link com.github.icelyframework.configuration.AuthenticationType <em>Authentication Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.github.icelyframework.configuration.AuthenticationType
+	 * @see com.github.icelyframework.configuration.impl.ConfigurationPackageImpl#getAuthenticationType()
+	 * @generated
+	 */
+	int AUTHENTICATION_TYPE = 21;
+
+	/**
+	 * The meta object id for the '{@link com.github.icelyframework.configuration.JhipsterApplicationType <em>Jhipster Application Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.github.icelyframework.configuration.JhipsterApplicationType
+	 * @see com.github.icelyframework.configuration.impl.ConfigurationPackageImpl#getJhipsterApplicationType()
+	 * @generated
+	 */
+	int JHIPSTER_APPLICATION_TYPE = 22;
+
+
+	/**
 	 * Returns the meta object for class '{@link com.github.icelyframework.configuration.ApplicationConfig <em>Application Config</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1728,6 +1776,17 @@ public interface ConfigurationPackage extends EPackage {
 	EReference getSculptorConfig_Defaultbaseclassnames();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link com.github.icelyframework.configuration.SculptorConfig#getCacheoptions <em>Cacheoptions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Cacheoptions</em>'.
+	 * @see com.github.icelyframework.configuration.SculptorConfig#getCacheoptions()
+	 * @see #getSculptorConfig()
+	 * @generated
+	 */
+	EReference getSculptorConfig_Cacheoptions();
+
+	/**
 	 * Returns the meta object for class '{@link com.github.icelyframework.configuration.JhipsterConfig <em>Jhipster Config</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1868,6 +1927,28 @@ public interface ConfigurationPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getJhipsterConfig_BuildTool();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.github.icelyframework.configuration.JhipsterConfig#getAuthenticationType <em>Authentication Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Authentication Type</em>'.
+	 * @see com.github.icelyframework.configuration.JhipsterConfig#getAuthenticationType()
+	 * @see #getJhipsterConfig()
+	 * @generated
+	 */
+	EAttribute getJhipsterConfig_AuthenticationType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.github.icelyframework.configuration.JhipsterConfig#getApplicationType <em>Application Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Application Type</em>'.
+	 * @see com.github.icelyframework.configuration.JhipsterConfig#getApplicationType()
+	 * @see #getJhipsterConfig()
+	 * @generated
+	 */
+	EAttribute getJhipsterConfig_ApplicationType();
 
 	/**
 	 * Returns the meta object for class '{@link com.github.icelyframework.configuration.RESTOptions <em>REST Options</em>}'.
@@ -2537,6 +2618,26 @@ public interface ConfigurationPackage extends EPackage {
 	EEnum getDatabaseType();
 
 	/**
+	 * Returns the meta object for enum '{@link com.github.icelyframework.configuration.AuthenticationType <em>Authentication Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Authentication Type</em>'.
+	 * @see com.github.icelyframework.configuration.AuthenticationType
+	 * @generated
+	 */
+	EEnum getAuthenticationType();
+
+	/**
+	 * Returns the meta object for enum '{@link com.github.icelyframework.configuration.JhipsterApplicationType <em>Jhipster Application Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Jhipster Application Type</em>'.
+	 * @see com.github.icelyframework.configuration.JhipsterApplicationType
+	 * @generated
+	 */
+	EEnum getJhipsterApplicationType();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2881,6 +2982,14 @@ public interface ConfigurationPackage extends EPackage {
 		EReference SCULPTOR_CONFIG__DEFAULTBASECLASSNAMES = eINSTANCE.getSculptorConfig_Defaultbaseclassnames();
 
 		/**
+		 * The meta object literal for the '<em><b>Cacheoptions</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SCULPTOR_CONFIG__CACHEOPTIONS = eINSTANCE.getSculptorConfig_Cacheoptions();
+
+		/**
 		 * The meta object literal for the '{@link com.github.icelyframework.configuration.impl.JhipsterConfigImpl <em>Jhipster Config</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2985,6 +3094,22 @@ public interface ConfigurationPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute JHIPSTER_CONFIG__BUILD_TOOL = eINSTANCE.getJhipsterConfig_BuildTool();
+
+		/**
+		 * The meta object literal for the '<em><b>Authentication Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute JHIPSTER_CONFIG__AUTHENTICATION_TYPE = eINSTANCE.getJhipsterConfig_AuthenticationType();
+
+		/**
+		 * The meta object literal for the '<em><b>Application Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute JHIPSTER_CONFIG__APPLICATION_TYPE = eINSTANCE.getJhipsterConfig_ApplicationType();
 
 		/**
 		 * The meta object literal for the '{@link com.github.icelyframework.configuration.impl.RESTOptionsImpl <em>REST Options</em>}' class.
@@ -3511,6 +3636,26 @@ public interface ConfigurationPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum DATABASE_TYPE = eINSTANCE.getDatabaseType();
+
+		/**
+		 * The meta object literal for the '{@link com.github.icelyframework.configuration.AuthenticationType <em>Authentication Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.github.icelyframework.configuration.AuthenticationType
+		 * @see com.github.icelyframework.configuration.impl.ConfigurationPackageImpl#getAuthenticationType()
+		 * @generated
+		 */
+		EEnum AUTHENTICATION_TYPE = eINSTANCE.getAuthenticationType();
+
+		/**
+		 * The meta object literal for the '{@link com.github.icelyframework.configuration.JhipsterApplicationType <em>Jhipster Application Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.github.icelyframework.configuration.JhipsterApplicationType
+		 * @see com.github.icelyframework.configuration.impl.ConfigurationPackageImpl#getJhipsterApplicationType()
+		 * @generated
+		 */
+		EEnum JHIPSTER_APPLICATION_TYPE = eINSTANCE.getJhipsterApplicationType();
 
 	}
 

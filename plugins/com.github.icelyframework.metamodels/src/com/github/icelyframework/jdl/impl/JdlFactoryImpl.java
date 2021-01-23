@@ -11,6 +11,7 @@ import com.github.icelyframework.jdl.CacheProviderType;
 import com.github.icelyframework.jdl.ClientFramework;
 import com.github.icelyframework.jdl.Config;
 import com.github.icelyframework.jdl.DTO;
+import com.github.icelyframework.jdl.DTOValue;
 import com.github.icelyframework.jdl.DatabaseType;
 import com.github.icelyframework.jdl.Deployment;
 import com.github.icelyframework.jdl.DeploymentType;
@@ -24,12 +25,14 @@ import com.github.icelyframework.jdl.Literal;
 import com.github.icelyframework.jdl.MessageBroker;
 import com.github.icelyframework.jdl.Multiplicity;
 import com.github.icelyframework.jdl.Paginate;
+import com.github.icelyframework.jdl.PaginationValue;
 import com.github.icelyframework.jdl.RelationshipColumn;
 import com.github.icelyframework.jdl.RelationshipType;
 import com.github.icelyframework.jdl.Search;
 import com.github.icelyframework.jdl.SearchEngine;
 import com.github.icelyframework.jdl.Service;
 import com.github.icelyframework.jdl.ServiceDiscoveryType;
+import com.github.icelyframework.jdl.ServiceValue;
 import com.github.icelyframework.jdl.UnidirectionalRelationship;
 
 import org.eclipse.emf.ecore.EClass;
@@ -139,6 +142,12 @@ public class JdlFactoryImpl extends EFactoryImpl implements JdlFactory {
 				return createServiceDiscoveryTypeFromString(eDataType, initialValue);
 			case JdlPackage.GATEWAY_TYPE:
 				return createGatewayTypeFromString(eDataType, initialValue);
+			case JdlPackage.SERVICE_VALUE:
+				return createServiceValueFromString(eDataType, initialValue);
+			case JdlPackage.DTO_VALUE:
+				return createDTOValueFromString(eDataType, initialValue);
+			case JdlPackage.PAGINATION_VALUE:
+				return createPaginationValueFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -178,6 +187,12 @@ public class JdlFactoryImpl extends EFactoryImpl implements JdlFactory {
 				return convertServiceDiscoveryTypeToString(eDataType, instanceValue);
 			case JdlPackage.GATEWAY_TYPE:
 				return convertGatewayTypeToString(eDataType, instanceValue);
+			case JdlPackage.SERVICE_VALUE:
+				return convertServiceValueToString(eDataType, instanceValue);
+			case JdlPackage.DTO_VALUE:
+				return convertDTOValueToString(eDataType, instanceValue);
+			case JdlPackage.PAGINATION_VALUE:
+				return convertPaginationValueToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -605,6 +620,66 @@ public class JdlFactoryImpl extends EFactoryImpl implements JdlFactory {
 	 * @generated
 	 */
 	public String convertGatewayTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ServiceValue createServiceValueFromString(EDataType eDataType, String initialValue) {
+		ServiceValue result = ServiceValue.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertServiceValueToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DTOValue createDTOValueFromString(EDataType eDataType, String initialValue) {
+		DTOValue result = DTOValue.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertDTOValueToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PaginationValue createPaginationValueFromString(EDataType eDataType, String initialValue) {
+		PaginationValue result = PaginationValue.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertPaginationValueToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

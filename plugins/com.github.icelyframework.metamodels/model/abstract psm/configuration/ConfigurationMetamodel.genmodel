@@ -25,7 +25,18 @@
       <genEnumLiterals ecoreEnumLiteral="ConfigurationMetamodel.ecore#//DatabaseType/COUCHBASE"/>
       <genEnumLiterals ecoreEnumLiteral="ConfigurationMetamodel.ecore#//DatabaseType/NO"/>
     </genEnums>
-    <genClasses ecoreClass="ConfigurationMetamodel.ecore#//ApplicationConfig">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ConfigurationMetamodel.ecore#//AuthenticationType">
+      <genEnumLiterals ecoreEnumLiteral="ConfigurationMetamodel.ecore#//AuthenticationType/JWT"/>
+      <genEnumLiterals ecoreEnumLiteral="ConfigurationMetamodel.ecore#//AuthenticationType/UAA"/>
+      <genEnumLiterals ecoreEnumLiteral="ConfigurationMetamodel.ecore#//AuthenticationType/SESSION"/>
+      <genEnumLiterals ecoreEnumLiteral="ConfigurationMetamodel.ecore#//AuthenticationType/OAUTH2"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ConfigurationMetamodel.ecore#//JhipsterApplicationType">
+      <genEnumLiterals ecoreEnumLiteral="ConfigurationMetamodel.ecore#//JhipsterApplicationType/MICROSERVICE"/>
+      <genEnumLiterals ecoreEnumLiteral="ConfigurationMetamodel.ecore#//JhipsterApplicationType/GATEWAY"/>
+      <genEnumLiterals ecoreEnumLiteral="ConfigurationMetamodel.ecore#//JhipsterApplicationType/MONOLITH"/>
+    </genEnums>
+    <genClasses image="false" ecoreClass="ConfigurationMetamodel.ecore#//ApplicationConfig">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//ApplicationConfig/baseName"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//ApplicationConfig/servicePort"/>
     </genClasses>
@@ -68,6 +79,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetamodel.ecore#//SculptorConfig/javatypes"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetamodel.ecore#//SculptorConfig/packagenames"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetamodel.ecore#//SculptorConfig/defaultbaseclassnames"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetamodel.ecore#//SculptorConfig/cacheoptions"/>
     </genClasses>
     <genClasses ecoreClass="ConfigurationMetamodel.ecore#//JhipsterConfig">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//JhipsterConfig/databaseType"/>
@@ -82,6 +94,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//JhipsterConfig/enableHibernateCache"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//JhipsterConfig/skipClient"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//JhipsterConfig/buildTool"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//JhipsterConfig/authenticationType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//JhipsterConfig/applicationType"/>
     </genClasses>
     <genClasses ecoreClass="ConfigurationMetamodel.ecore#//RESTOptions">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//RESTOptions/spring_remoting_type"/>

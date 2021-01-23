@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see com.github.icelyframework.configuration.ConfigurationPackage#getApplicationConfig()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface ApplicationConfig extends EObject {

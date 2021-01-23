@@ -11,9 +11,13 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="baseName" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="servicePort" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="application" lowerBound="1"
+        eType="#//Application" eOpposite="#//Application/config"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ProjectConfig">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="project" lowerBound="1"
+        eType="#//Project" eOpposite="#//Project/config"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ApplicationType">
     <eLiterals name="JHIPSTER_MICROSERVICE"/>
@@ -32,7 +36,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="applicationType" eType="#//ApplicationType"
         defaultValueLiteral="SCULPTOR_MICROSERVICE"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="config" lowerBound="1"
-        eType="#//ApplicationConfig" containment="true"/>
+        eType="#//ApplicationConfig" containment="true" eOpposite="#//ApplicationConfig/application"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Project">
     <eStructuralFeatures xsi:type="ecore:EReference" name="applications" upperBound="-1"
@@ -44,7 +48,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="architecture" lowerBound="1"
         eType="#//ArchitectureType"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="config" lowerBound="1"
-        eType="#//ProjectConfig" containment="true"/>
+        eType="#//ProjectConfig" containment="true" eOpposite="#//ProjectConfig/project"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ArchitectureType">
     <eLiterals name="SIMPLE"/>
@@ -212,5 +216,6 @@
     <eLiterals name="MICROSERVICE"/>
     <eLiterals name="GATEWAY" value="1"/>
     <eLiterals name="MONOLITH" value="2"/>
+    <eLiterals name="UAA" value="3" literal="UAA"/>
   </eClassifiers>
 </ecore:EPackage>

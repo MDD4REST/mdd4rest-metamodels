@@ -5,6 +5,8 @@ package com.github.icelyframework.jdl.provider;
 
 import com.github.icelyframework.jdl.JdlPackage;
 
+import com.github.icelyframework.jdl.Paginate;
+import com.github.icelyframework.jdl.PaginationValue;
 import java.util.Collection;
 import java.util.List;
 
@@ -20,7 +22,9 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
  * This is the item provider adapter for a {@link com.github.icelyframework.jdl.Paginate} object.
@@ -57,29 +61,52 @@ public class PaginateItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addEntityPropertyDescriptor(object);
+			addEntitiesPropertyDescriptor(object);
+			addValuePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Entity feature.
+	 * This adds a property descriptor for the Entities feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addEntityPropertyDescriptor(Object object) {
+	protected void addEntitiesPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Paginate_entity_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Paginate_entity_feature", "_UI_Paginate_type"),
-				 JdlPackage.Literals.PAGINATE__ENTITY,
+				 getString("_UI_Paginate_entities_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Paginate_entities_feature", "_UI_Paginate_type"),
+				 JdlPackage.Literals.PAGINATE__ENTITIES,
 				 true,
 				 false,
 				 true,
 				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Value feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addValuePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Paginate_value_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Paginate_value_feature", "_UI_Paginate_type"),
+				 JdlPackage.Literals.PAGINATE__VALUE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -103,7 +130,11 @@ public class PaginateItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Paginate_type");
+		PaginationValue labelValue = ((Paginate)object).getValue();
+		String label = labelValue == null ? null : labelValue.toString();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Paginate_type") :
+			getString("_UI_Paginate_type") + " " + label;
 	}
 
 
@@ -117,6 +148,12 @@ public class PaginateItemProvider
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(Paginate.class)) {
+			case JdlPackage.PAGINATE__VALUE:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 

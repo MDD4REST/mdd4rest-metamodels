@@ -2,6 +2,7 @@
  */
 package com.github.icelyframework.configuration.impl;
 
+import com.github.icelyframework.configuration.CacheOptions;
 import com.github.icelyframework.configuration.CascadeOptions;
 import com.github.icelyframework.configuration.ConfigurationPackage;
 import com.github.icelyframework.configuration.DatabaseOptions;
@@ -59,6 +60,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.github.icelyframework.configuration.impl.SculptorConfigImpl#getJavatypes <em>Javatypes</em>}</li>
  *   <li>{@link com.github.icelyframework.configuration.impl.SculptorConfigImpl#getPackagenames <em>Packagenames</em>}</li>
  *   <li>{@link com.github.icelyframework.configuration.impl.SculptorConfigImpl#getDefaultbaseclassnames <em>Defaultbaseclassnames</em>}</li>
+ *   <li>{@link com.github.icelyframework.configuration.impl.SculptorConfigImpl#getCacheoptions <em>Cacheoptions</em>}</li>
  * </ul>
  *
  * @generated
@@ -353,6 +355,16 @@ public class SculptorConfigImpl extends ApplicationConfigImpl implements Sculpto
 	 * @ordered
 	 */
 	protected EList<DefaultBaseClassName> defaultbaseclassnames;
+
+	/**
+	 * The cached value of the '{@link #getCacheoptions() <em>Cacheoptions</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCacheoptions()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<CacheOptions> cacheoptions;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -825,6 +837,19 @@ public class SculptorConfigImpl extends ApplicationConfigImpl implements Sculpto
 	 * @generated
 	 */
 	@Override
+	public EList<CacheOptions> getCacheoptions() {
+		if (cacheoptions == null) {
+			cacheoptions = new EObjectContainmentEList<CacheOptions>(CacheOptions.class, this, ConfigurationPackage.SCULPTOR_CONFIG__CACHEOPTIONS);
+		}
+		return cacheoptions;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case ConfigurationPackage.SCULPTOR_CONFIG__FRAMEWORK:
@@ -849,6 +874,8 @@ public class SculptorConfigImpl extends ApplicationConfigImpl implements Sculpto
 				return ((InternalEList<?>)getPackagenames()).basicRemove(otherEnd, msgs);
 			case ConfigurationPackage.SCULPTOR_CONFIG__DEFAULTBASECLASSNAMES:
 				return ((InternalEList<?>)getDefaultbaseclassnames()).basicRemove(otherEnd, msgs);
+			case ConfigurationPackage.SCULPTOR_CONFIG__CACHEOPTIONS:
+				return ((InternalEList<?>)getCacheoptions()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -901,6 +928,8 @@ public class SculptorConfigImpl extends ApplicationConfigImpl implements Sculpto
 				return getPackagenames();
 			case ConfigurationPackage.SCULPTOR_CONFIG__DEFAULTBASECLASSNAMES:
 				return getDefaultbaseclassnames();
+			case ConfigurationPackage.SCULPTOR_CONFIG__CACHEOPTIONS:
+				return getCacheoptions();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -982,6 +1011,10 @@ public class SculptorConfigImpl extends ApplicationConfigImpl implements Sculpto
 				getDefaultbaseclassnames().clear();
 				getDefaultbaseclassnames().addAll((Collection<? extends DefaultBaseClassName>)newValue);
 				return;
+			case ConfigurationPackage.SCULPTOR_CONFIG__CACHEOPTIONS:
+				getCacheoptions().clear();
+				getCacheoptions().addAll((Collection<? extends CacheOptions>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -1054,6 +1087,9 @@ public class SculptorConfigImpl extends ApplicationConfigImpl implements Sculpto
 			case ConfigurationPackage.SCULPTOR_CONFIG__DEFAULTBASECLASSNAMES:
 				getDefaultbaseclassnames().clear();
 				return;
+			case ConfigurationPackage.SCULPTOR_CONFIG__CACHEOPTIONS:
+				getCacheoptions().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -1106,6 +1142,8 @@ public class SculptorConfigImpl extends ApplicationConfigImpl implements Sculpto
 				return packagenames != null && !packagenames.isEmpty();
 			case ConfigurationPackage.SCULPTOR_CONFIG__DEFAULTBASECLASSNAMES:
 				return defaultbaseclassnames != null && !defaultbaseclassnames.isEmpty();
+			case ConfigurationPackage.SCULPTOR_CONFIG__CACHEOPTIONS:
+				return cacheoptions != null && !cacheoptions.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

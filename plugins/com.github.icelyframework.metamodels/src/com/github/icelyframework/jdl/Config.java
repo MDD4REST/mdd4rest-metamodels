@@ -30,6 +30,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.github.icelyframework.jdl.Config#getTestFrameworks <em>Test Frameworks</em>}</li>
  *   <li>{@link com.github.icelyframework.jdl.Config#getAuthenticationType <em>Authentication Type</em>}</li>
  *   <li>{@link com.github.icelyframework.jdl.Config#getCacheProvider <em>Cache Provider</em>}</li>
+ *   <li>{@link com.github.icelyframework.jdl.Config#getApplication <em>Application</em>}</li>
  * </ul>
  *
  * @see com.github.icelyframework.jdl.JdlPackage#getConfig()
@@ -419,5 +420,29 @@ public interface Config extends EObject {
 	 * @generated
 	 */
 	void setCacheProvider(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Application</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link com.github.icelyframework.jdl.Application#getConfig <em>Config</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Application</em>' container reference.
+	 * @see #setApplication(Application)
+	 * @see com.github.icelyframework.jdl.JdlPackage#getConfig_Application()
+	 * @see com.github.icelyframework.jdl.Application#getConfig
+	 * @model opposite="config" required="true" transient="false"
+	 * @generated
+	 */
+	Application getApplication();
+
+	/**
+	 * Sets the value of the '{@link com.github.icelyframework.jdl.Config#getApplication <em>Application</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Application</em>' container reference.
+	 * @see #getApplication()
+	 * @generated
+	 */
+	void setApplication(Application value);
 
 } // Config

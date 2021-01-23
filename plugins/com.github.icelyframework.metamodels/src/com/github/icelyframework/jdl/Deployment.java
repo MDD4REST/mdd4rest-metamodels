@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.github.icelyframework.jdl.Deployment#isMonitoring <em>Monitoring</em>}</li>
  *   <li>{@link com.github.icelyframework.jdl.Deployment#getGatewayType <em>Gateway Type</em>}</li>
  *   <li>{@link com.github.icelyframework.jdl.Deployment#getKubernetesServiceType <em>Kubernetes Service Type</em>}</li>
+ *   <li>{@link com.github.icelyframework.jdl.Deployment#getApplication <em>Application</em>}</li>
  * </ul>
  *
  * @see com.github.icelyframework.jdl.JdlPackage#getDeployment()
@@ -204,5 +205,29 @@ public interface Deployment extends EObject {
 	 * @generated
 	 */
 	void setKubernetesServiceType(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Application</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link com.github.icelyframework.jdl.Application#getDeployments <em>Deployments</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Application</em>' container reference.
+	 * @see #setApplication(Application)
+	 * @see com.github.icelyframework.jdl.JdlPackage#getDeployment_Application()
+	 * @see com.github.icelyframework.jdl.Application#getDeployments
+	 * @model opposite="deployments" required="true" transient="false"
+	 * @generated
+	 */
+	Application getApplication();
+
+	/**
+	 * Sets the value of the '{@link com.github.icelyframework.jdl.Deployment#getApplication <em>Application</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Application</em>' container reference.
+	 * @see #getApplication()
+	 * @generated
+	 */
+	void setApplication(Application value);
 
 } // Deployment
