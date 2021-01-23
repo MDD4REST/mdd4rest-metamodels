@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.github.icelyframework.jdl.Deployment#isMonitoring <em>Monitoring</em>}</li>
  *   <li>{@link com.github.icelyframework.jdl.Deployment#getGatewayType <em>Gateway Type</em>}</li>
  *   <li>{@link com.github.icelyframework.jdl.Deployment#getKubernetesServiceType <em>Kubernetes Service Type</em>}</li>
- *   <li>{@link com.github.icelyframework.jdl.Deployment#getApplication <em>Application</em>}</li>
+ *   <li>{@link com.github.icelyframework.jdl.Deployment#getJdl <em>Jdl</em>}</li>
  * </ul>
  *
  * @see com.github.icelyframework.jdl.JdlPackage#getDeployment()
@@ -207,27 +207,27 @@ public interface Deployment extends EObject {
 	void setKubernetesServiceType(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Application</b></em>' reference.
+	 * Returns the value of the '<em><b>Jdl</b></em>' reference.
 	 * It is bidirectional and its opposite is '{@link com.github.icelyframework.jdl.JDL#getDeployments <em>Deployments</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Application</em>' reference.
-	 * @see #setApplication(JDL)
-	 * @see com.github.icelyframework.jdl.JdlPackage#getDeployment_Application()
+	 * @return the value of the '<em>Jdl</em>' reference.
+	 * @see #setJdl(JDL)
+	 * @see com.github.icelyframework.jdl.JdlPackage#getDeployment_Jdl()
 	 * @see com.github.icelyframework.jdl.JDL#getDeployments
 	 * @model opposite="deployments" required="true"
 	 * @generated
 	 */
-	JDL getApplication();
+	JDL getJdl();
 
 	/**
-	 * Sets the value of the '{@link com.github.icelyframework.jdl.Deployment#getApplication <em>Application</em>}' reference.
+	 * Sets the value of the '{@link com.github.icelyframework.jdl.Deployment#getJdl <em>Jdl</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Application</em>' reference.
-	 * @see #getApplication()
+	 * @param value the new value of the '<em>Jdl</em>' reference.
+	 * @see #getJdl()
 	 * @generated
 	 */
-	void setApplication(JDL value);
+	void setJdl(JDL value);
 
 } // Deployment

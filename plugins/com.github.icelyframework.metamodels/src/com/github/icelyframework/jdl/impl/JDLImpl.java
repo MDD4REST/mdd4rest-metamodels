@@ -26,6 +26,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -120,14 +121,14 @@ public class JDLImpl extends EObjectImpl implements JDL {
 	protected EList<Search> search;
 
 	/**
-	 * The cached value of the '{@link #getDeployments() <em>Deployments</em>}' reference.
+	 * The cached value of the '{@link #getDeployments() <em>Deployments</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getDeployments()
 	 * @generated
 	 * @ordered
 	 */
-	protected Deployment deployments;
+	protected EList<Deployment> deployments;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -245,14 +246,9 @@ public class JDLImpl extends EObjectImpl implements JDL {
 	 * @generated
 	 */
 	@Override
-	public Deployment getDeployments() {
-		if (deployments != null && deployments.eIsProxy()) {
-			InternalEObject oldDeployments = (InternalEObject)deployments;
-			deployments = (Deployment)eResolveProxy(oldDeployments);
-			if (deployments != oldDeployments) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, JdlPackage.JDL__DEPLOYMENTS, oldDeployments, deployments));
-			}
+	public EList<Deployment> getDeployments() {
+		if (deployments == null) {
+			deployments = new EObjectWithInverseResolvingEList<Deployment>(Deployment.class, this, JdlPackage.JDL__DEPLOYMENTS, JdlPackage.DEPLOYMENT__JDL);
 		}
 		return deployments;
 	}
@@ -262,57 +258,12 @@ public class JDLImpl extends EObjectImpl implements JDL {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Deployment basicGetDeployments() {
-		return deployments;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetDeployments(Deployment newDeployments, NotificationChain msgs) {
-		Deployment oldDeployments = deployments;
-		deployments = newDeployments;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, JdlPackage.JDL__DEPLOYMENTS, oldDeployments, newDeployments);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setDeployments(Deployment newDeployments) {
-		if (newDeployments != deployments) {
-			NotificationChain msgs = null;
-			if (deployments != null)
-				msgs = ((InternalEObject)deployments).eInverseRemove(this, JdlPackage.DEPLOYMENT__APPLICATION, Deployment.class, msgs);
-			if (newDeployments != null)
-				msgs = ((InternalEObject)newDeployments).eInverseAdd(this, JdlPackage.DEPLOYMENT__APPLICATION, Deployment.class, msgs);
-			msgs = basicSetDeployments(newDeployments, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, JdlPackage.JDL__DEPLOYMENTS, newDeployments, newDeployments));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case JdlPackage.JDL__DEPLOYMENTS:
-				if (deployments != null)
-					msgs = ((InternalEObject)deployments).eInverseRemove(this, JdlPackage.DEPLOYMENT__APPLICATION, Deployment.class, msgs);
-				return basicSetDeployments((Deployment)otherEnd, msgs);
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getDeployments()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -340,7 +291,7 @@ public class JDLImpl extends EObjectImpl implements JDL {
 			case JdlPackage.JDL__SEARCH:
 				return ((InternalEList<?>)getSearch()).basicRemove(otherEnd, msgs);
 			case JdlPackage.JDL__DEPLOYMENTS:
-				return basicSetDeployments(null, msgs);
+				return ((InternalEList<?>)getDeployments()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -368,8 +319,7 @@ public class JDLImpl extends EObjectImpl implements JDL {
 			case JdlPackage.JDL__SEARCH:
 				return getSearch();
 			case JdlPackage.JDL__DEPLOYMENTS:
-				if (resolve) return getDeployments();
-				return basicGetDeployments();
+				return getDeployments();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -412,7 +362,8 @@ public class JDLImpl extends EObjectImpl implements JDL {
 				getSearch().addAll((Collection<? extends Search>)newValue);
 				return;
 			case JdlPackage.JDL__DEPLOYMENTS:
-				setDeployments((Deployment)newValue);
+				getDeployments().clear();
+				getDeployments().addAll((Collection<? extends Deployment>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -448,7 +399,7 @@ public class JDLImpl extends EObjectImpl implements JDL {
 				getSearch().clear();
 				return;
 			case JdlPackage.JDL__DEPLOYMENTS:
-				setDeployments((Deployment)null);
+				getDeployments().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -477,7 +428,7 @@ public class JDLImpl extends EObjectImpl implements JDL {
 			case JdlPackage.JDL__SEARCH:
 				return search != null && !search.isEmpty();
 			case JdlPackage.JDL__DEPLOYMENTS:
-				return deployments != null;
+				return deployments != null && !deployments.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

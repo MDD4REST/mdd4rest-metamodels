@@ -159,7 +159,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JDLMetamodel.ecore#//Deployment/monitoring"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JDLMetamodel.ecore#//Deployment/gatewayType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JDLMetamodel.ecore#//Deployment/kubernetesServiceType"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference JDLMetamodel.ecore#//Deployment/application"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference JDLMetamodel.ecore#//Deployment/jdl"/>
     </genClasses>
     <genClasses ecoreClass="JDLMetamodel.ecore#//UnidirectionalRelationship">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference JDLMetamodel.ecore#//UnidirectionalRelationship/toEntity"/>

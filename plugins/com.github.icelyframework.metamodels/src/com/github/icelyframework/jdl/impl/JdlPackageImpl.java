@@ -990,7 +990,7 @@ public class JdlPackageImpl extends EPackageImpl implements JdlPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getDeployment_Application() {
+	public EReference getDeployment_Jdl() {
 		return (EReference)deploymentEClass.getEStructuralFeatures().get(8);
 	}
 
@@ -1475,7 +1475,7 @@ public class JdlPackageImpl extends EPackageImpl implements JdlPackage {
 		createEAttribute(deploymentEClass, DEPLOYMENT__MONITORING);
 		createEAttribute(deploymentEClass, DEPLOYMENT__GATEWAY_TYPE);
 		createEAttribute(deploymentEClass, DEPLOYMENT__KUBERNETES_SERVICE_TYPE);
-		createEReference(deploymentEClass, DEPLOYMENT__APPLICATION);
+		createEReference(deploymentEClass, DEPLOYMENT__JDL);
 
 		unidirectionalRelationshipEClass = createEClass(UNIDIRECTIONAL_RELATIONSHIP);
 		createEReference(unidirectionalRelationshipEClass, UNIDIRECTIONAL_RELATIONSHIP__TO_ENTITY);
@@ -1619,7 +1619,7 @@ public class JdlPackageImpl extends EPackageImpl implements JdlPackage {
 		initEReference(getJDL_Dto(), this.getDTO(), null, "dto", null, 0, -1, com.github.icelyframework.jdl.JDL.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getJDL_Service(), this.getService(), null, "service", null, 0, -1, com.github.icelyframework.jdl.JDL.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getJDL_Search(), this.getSearch(), null, "search", null, 0, -1, com.github.icelyframework.jdl.JDL.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getJDL_Deployments(), this.getDeployment(), this.getDeployment_Application(), "deployments", null, 0, 1, com.github.icelyframework.jdl.JDL.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getJDL_Deployments(), this.getDeployment(), this.getDeployment_Jdl(), "deployments", null, 0, -1, com.github.icelyframework.jdl.JDL.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(deploymentEClass, Deployment.class, "Deployment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDeployment_DeploymentType(), this.getDeploymentType(), "deploymentType", null, 0, 1, Deployment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1630,7 +1630,7 @@ public class JdlPackageImpl extends EPackageImpl implements JdlPackage {
 		initEAttribute(getDeployment_Monitoring(), ecorePackage.getEBoolean(), "monitoring", null, 0, 1, Deployment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDeployment_GatewayType(), this.getGatewayType(), "gatewayType", null, 0, 1, Deployment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDeployment_KubernetesServiceType(), ecorePackage.getEString(), "kubernetesServiceType", null, 0, 1, Deployment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDeployment_Application(), this.getJDL(), this.getJDL_Deployments(), "application", null, 1, 1, Deployment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDeployment_Jdl(), this.getJDL(), this.getJDL_Deployments(), "jdl", null, 1, 1, Deployment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(unidirectionalRelationshipEClass, UnidirectionalRelationship.class, "UnidirectionalRelationship", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getUnidirectionalRelationship_ToEntity(), this.getEntity(), null, "toEntity", null, 1, 1, UnidirectionalRelationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -103,8 +103,8 @@
         eType="#//Service" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="search" upperBound="-1"
         eType="#//Search" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="deployments" eType="#//Deployment"
-        eOpposite="#//Deployment/application"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="deployments" upperBound="-1"
+        eType="#//Deployment" eOpposite="#//Deployment/jdl"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Deployment">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="deploymentType" eType="#//DeploymentType"/>
@@ -117,8 +117,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="gatewayType" eType="#//GatewayType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="kubernetesServiceType"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="application" lowerBound="1"
-        eType="#//JDL" eOpposite="#//JDL/deployments"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="jdl" lowerBound="1" eType="#//JDL"
+        eOpposite="#//JDL/deployments"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="DeploymentType">
     <eLiterals name="DOCKER_COMPOSE"/>

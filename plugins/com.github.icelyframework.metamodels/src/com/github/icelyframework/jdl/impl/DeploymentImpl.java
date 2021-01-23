@@ -42,7 +42,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  *   <li>{@link com.github.icelyframework.jdl.impl.DeploymentImpl#isMonitoring <em>Monitoring</em>}</li>
  *   <li>{@link com.github.icelyframework.jdl.impl.DeploymentImpl#getGatewayType <em>Gateway Type</em>}</li>
  *   <li>{@link com.github.icelyframework.jdl.impl.DeploymentImpl#getKubernetesServiceType <em>Kubernetes Service Type</em>}</li>
- *   <li>{@link com.github.icelyframework.jdl.impl.DeploymentImpl#getApplication <em>Application</em>}</li>
+ *   <li>{@link com.github.icelyframework.jdl.impl.DeploymentImpl#getJdl <em>Jdl</em>}</li>
  * </ul>
  *
  * @generated
@@ -199,14 +199,14 @@ public class DeploymentImpl extends EObjectImpl implements Deployment {
 	protected String kubernetesServiceType = KUBERNETES_SERVICE_TYPE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getApplication() <em>Application</em>}' reference.
+	 * The cached value of the '{@link #getJdl() <em>Jdl</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getApplication()
+	 * @see #getJdl()
 	 * @generated
 	 * @ordered
 	 */
-	protected JDL application;
+	protected JDL jdl;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -407,16 +407,16 @@ public class DeploymentImpl extends EObjectImpl implements Deployment {
 	 * @generated
 	 */
 	@Override
-	public JDL getApplication() {
-		if (application != null && application.eIsProxy()) {
-			InternalEObject oldApplication = (InternalEObject)application;
-			application = (JDL)eResolveProxy(oldApplication);
-			if (application != oldApplication) {
+	public JDL getJdl() {
+		if (jdl != null && jdl.eIsProxy()) {
+			InternalEObject oldJdl = (InternalEObject)jdl;
+			jdl = (JDL)eResolveProxy(oldJdl);
+			if (jdl != oldJdl) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, JdlPackage.DEPLOYMENT__APPLICATION, oldApplication, application));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, JdlPackage.DEPLOYMENT__JDL, oldJdl, jdl));
 			}
 		}
-		return application;
+		return jdl;
 	}
 
 	/**
@@ -424,8 +424,8 @@ public class DeploymentImpl extends EObjectImpl implements Deployment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public JDL basicGetApplication() {
-		return application;
+	public JDL basicGetJdl() {
+		return jdl;
 	}
 
 	/**
@@ -433,11 +433,11 @@ public class DeploymentImpl extends EObjectImpl implements Deployment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetApplication(JDL newApplication, NotificationChain msgs) {
-		JDL oldApplication = application;
-		application = newApplication;
+	public NotificationChain basicSetJdl(JDL newJdl, NotificationChain msgs) {
+		JDL oldJdl = jdl;
+		jdl = newJdl;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, JdlPackage.DEPLOYMENT__APPLICATION, oldApplication, newApplication);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, JdlPackage.DEPLOYMENT__JDL, oldJdl, newJdl);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -449,18 +449,18 @@ public class DeploymentImpl extends EObjectImpl implements Deployment {
 	 * @generated
 	 */
 	@Override
-	public void setApplication(JDL newApplication) {
-		if (newApplication != application) {
+	public void setJdl(JDL newJdl) {
+		if (newJdl != jdl) {
 			NotificationChain msgs = null;
-			if (application != null)
-				msgs = ((InternalEObject)application).eInverseRemove(this, JdlPackage.JDL__DEPLOYMENTS, JDL.class, msgs);
-			if (newApplication != null)
-				msgs = ((InternalEObject)newApplication).eInverseAdd(this, JdlPackage.JDL__DEPLOYMENTS, JDL.class, msgs);
-			msgs = basicSetApplication(newApplication, msgs);
+			if (jdl != null)
+				msgs = ((InternalEObject)jdl).eInverseRemove(this, JdlPackage.JDL__DEPLOYMENTS, JDL.class, msgs);
+			if (newJdl != null)
+				msgs = ((InternalEObject)newJdl).eInverseAdd(this, JdlPackage.JDL__DEPLOYMENTS, JDL.class, msgs);
+			msgs = basicSetJdl(newJdl, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, JdlPackage.DEPLOYMENT__APPLICATION, newApplication, newApplication));
+			eNotify(new ENotificationImpl(this, Notification.SET, JdlPackage.DEPLOYMENT__JDL, newJdl, newJdl));
 	}
 
 	/**
@@ -471,10 +471,10 @@ public class DeploymentImpl extends EObjectImpl implements Deployment {
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case JdlPackage.DEPLOYMENT__APPLICATION:
-				if (application != null)
-					msgs = ((InternalEObject)application).eInverseRemove(this, JdlPackage.JDL__DEPLOYMENTS, JDL.class, msgs);
-				return basicSetApplication((JDL)otherEnd, msgs);
+			case JdlPackage.DEPLOYMENT__JDL:
+				if (jdl != null)
+					msgs = ((InternalEObject)jdl).eInverseRemove(this, JdlPackage.JDL__DEPLOYMENTS, JDL.class, msgs);
+				return basicSetJdl((JDL)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -487,8 +487,8 @@ public class DeploymentImpl extends EObjectImpl implements Deployment {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case JdlPackage.DEPLOYMENT__APPLICATION:
-				return basicSetApplication(null, msgs);
+			case JdlPackage.DEPLOYMENT__JDL:
+				return basicSetJdl(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -517,9 +517,9 @@ public class DeploymentImpl extends EObjectImpl implements Deployment {
 				return getGatewayType();
 			case JdlPackage.DEPLOYMENT__KUBERNETES_SERVICE_TYPE:
 				return getKubernetesServiceType();
-			case JdlPackage.DEPLOYMENT__APPLICATION:
-				if (resolve) return getApplication();
-				return basicGetApplication();
+			case JdlPackage.DEPLOYMENT__JDL:
+				if (resolve) return getJdl();
+				return basicGetJdl();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -558,8 +558,8 @@ public class DeploymentImpl extends EObjectImpl implements Deployment {
 			case JdlPackage.DEPLOYMENT__KUBERNETES_SERVICE_TYPE:
 				setKubernetesServiceType((String)newValue);
 				return;
-			case JdlPackage.DEPLOYMENT__APPLICATION:
-				setApplication((JDL)newValue);
+			case JdlPackage.DEPLOYMENT__JDL:
+				setJdl((JDL)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -597,8 +597,8 @@ public class DeploymentImpl extends EObjectImpl implements Deployment {
 			case JdlPackage.DEPLOYMENT__KUBERNETES_SERVICE_TYPE:
 				setKubernetesServiceType(KUBERNETES_SERVICE_TYPE_EDEFAULT);
 				return;
-			case JdlPackage.DEPLOYMENT__APPLICATION:
-				setApplication((JDL)null);
+			case JdlPackage.DEPLOYMENT__JDL:
+				setJdl((JDL)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -628,8 +628,8 @@ public class DeploymentImpl extends EObjectImpl implements Deployment {
 				return gatewayType != GATEWAY_TYPE_EDEFAULT;
 			case JdlPackage.DEPLOYMENT__KUBERNETES_SERVICE_TYPE:
 				return KUBERNETES_SERVICE_TYPE_EDEFAULT == null ? kubernetesServiceType != null : !KUBERNETES_SERVICE_TYPE_EDEFAULT.equals(kubernetesServiceType);
-			case JdlPackage.DEPLOYMENT__APPLICATION:
-				return application != null;
+			case JdlPackage.DEPLOYMENT__JDL:
+				return jdl != null;
 		}
 		return super.eIsSet(featureID);
 	}

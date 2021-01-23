@@ -613,7 +613,7 @@ public interface JdlPackage extends EPackage {
 	int JDL__SEARCH = 6;
 
 	/**
-	 * The feature id for the '<em><b>Deployments</b></em>' reference.
+	 * The feature id for the '<em><b>Deployments</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -713,13 +713,13 @@ public interface JdlPackage extends EPackage {
 	int DEPLOYMENT__KUBERNETES_SERVICE_TYPE = 7;
 
 	/**
-	 * The feature id for the '<em><b>Application</b></em>' reference.
+	 * The feature id for the '<em><b>Jdl</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DEPLOYMENT__APPLICATION = 8;
+	int DEPLOYMENT__JDL = 8;
 
 	/**
 	 * The number of structural features of the '<em>Deployment</em>' class.
@@ -1841,10 +1841,10 @@ public interface JdlPackage extends EPackage {
 	EReference getJDL_Search();
 
 	/**
-	 * Returns the meta object for the reference '{@link com.github.icelyframework.jdl.JDL#getDeployments <em>Deployments</em>}'.
+	 * Returns the meta object for the reference list '{@link com.github.icelyframework.jdl.JDL#getDeployments <em>Deployments</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Deployments</em>'.
+	 * @return the meta object for the reference list '<em>Deployments</em>'.
 	 * @see com.github.icelyframework.jdl.JDL#getDeployments()
 	 * @see #getJDL()
 	 * @generated
@@ -1950,15 +1950,15 @@ public interface JdlPackage extends EPackage {
 	EAttribute getDeployment_KubernetesServiceType();
 
 	/**
-	 * Returns the meta object for the reference '{@link com.github.icelyframework.jdl.Deployment#getApplication <em>Application</em>}'.
+	 * Returns the meta object for the reference '{@link com.github.icelyframework.jdl.Deployment#getJdl <em>Jdl</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Application</em>'.
-	 * @see com.github.icelyframework.jdl.Deployment#getApplication()
+	 * @return the meta object for the reference '<em>Jdl</em>'.
+	 * @see com.github.icelyframework.jdl.Deployment#getJdl()
 	 * @see #getDeployment()
 	 * @generated
 	 */
-	EReference getDeployment_Application();
+	EReference getDeployment_Jdl();
 
 	/**
 	 * Returns the meta object for class '{@link com.github.icelyframework.jdl.UnidirectionalRelationship <em>Unidirectional Relationship</em>}'.
@@ -2831,7 +2831,7 @@ public interface JdlPackage extends EPackage {
 		EReference JDL__SEARCH = eINSTANCE.getJDL_Search();
 
 		/**
-		 * The meta object literal for the '<em><b>Deployments</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Deployments</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -2913,12 +2913,12 @@ public interface JdlPackage extends EPackage {
 		EAttribute DEPLOYMENT__KUBERNETES_SERVICE_TYPE = eINSTANCE.getDeployment_KubernetesServiceType();
 
 		/**
-		 * The meta object literal for the '<em><b>Application</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Jdl</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DEPLOYMENT__APPLICATION = eINSTANCE.getDeployment_Application();
+		EReference DEPLOYMENT__JDL = eINSTANCE.getDeployment_Jdl();
 
 		/**
 		 * The meta object literal for the '{@link com.github.icelyframework.jdl.impl.UnidirectionalRelationshipImpl <em>Unidirectional Relationship</em>}' class.

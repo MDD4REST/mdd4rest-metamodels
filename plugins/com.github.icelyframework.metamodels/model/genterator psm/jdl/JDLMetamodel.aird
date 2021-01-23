@@ -4,7 +4,7 @@
     <semanticResources>JDLMetamodel.ecore</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_FiB4sKwcEeqaqLjgT5GnwA">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_GCVwcKwcEeqaqLjgT5GnwA" name="JDLMetamodel class diagram" repPath="#_GB_yMKwcEeqaqLjgT5GnwA" changeId="985b0c57-a1d3-4ac7-a221-bfdcb8c986ff">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_GCVwcKwcEeqaqLjgT5GnwA" name="JDLMetamodel class diagram" repPath="#_GB_yMKwcEeqaqLjgT5GnwA" changeId="62f9c089-07c7-482b-a095-c2d611cfc423">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="JDLMetamodel.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -67,6 +67,12 @@
             <labelFormat>bold</labelFormat>
             <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </endLabelStyleDescription>
+        </computedStyleDescriptions>
+        <computedStyleDescriptions xmi:type="style:FlatContainerStyleDescription" xmi:id="_cQLIpF1lEeuym8a9gbgJNg" arcWidth="8" arcHeight="8" borderSizeComputationExpression="1" tooltipExpression="service:renderTooltip" roundedCorner="true" widthComputationExpression="12" heightComputationExpression="10" backgroundStyle="Liquid">
+          <borderColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+          <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+          <backgroundColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          <foregroundColor xmi:type="description:UserFixedColor" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@userColorsPalettes[name='Ecore%20Palette']/@entries[name='EClass']"/>
         </computedStyleDescriptions>
       </data>
     </ownedAnnotationEntries>
@@ -1757,16 +1763,15 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_2_NeALCFEeq6NMutbmF8bg" name="Deployment" tooltipText="" incomingEdges="_Bb0SJl1hEeuszMhZ97ISnA" width="12" height="10">
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_2_NeALCFEeq6NMutbmF8bg" name="Deployment" tooltipText="&#xA;ERROR : The lower bound -1 must be greater than or equal to 0" incomingEdges="_Bb0SJl1hEeuszMhZ97ISnA" width="12" height="10">
       <target xmi:type="ecore:EClass" href="JDLMetamodel.ecore#//Deployment"/>
       <semanticElements xmi:type="ecore:EClass" href="JDLMetamodel.ecore#//Deployment"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_OZv1D1HYEeuOppIWGhLL_g" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" backgroundColor="128,128,128" foregroundColor="128,128,128">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_cQLIpl1lEeuym8a9gbgJNg" labelColor="239,41,41" description="_cQLIpF1lEeuym8a9gbgJNg" borderSize="1" borderSizeComputationExpression="1" borderColor="239,41,41" backgroundStyle="Liquid" backgroundColor="128,128,128" foregroundColor="128,128,128">
         <customFeatures>backgroundColor</customFeatures>
         <customFeatures>foregroundColor</customFeatures>
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
       <ownedElements xmi:type="diagram:DNodeListElement" uid="_kEPMULCGEeq6NMutbmF8bg" name="deploymentType : DeploymentType = DOCKER_COMPOSE" tooltipText="">
@@ -2687,10 +2692,10 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='Bi-directional%20EC_EReference%20']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_Bb0SJl1hEeuszMhZ97ISnA" sourceNode="_fvnQkKzEEeqij7FhILCPzQ" targetNode="_2_NeALCFEeq6NMutbmF8bg" beginLabel="[1..1] application" endLabel="[0..1] deployments">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_Bb0SJl1hEeuszMhZ97ISnA" sourceNode="_fvnQkKzEEeqij7FhILCPzQ" targetNode="_2_NeALCFEeq6NMutbmF8bg" beginLabel="[1..1] jdl" endLabel="[0..*] deployments">
       <target xmi:type="ecore:EReference" href="JDLMetamodel.ecore#//JDL/deployments"/>
-      <semanticElements xmi:type="ecore:EReference" href="JDLMetamodel.ecore#//Deployment/application"/>
       <semanticElements xmi:type="ecore:EReference" href="JDLMetamodel.ecore#//JDL/deployments"/>
+      <semanticElements xmi:type="ecore:EReference" href="JDLMetamodel.ecore#//Deployment/jdl"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_Bb05MF1hEeuszMhZ97ISnA" sourceArrow="InputArrow" routingStyle="manhattan" strokeColor="0,0,0">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='Bi-directional%20EC_EReference%20']/@style"/>
         <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_Bb05MV1hEeuszMhZ97ISnA" showIcon="false"/>
