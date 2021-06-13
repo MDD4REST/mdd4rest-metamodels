@@ -61,4 +61,12 @@
             genModel="model/genterator%20psm/sculptor/sculptormetamodel.xcore"/>
    </extension>
 
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated openapi2 -->
+      <package
+            uri="http://som.uoc.edu/openapi/2.0.0"
+            class="openapi2.Openapi2Package"
+            genModel="model/genterator%20psm/openapi/openapi2.genmodel"/>
+   </extension>
+
 </plugin>

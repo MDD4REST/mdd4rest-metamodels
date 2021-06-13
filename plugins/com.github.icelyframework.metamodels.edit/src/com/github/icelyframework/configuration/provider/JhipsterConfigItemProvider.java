@@ -59,6 +59,7 @@ public class JhipsterConfigItemProvider extends ApplicationConfigItemProvider {
 			addBuildToolPropertyDescriptor(object);
 			addAuthenticationTypePropertyDescriptor(object);
 			addApplicationTypePropertyDescriptor(object);
+			addClientFrameworkPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -372,6 +373,28 @@ public class JhipsterConfigItemProvider extends ApplicationConfigItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Client Framework feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addClientFrameworkPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_JhipsterConfig_clientFramework_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_JhipsterConfig_clientFramework_feature", "_UI_JhipsterConfig_type"),
+				 ConfigurationPackage.Literals.JHIPSTER_CONFIG__CLIENT_FRAMEWORK,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns JhipsterConfig.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -423,6 +446,7 @@ public class JhipsterConfigItemProvider extends ApplicationConfigItemProvider {
 			case ConfigurationPackage.JHIPSTER_CONFIG__BUILD_TOOL:
 			case ConfigurationPackage.JHIPSTER_CONFIG__AUTHENTICATION_TYPE:
 			case ConfigurationPackage.JHIPSTER_CONFIG__APPLICATION_TYPE:
+			case ConfigurationPackage.JHIPSTER_CONFIG__CLIENT_FRAMEWORK:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

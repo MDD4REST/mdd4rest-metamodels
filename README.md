@@ -6,7 +6,7 @@
   <br>
 </h1>
 
-<h4 align="center">Metamodels was used by icely-framework</h4>
+<h4 align="center">EMF Metamodels are used by the icely-framework generator</h4>
 
 <p align="center">
   <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/IcelyFramework/icely-metamodels">

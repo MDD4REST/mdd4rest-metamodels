@@ -31,6 +31,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.github.icelyframework.jdl.Config#getAuthenticationType <em>Authentication Type</em>}</li>
  *   <li>{@link com.github.icelyframework.jdl.Config#getCacheProvider <em>Cache Provider</em>}</li>
  *   <li>{@link com.github.icelyframework.jdl.Config#getApplication <em>Application</em>}</li>
+ *   <li>{@link com.github.icelyframework.jdl.Config#getClientFramework <em>Client Framework</em>}</li>
  * </ul>
  *
  * @see com.github.icelyframework.jdl.JdlPackage#getConfig()
@@ -444,5 +445,30 @@ public interface Config extends EObject {
 	 * @generated
 	 */
 	void setApplication(Application value);
+
+	/**
+	 * Returns the value of the '<em><b>Client Framework</b></em>' attribute.
+	 * The literals are from the enumeration {@link com.github.icelyframework.jdl.ClientFramework}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Client Framework</em>' attribute.
+	 * @see com.github.icelyframework.jdl.ClientFramework
+	 * @see #setClientFramework(ClientFramework)
+	 * @see com.github.icelyframework.jdl.JdlPackage#getConfig_ClientFramework()
+	 * @model
+	 * @generated
+	 */
+	ClientFramework getClientFramework();
+
+	/**
+	 * Sets the value of the '{@link com.github.icelyframework.jdl.Config#getClientFramework <em>Client Framework</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Client Framework</em>' attribute.
+	 * @see com.github.icelyframework.jdl.ClientFramework
+	 * @see #getClientFramework()
+	 * @generated
+	 */
+	void setClientFramework(ClientFramework value);
 
 } // Config

@@ -6,13 +6,6 @@
         eType="#//Config" containment="true" eOpposite="#//Config/application"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="entities" upperBound="-1"
         eType="#//Entity"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="dtos" upperBound="-1" eType="#//DTO"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="paginates" upperBound="-1"
-        eType="#//Paginate"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="services" upperBound="-1"
-        eType="#//Service"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="search" upperBound="-1"
-        eType="#//Search"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Config">
@@ -36,6 +29,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="cacheProvider" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="application" lowerBound="1"
         eType="#//Application" eOpposite="#//Application/config"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="clientFramework" eType="#//ClientFramework"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Entity">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

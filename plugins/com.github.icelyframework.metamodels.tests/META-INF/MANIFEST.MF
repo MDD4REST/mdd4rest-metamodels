@@ -13,7 +13,8 @@ Export-Package: com.github.icelyframework.staticview.tests,
  com.github.icelyframework.configuration.tests,
  com.github.icelyframework.deployment.tests,
  com.github.icelyframework.service.tests,
- com.github.icelyframework.jdl.tests
+ com.github.icelyframework.jdl.tests,
+ openapi2.tests
 Require-Bundle: org.eclipse.core.runtime,
  com.github.icelyframework.metamodels;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,

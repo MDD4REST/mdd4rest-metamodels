@@ -40,10 +40,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link com.github.icelyframework.jdl.impl.ApplicationImpl#getConfig <em>Config</em>}</li>
  *   <li>{@link com.github.icelyframework.jdl.impl.ApplicationImpl#getEntities <em>Entities</em>}</li>
- *   <li>{@link com.github.icelyframework.jdl.impl.ApplicationImpl#getDtos <em>Dtos</em>}</li>
- *   <li>{@link com.github.icelyframework.jdl.impl.ApplicationImpl#getPaginates <em>Paginates</em>}</li>
- *   <li>{@link com.github.icelyframework.jdl.impl.ApplicationImpl#getServices <em>Services</em>}</li>
- *   <li>{@link com.github.icelyframework.jdl.impl.ApplicationImpl#getSearch <em>Search</em>}</li>
  *   <li>{@link com.github.icelyframework.jdl.impl.ApplicationImpl#getName <em>Name</em>}</li>
  * </ul>
  *
@@ -69,46 +65,6 @@ public class ApplicationImpl extends EObjectImpl implements Application {
 	 * @ordered
 	 */
 	protected EList<Entity> entities;
-
-	/**
-	 * The cached value of the '{@link #getDtos() <em>Dtos</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDtos()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<DTO> dtos;
-
-	/**
-	 * The cached value of the '{@link #getPaginates() <em>Paginates</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPaginates()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Paginate> paginates;
-
-	/**
-	 * The cached value of the '{@link #getServices() <em>Services</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getServices()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Service> services;
-
-	/**
-	 * The cached value of the '{@link #getSearch() <em>Search</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSearch()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Search> search;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -213,58 +169,6 @@ public class ApplicationImpl extends EObjectImpl implements Application {
 	 * @generated
 	 */
 	@Override
-	public EList<DTO> getDtos() {
-		if (dtos == null) {
-			dtos = new EObjectResolvingEList<DTO>(DTO.class, this, JdlPackage.APPLICATION__DTOS);
-		}
-		return dtos;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EList<Paginate> getPaginates() {
-		if (paginates == null) {
-			paginates = new EObjectResolvingEList<Paginate>(Paginate.class, this, JdlPackage.APPLICATION__PAGINATES);
-		}
-		return paginates;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EList<Service> getServices() {
-		if (services == null) {
-			services = new EObjectResolvingEList<Service>(Service.class, this, JdlPackage.APPLICATION__SERVICES);
-		}
-		return services;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EList<Search> getSearch() {
-		if (search == null) {
-			search = new EObjectResolvingEList<Search>(Search.class, this, JdlPackage.APPLICATION__SEARCH);
-		}
-		return search;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public String getName() {
 		return name;
 	}
@@ -325,14 +229,6 @@ public class ApplicationImpl extends EObjectImpl implements Application {
 				return getConfig();
 			case JdlPackage.APPLICATION__ENTITIES:
 				return getEntities();
-			case JdlPackage.APPLICATION__DTOS:
-				return getDtos();
-			case JdlPackage.APPLICATION__PAGINATES:
-				return getPaginates();
-			case JdlPackage.APPLICATION__SERVICES:
-				return getServices();
-			case JdlPackage.APPLICATION__SEARCH:
-				return getSearch();
 			case JdlPackage.APPLICATION__NAME:
 				return getName();
 		}
@@ -355,22 +251,6 @@ public class ApplicationImpl extends EObjectImpl implements Application {
 				getEntities().clear();
 				getEntities().addAll((Collection<? extends Entity>)newValue);
 				return;
-			case JdlPackage.APPLICATION__DTOS:
-				getDtos().clear();
-				getDtos().addAll((Collection<? extends DTO>)newValue);
-				return;
-			case JdlPackage.APPLICATION__PAGINATES:
-				getPaginates().clear();
-				getPaginates().addAll((Collection<? extends Paginate>)newValue);
-				return;
-			case JdlPackage.APPLICATION__SERVICES:
-				getServices().clear();
-				getServices().addAll((Collection<? extends Service>)newValue);
-				return;
-			case JdlPackage.APPLICATION__SEARCH:
-				getSearch().clear();
-				getSearch().addAll((Collection<? extends Search>)newValue);
-				return;
 			case JdlPackage.APPLICATION__NAME:
 				setName((String)newValue);
 				return;
@@ -392,18 +272,6 @@ public class ApplicationImpl extends EObjectImpl implements Application {
 			case JdlPackage.APPLICATION__ENTITIES:
 				getEntities().clear();
 				return;
-			case JdlPackage.APPLICATION__DTOS:
-				getDtos().clear();
-				return;
-			case JdlPackage.APPLICATION__PAGINATES:
-				getPaginates().clear();
-				return;
-			case JdlPackage.APPLICATION__SERVICES:
-				getServices().clear();
-				return;
-			case JdlPackage.APPLICATION__SEARCH:
-				getSearch().clear();
-				return;
 			case JdlPackage.APPLICATION__NAME:
 				setName(NAME_EDEFAULT);
 				return;
@@ -423,14 +291,6 @@ public class ApplicationImpl extends EObjectImpl implements Application {
 				return config != null;
 			case JdlPackage.APPLICATION__ENTITIES:
 				return entities != null && !entities.isEmpty();
-			case JdlPackage.APPLICATION__DTOS:
-				return dtos != null && !dtos.isEmpty();
-			case JdlPackage.APPLICATION__PAGINATES:
-				return paginates != null && !paginates.isEmpty();
-			case JdlPackage.APPLICATION__SERVICES:
-				return services != null && !services.isEmpty();
-			case JdlPackage.APPLICATION__SEARCH:
-				return search != null && !search.isEmpty();
 			case JdlPackage.APPLICATION__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}

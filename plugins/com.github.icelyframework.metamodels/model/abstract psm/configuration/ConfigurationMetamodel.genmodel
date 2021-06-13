@@ -99,6 +99,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//JhipsterConfig/buildTool"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//JhipsterConfig/authenticationType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//JhipsterConfig/applicationType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//JhipsterConfig/clientFramework"/>
     </genClasses>
     <genClasses ecoreClass="ConfigurationMetamodel.ecore#//RESTOptions">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetamodel.ecore#//RESTOptions/spring_remoting_type"/>

@@ -841,6 +841,16 @@ public class ConfigurationPackageImpl extends EPackageImpl implements Configurat
 	 * @generated
 	 */
 	@Override
+	public EAttribute getJhipsterConfig_ClientFramework() {
+		return (EAttribute)jhipsterConfigEClass.getEStructuralFeatures().get(14);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getRESTOptions() {
 		return restOptionsEClass;
 	}
@@ -1566,6 +1576,7 @@ public class ConfigurationPackageImpl extends EPackageImpl implements Configurat
 		createEAttribute(jhipsterConfigEClass, JHIPSTER_CONFIG__BUILD_TOOL);
 		createEAttribute(jhipsterConfigEClass, JHIPSTER_CONFIG__AUTHENTICATION_TYPE);
 		createEAttribute(jhipsterConfigEClass, JHIPSTER_CONFIG__APPLICATION_TYPE);
+		createEAttribute(jhipsterConfigEClass, JHIPSTER_CONFIG__CLIENT_FRAMEWORK);
 
 		restOptionsEClass = createEClass(REST_OPTIONS);
 		createEAttribute(restOptionsEClass, REST_OPTIONS__SPRING_REMOTING_TYPE);
@@ -1740,6 +1751,7 @@ public class ConfigurationPackageImpl extends EPackageImpl implements Configurat
 		initEAttribute(getJhipsterConfig_BuildTool(), ecorePackage.getEString(), "buildTool", null, 0, 1, JhipsterConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getJhipsterConfig_AuthenticationType(), this.getAuthenticationType(), "authenticationType", null, 0, 1, JhipsterConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getJhipsterConfig_ApplicationType(), this.getJhipsterApplicationType(), "applicationType", null, 0, 1, JhipsterConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getJhipsterConfig_ClientFramework(), ecorePackage.getEString(), "clientFramework", null, 0, 1, JhipsterConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(restOptionsEClass, RESTOptions.class, "RESTOptions", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRESTOptions_Spring_remoting_type(), ecorePackage.getEString(), "spring_remoting_type", null, 0, 1, RESTOptions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

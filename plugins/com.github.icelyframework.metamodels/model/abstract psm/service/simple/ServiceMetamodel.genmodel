@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="" modelDirectory="/com.github.icelyframework.metamodels/src"
+    modelPluginID="com.github.icelyframework.metamodels" modelName="Service" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="7.0" copyrightFields="false">
+  <foreignModel>ServiceMetamodel.ecore</foreignModel>
+  <genPackages prefix="Service" basePackage="com.github.icelyframework" disposableProviderFactory="true"
+      ecorePackage="ServiceMetamodel.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ServiceMetamodel.ecore#//Multiplicity">
+      <genEnumLiterals ecoreEnumLiteral="ServiceMetamodel.ecore#//Multiplicity/ONE_TO_MANY"/>
+      <genEnumLiterals ecoreEnumLiteral="ServiceMetamodel.ecore#//Multiplicity/MANY_TO_ONE"/>
+      <genEnumLiterals ecoreEnumLiteral="ServiceMetamodel.ecore#//Multiplicity/ONE_TO_ONE"/>
+      <genEnumLiterals ecoreEnumLiteral="ServiceMetamodel.ecore#//Multiplicity/MANY_TO_MANY"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ServiceMetamodel.ecore#//DefaultType">
+      <genEnumLiterals ecoreEnumLiteral="ServiceMetamodel.ecore#//DefaultType/String"/>
+      <genEnumLiterals ecoreEnumLiteral="ServiceMetamodel.ecore#//DefaultType/Integer"/>
+      <genEnumLiterals ecoreEnumLiteral="ServiceMetamodel.ecore#//DefaultType/Float"/>
+      <genEnumLiterals ecoreEnumLiteral="ServiceMetamodel.ecore#//DefaultType/Boolean"/>
+      <genEnumLiterals ecoreEnumLiteral="ServiceMetamodel.ecore#//DefaultType/null"/>
+      <genEnumLiterals ecoreEnumLiteral="ServiceMetamodel.ecore#//DefaultType/Date"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ServiceMetamodel.ecore#//HttpMethod">
+      <genEnumLiterals ecoreEnumLiteral="ServiceMetamodel.ecore#//HttpMethod/UNDEFINED"/>
+      <genEnumLiterals ecoreEnumLiteral="ServiceMetamodel.ecore#//HttpMethod/GET"/>
+      <genEnumLiterals ecoreEnumLiteral="ServiceMetamodel.ecore#//HttpMethod/POST"/>
+      <genEnumLiterals ecoreEnumLiteral="ServiceMetamodel.ecore#//HttpMethod/PUT"/>
+      <genEnumLiterals ecoreEnumLiteral="ServiceMetamodel.ecore#//HttpMethod/DELETE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ServiceMetamodel.ecore#//RelationType">
+      <genEnumLiterals ecoreEnumLiteral="ServiceMetamodel.ecore#//RelationType/COMPOSITION"/>
+      <genEnumLiterals ecoreEnumLiteral="ServiceMetamodel.ecore#//RelationType/ASSOCIATION"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ServiceMetamodel.ecore#//InheritanceType">
+      <genEnumLiterals ecoreEnumLiteral="ServiceMetamodel.ecore#//InheritanceType/SINGLE_TABLE"/>
+      <genEnumLiterals ecoreEnumLiteral="ServiceMetamodel.ecore#//InheritanceType/JOINED"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ServiceMetamodel.ecore#//DiscriminatorType">
+      <genEnumLiterals ecoreEnumLiteral="ServiceMetamodel.ecore#//DiscriminatorType/STRING"/>
+      <genEnumLiterals ecoreEnumLiteral="ServiceMetamodel.ecore#//DiscriminatorType/CHAR"/>
+      <genEnumLiterals ecoreEnumLiteral="ServiceMetamodel.ecore#//DiscriminatorType/INTEGER"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ServiceMetamodel.ecore#//CollectionType">
+      <genEnumLiterals ecoreEnumLiteral="ServiceMetamodel.ecore#//CollectionType/SET"/>
+      <genEnumLiterals ecoreEnumLiteral="ServiceMetamodel.ecore#//CollectionType/LIST"/>
+      <genEnumLiterals ecoreEnumLiteral="ServiceMetamodel.ecore#//CollectionType/BAG"/>
+      <genEnumLiterals ecoreEnumLiteral="ServiceMetamodel.ecore#//CollectionType/MAP"/>
+      <genEnumLiterals ecoreEnumLiteral="ServiceMetamodel.ecore#//CollectionType/COLLECTION"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ServiceMetamodel.ecore#//ArchitectureType">
+      <genEnumLiterals ecoreEnumLiteral="ServiceMetamodel.ecore#//ArchitectureType/SIMPLE"/>
+      <genEnumLiterals ecoreEnumLiteral="ServiceMetamodel.ecore#//ArchitectureType/CQRS"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ServiceMetamodel.ecore#//AuthenticationType">
+      <genEnumLiterals ecoreEnumLiteral="ServiceMetamodel.ecore#//AuthenticationType/CENTERALIZED"/>
+      <genEnumLiterals ecoreEnumLiteral="ServiceMetamodel.ecore#//AuthenticationType/DECENTERALIZED"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ServiceMetamodel.ecore#//QueryType">
+      <genEnumLiterals ecoreEnumLiteral="ServiceMetamodel.ecore#//QueryType/NONE"/>
+      <genEnumLiterals ecoreEnumLiteral="ServiceMetamodel.ecore#//QueryType/PAGE"/>
+      <genEnumLiterals ecoreEnumLiteral="ServiceMetamodel.ecore#//QueryType/SIZE"/>
+      <genEnumLiterals ecoreEnumLiteral="ServiceMetamodel.ecore#//QueryType/SORT"/>
+      <genEnumLiterals ecoreEnumLiteral="ServiceMetamodel.ecore#//QueryType/SEARCH"/>
+      <genEnumLiterals ecoreEnumLiteral="ServiceMetamodel.ecore#//QueryType/FILTER"/>
+      <genEnumLiterals ecoreEnumLiteral="ServiceMetamodel.ecore#//QueryType/SELECT"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ServiceMetamodel.ecore#//ApplicationType">
+      <genEnumLiterals ecoreEnumLiteral="ServiceMetamodel.ecore#//ApplicationType/JHIPSTER_MICROSERVICE"/>
+      <genEnumLiterals ecoreEnumLiteral="ServiceMetamodel.ecore#//ApplicationType/JHIPSTER_GATEWAY"/>
+      <genEnumLiterals ecoreEnumLiteral="ServiceMetamodel.ecore#//ApplicationType/JHIPSTER_MONOLITH"/>
+      <genEnumLiterals ecoreEnumLiteral="ServiceMetamodel.ecore#//ApplicationType/JHIPSTER_UAA"/>
+      <genEnumLiterals ecoreEnumLiteral="ServiceMetamodel.ecore#//ApplicationType/SCULPTOR_MICROSERVICE"/>
+      <genEnumLiterals ecoreEnumLiteral="ServiceMetamodel.ecore#//ApplicationType/SCULPTOR_MONOLITH"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ServiceMetamodel.ecore#//MediaType">
+      <genEnumLiterals ecoreEnumLiteral="ServiceMetamodel.ecore#//MediaType/JSON"/>
+      <genEnumLiterals ecoreEnumLiteral="ServiceMetamodel.ecore#//MediaType/XML"/>
+    </genEnums>
+    <genClasses ecoreClass="ServiceMetamodel.ecore#//Project">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//Project/applications"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//Project/primitivetype"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Project/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Project/basePath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Project/basePackage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Project/architecture"/>
+    </genClasses>
+    <genClasses ecoreClass="ServiceMetamodel.ecore#//Application">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Application/name"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//Application/project"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Application/basePackage"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//Application/complextypes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//Application/modules"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//Application/roles"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Application/applicationType"/>
+    </genClasses>
+    <genClasses ecoreClass="ServiceMetamodel.ecore#//Property">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Property/unique"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Property/isNamingProperty"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Property/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Property/required"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Property/min"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Property/max"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//Property/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Property/changeable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Property/nullable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Property/visibility"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Property/databaseColumn"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Property/transient"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Property/validate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Property/length"/>
+    </genClasses>
+    <genClasses ecoreClass="ServiceMetamodel.ecore#//PrimitiveType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//PrimitiveType/type"/>
+    </genClasses>
+    <genClasses ecoreClass="ServiceMetamodel.ecore#//Relation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//Relation/target"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//Relation/source"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Relation/cascade"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Relation/orderBy"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Relation/visibility"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Relation/required"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Relation/nullable"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//Relation/opposite"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Relation/relationType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Relation/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Relation/changeable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Relation/cache"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Relation/databaseJoinColumn"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Relation/inverse"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Relation/validate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Relation/transient"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Relation/databaseJoinTable"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//Relation/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Relation/generatedBySculptor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Relation/generatedByJHipster"/>
+    </genClasses>
+    <genClasses ecoreClass="ServiceMetamodel.ecore#//Literal">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Literal/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Literal/value"/>
+    </genClasses>
+    <genClasses ecoreClass="ServiceMetamodel.ecore#//Inheritance">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Inheritance/discriminatorColumnLength"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Inheritance/discriminatorType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Inheritance/discriminatorColumnName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Inheritance/type"/>
+    </genClasses>
+    <genClasses ecoreClass="ServiceMetamodel.ecore#//Entity">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Entity/auditable"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="ServiceMetamodel.ecore#//TypeDefinition"/>
+    <genClasses ecoreClass="ServiceMetamodel.ecore#//ValueObject">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//ValueObject/immutable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//ValueObject/persistent"/>
+    </genClasses>
+    <genClasses ecoreClass="ServiceMetamodel.ecore#//DataMapper">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//DataMapper/domainObject"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//DataMapper/dto"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//DataMapper/name"/>
+    </genClasses>
+    <genClasses ecoreClass="ServiceMetamodel.ecore#//BasicType"/>
+    <genClasses ecoreClass="ServiceMetamodel.ecore#//CommandEvent"/>
+    <genClasses image="false" ecoreClass="ServiceMetamodel.ecore#//DomainObject">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//DomainObject/properties"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//DomainObject/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//DomainObject/abstract"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//DomainObject/aggregateRoot"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//DomainObject/relations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//DomainObject/inheritance"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//DomainObject/repository"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//DomainObject/operations"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//DomainObject/aggregate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//DomainObject/package"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//DomainObject/gapClass"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//DomainObject/cache"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//DomainObject/optimisticLocking"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//DomainObject/databaseTable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//DomainObject/validate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//DomainObject/discriminatorColumnValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//DomainObject/scaffold"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//DomainObject/generatedByJHipster"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//DomainObject/generatedBySculptor"/>
+    </genClasses>
+    <genClasses ecoreClass="ServiceMetamodel.ecore#//Enumeration">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//Enumeration/literals"/>
+    </genClasses>
+    <genClasses ecoreClass="ServiceMetamodel.ecore#//Aggregate">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//Aggregate/domainobjects"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Aggregate/name"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//Aggregate/module"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//Aggregate/aggregateRoot"/>
+    </genClasses>
+    <genClasses ecoreClass="ServiceMetamodel.ecore#//DTO"/>
+    <genClasses image="false" ecoreClass="ServiceMetamodel.ecore#//Event"/>
+    <genClasses ecoreClass="ServiceMetamodel.ecore#//DomainEvent"/>
+    <genClasses ecoreClass="ServiceMetamodel.ecore#//Path">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Path/relativePath"/>
+    </genClasses>
+    <genClasses ecoreClass="ServiceMetamodel.ecore#//Repository">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//Repository/operations"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//Repository/repositoryDependencies"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Repository/otherDependencies"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//Repository/subscribe"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//Repository/aggregateRoot"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Repository/gapClass"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Repository/name"/>
+    </genClasses>
+    <genClasses ecoreClass="ServiceMetamodel.ecore#//ResourceOperation">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//ResourceOperation/resource"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//ResourceOperation/httpMethod"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//ResourceOperation/delegate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//ResourceOperation/returnString"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//ResourceOperation/path"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//ResourceOperation/contentType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//ResourceOperation/resourceParams"/>
+    </genClasses>
+    <genClasses ecoreClass="ServiceMetamodel.ecore#//Resource">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//Resource/serviceDependencies"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//Resource/operations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//Resource/path"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Resource/gapClass"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Resource/name"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//Resource/module"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//Resource/permissions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//Resource/inputrepresentation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//Resource/outputrepresentation"/>
+    </genClasses>
+    <genClasses ecoreClass="ServiceMetamodel.ecore#//ServiceOperation">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//ServiceOperation/service"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//ServiceOperation/serviceDelegate"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//ServiceOperation/delegate"/>
+    </genClasses>
+    <genClasses ecoreClass="ServiceMetamodel.ecore#//RepositoryOperation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//RepositoryOperation/delegateToAccessObject"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//RepositoryOperation/accessObjectName"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//RepositoryOperation/repository"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//RepositoryOperation/query"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//RepositoryOperation/select"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//RepositoryOperation/condition"/>
+    </genClasses>
+    <genClasses ecoreClass="ServiceMetamodel.ecore#//DomainObjectOperation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//DomainObjectOperation/abstract"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//DomainObjectOperation/domainobject"/>
+    </genClasses>
+    <genClasses ecoreClass="ServiceMetamodel.ecore#//Consumer">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//Consumer/repositoryDependencies"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//Consumer/serviceDependencies"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Consumer/channel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Consumer/otherDependencies"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//Consumer/subscribe"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//Consumer/messageRoot"/>
+    </genClasses>
+    <genClasses ecoreClass="ServiceMetamodel.ecore#//Subscribe">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Subscribe/eventBus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Subscribe/topic"/>
+    </genClasses>
+    <genClasses ecoreClass="ServiceMetamodel.ecore#//Service">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//Service/operations"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//Service/repositoryDependencies"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Service/otherDependencies"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//Service/serviceDependencies"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Service/webService"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Service/remoteInterface"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Service/localInterface"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//Service/subscribe"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Service/gapClass"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Service/name"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//Service/module"/>
+    </genClasses>
+    <genClasses ecoreClass="ServiceMetamodel.ecore#//Operation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Operation/throws"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Operation/visibility"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//Operation/publish"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Operation/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//Operation/parameters"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//Operation/returntype"/>
+    </genClasses>
+    <genClasses ecoreClass="ServiceMetamodel.ecore#//Publish">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Publish/eventBus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Publish/topic"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//Publish/eventType"/>
+    </genClasses>
+    <genClasses ecoreClass="ServiceMetamodel.ecore#//Parameter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Parameter/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//Parameter/type"/>
+    </genClasses>
+    <genClasses ecoreClass="ServiceMetamodel.ecore#//ComplexType">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//ComplexType/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//ComplexType/collection"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//ComplexType/mappedType"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="ServiceMetamodel.ecore#//SimpleType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//SimpleType/typeName"/>
+    </genClasses>
+    <genClasses ecoreClass="ServiceMetamodel.ecore#//Module">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Module/external"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Module/basePackage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Module/persistenceUnit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Module/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//Module/aggregates"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//Module/application"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//Module/services"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//Module/resources"/>
+    </genClasses>
+    <genClasses ecoreClass="ServiceMetamodel.ecore#//HasAnyAuthorities">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//HasAnyAuthorities/roles"/>
+    </genClasses>
+    <genClasses ecoreClass="ServiceMetamodel.ecore#//HasAuthority">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//HasAuthority/role"/>
+    </genClasses>
+    <genClasses ecoreClass="ServiceMetamodel.ecore#//Authenticated"/>
+    <genClasses ecoreClass="ServiceMetamodel.ecore#//Access">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Access/access"/>
+    </genClasses>
+    <genClasses ecoreClass="ServiceMetamodel.ecore#//PermitAll">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//PermitAll/withAllSubresources"/>
+    </genClasses>
+    <genClasses ecoreClass="ServiceMetamodel.ecore#//Role">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ServiceMetamodel.ecore#//Role/application"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//Role/name"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="ServiceMetamodel.ecore#//Permission"/>
+    <genClasses ecoreClass="ServiceMetamodel.ecore#//ResourceParam">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//ResourceParam/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//ResourceParam/queryType"/>
+    </genClasses>
+    <genClasses ecoreClass="ServiceMetamodel.ecore#//OutputRepresentation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//OutputRepresentation/outputMediaType"/>
+    </genClasses>
+    <genClasses ecoreClass="ServiceMetamodel.ecore#//InputRepresentation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceMetamodel.ecore#//InputRepresentation/inputMediaType"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

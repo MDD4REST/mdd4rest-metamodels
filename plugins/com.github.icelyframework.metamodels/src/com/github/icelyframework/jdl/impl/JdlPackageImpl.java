@@ -370,48 +370,8 @@ public class JdlPackageImpl extends EPackageImpl implements JdlPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getApplication_Dtos() {
-		return (EReference)applicationEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getApplication_Paginates() {
-		return (EReference)applicationEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getApplication_Services() {
-		return (EReference)applicationEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getApplication_Search() {
-		return (EReference)applicationEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EAttribute getApplication_Name() {
-		return (EAttribute)applicationEClass.getEStructuralFeatures().get(6);
+		return (EAttribute)applicationEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -602,6 +562,16 @@ public class JdlPackageImpl extends EPackageImpl implements JdlPackage {
 	@Override
 	public EReference getConfig_Application() {
 		return (EReference)configEClass.getEStructuralFeatures().get(17);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getConfig_ClientFramework() {
+		return (EAttribute)configEClass.getEStructuralFeatures().get(18);
 	}
 
 	/**
@@ -1406,10 +1376,6 @@ public class JdlPackageImpl extends EPackageImpl implements JdlPackage {
 		applicationEClass = createEClass(APPLICATION);
 		createEReference(applicationEClass, APPLICATION__CONFIG);
 		createEReference(applicationEClass, APPLICATION__ENTITIES);
-		createEReference(applicationEClass, APPLICATION__DTOS);
-		createEReference(applicationEClass, APPLICATION__PAGINATES);
-		createEReference(applicationEClass, APPLICATION__SERVICES);
-		createEReference(applicationEClass, APPLICATION__SEARCH);
 		createEAttribute(applicationEClass, APPLICATION__NAME);
 
 		configEClass = createEClass(CONFIG);
@@ -1431,6 +1397,7 @@ public class JdlPackageImpl extends EPackageImpl implements JdlPackage {
 		createEAttribute(configEClass, CONFIG__AUTHENTICATION_TYPE);
 		createEAttribute(configEClass, CONFIG__CACHE_PROVIDER);
 		createEReference(configEClass, CONFIG__APPLICATION);
+		createEAttribute(configEClass, CONFIG__CLIENT_FRAMEWORK);
 
 		entityEClass = createEClass(ENTITY);
 		createEAttribute(entityEClass, ENTITY__NAME);
@@ -1561,10 +1528,6 @@ public class JdlPackageImpl extends EPackageImpl implements JdlPackage {
 		initEClass(applicationEClass, Application.class, "Application", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getApplication_Config(), this.getConfig(), this.getConfig_Application(), "config", null, 1, 1, Application.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getApplication_Entities(), this.getEntity(), null, "entities", null, 0, -1, Application.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getApplication_Dtos(), this.getDTO(), null, "dtos", null, 0, -1, Application.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getApplication_Paginates(), this.getPaginate(), null, "paginates", null, 0, -1, Application.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getApplication_Services(), this.getService(), null, "services", null, 0, -1, Application.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getApplication_Search(), this.getSearch(), null, "search", null, 0, -1, Application.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getApplication_Name(), ecorePackage.getEString(), "name", null, 1, 1, Application.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(configEClass, Config.class, "Config", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1586,6 +1549,7 @@ public class JdlPackageImpl extends EPackageImpl implements JdlPackage {
 		initEAttribute(getConfig_AuthenticationType(), this.getAuthenticationType(), "authenticationType", null, 0, 1, Config.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getConfig_CacheProvider(), ecorePackage.getEString(), "cacheProvider", null, 0, 1, Config.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getConfig_Application(), this.getApplication(), this.getApplication_Config(), "application", null, 1, 1, Config.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getConfig_ClientFramework(), this.getClientFramework(), "clientFramework", null, 0, 1, Config.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(entityEClass, Entity.class, "Entity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEntity_Name(), ecorePackage.getEString(), "name", null, 1, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

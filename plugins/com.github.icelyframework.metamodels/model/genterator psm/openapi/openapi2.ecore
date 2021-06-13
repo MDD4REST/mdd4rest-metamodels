@@ -92,13 +92,13 @@
       <eParameters name="method" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="relativePath" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Get" eType="#//Operation"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="get" eType="#//Operation"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Put" eType="#//Operation"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="put" eType="#//Operation"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Post" eType="#//Operation"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="post" eType="#//Operation"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Delete" eType="#//Operation"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="delete" eType="#//Operation"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="options" eType="#//Operation"
         containment="true"/>

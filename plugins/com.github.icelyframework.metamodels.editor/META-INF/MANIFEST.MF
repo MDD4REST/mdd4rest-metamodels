@@ -5,7 +5,7 @@ Bundle-SymbolicName: com.github.icelyframework.metamodels.editor;singleton:=true
 Automatic-Module-Name: com.github.icelyframework.metamodels.editor
 Bundle-Version: 1.1.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: com.github.icelyframework.jdl.presentation.JdlEditorPlugin$Implementation
+Bundle-Activator: openapi2.presentation.Openapi2EditorPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
@@ -14,7 +14,8 @@ Export-Package: com.github.icelyframework.staticview.presentation,
  com.github.icelyframework.configuration.presentation,
  com.github.icelyframework.deployment.presentation,
  com.github.icelyframework.service.presentation,
- com.github.icelyframework.jdl.presentation
+ com.github.icelyframework.jdl.presentation,
+ openapi2.presentation
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources;visibility:=reexport,
  com.github.icelyframework.metamodels.edit;visibility:=reexport,

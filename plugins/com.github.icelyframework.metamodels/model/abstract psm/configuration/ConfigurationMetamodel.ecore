@@ -106,6 +106,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="buildTool" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="authenticationType" eType="#//AuthenticationType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="applicationType" eType="#//JhipsterApplicationType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="clientFramework" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RESTOptions">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="spring_remoting_type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

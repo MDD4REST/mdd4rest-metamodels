@@ -90,10 +90,6 @@
     <genClasses ecoreClass="JDLMetamodel.ecore#//Application">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JDLMetamodel.ecore#//Application/config"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference JDLMetamodel.ecore#//Application/entities"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference JDLMetamodel.ecore#//Application/dtos"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference JDLMetamodel.ecore#//Application/paginates"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference JDLMetamodel.ecore#//Application/services"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference JDLMetamodel.ecore#//Application/search"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JDLMetamodel.ecore#//Application/name"/>
     </genClasses>
     <genClasses ecoreClass="JDLMetamodel.ecore#//Config">
@@ -115,6 +111,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JDLMetamodel.ecore#//Config/authenticationType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JDLMetamodel.ecore#//Config/cacheProvider"/>
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference JDLMetamodel.ecore#//Config/application"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JDLMetamodel.ecore#//Config/clientFramework"/>
     </genClasses>
     <genClasses ecoreClass="JDLMetamodel.ecore#//Entity">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JDLMetamodel.ecore#//Entity/name"/>

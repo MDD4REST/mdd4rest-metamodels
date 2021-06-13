@@ -26,6 +26,7 @@ package com.github.icelyframework.configuration;
  *   <li>{@link com.github.icelyframework.configuration.JhipsterConfig#getBuildTool <em>Build Tool</em>}</li>
  *   <li>{@link com.github.icelyframework.configuration.JhipsterConfig#getAuthenticationType <em>Authentication Type</em>}</li>
  *   <li>{@link com.github.icelyframework.configuration.JhipsterConfig#getApplicationType <em>Application Type</em>}</li>
+ *   <li>{@link com.github.icelyframework.configuration.JhipsterConfig#getClientFramework <em>Client Framework</em>}</li>
  * </ul>
  *
  * @see com.github.icelyframework.configuration.ConfigurationPackage#getJhipsterConfig()
@@ -349,5 +350,27 @@ public interface JhipsterConfig extends ApplicationConfig {
 	 * @generated
 	 */
 	void setApplicationType(JhipsterApplicationType value);
+
+	/**
+	 * Returns the value of the '<em><b>Client Framework</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Client Framework</em>' attribute.
+	 * @see #setClientFramework(String)
+	 * @see com.github.icelyframework.configuration.ConfigurationPackage#getJhipsterConfig_ClientFramework()
+	 * @model
+	 * @generated
+	 */
+	String getClientFramework();
+
+	/**
+	 * Sets the value of the '{@link com.github.icelyframework.configuration.JhipsterConfig#getClientFramework <em>Client Framework</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Client Framework</em>' attribute.
+	 * @see #getClientFramework()
+	 * @generated
+	 */
+	void setClientFramework(String value);
 
 } // JhipsterConfig

@@ -85,49 +85,13 @@ public interface JdlPackage extends EPackage {
 	int APPLICATION__ENTITIES = 1;
 
 	/**
-	 * The feature id for the '<em><b>Dtos</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APPLICATION__DTOS = 2;
-
-	/**
-	 * The feature id for the '<em><b>Paginates</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APPLICATION__PAGINATES = 3;
-
-	/**
-	 * The feature id for the '<em><b>Services</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APPLICATION__SERVICES = 4;
-
-	/**
-	 * The feature id for the '<em><b>Search</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APPLICATION__SEARCH = 5;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APPLICATION__NAME = 6;
+	int APPLICATION__NAME = 2;
 
 	/**
 	 * The number of structural features of the '<em>Application</em>' class.
@@ -136,7 +100,7 @@ public interface JdlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APPLICATION_FEATURE_COUNT = 7;
+	int APPLICATION_FEATURE_COUNT = 3;
 
 	/**
 	 * The meta object id for the '{@link com.github.icelyframework.jdl.impl.ConfigImpl <em>Config</em>}' class.
@@ -311,13 +275,22 @@ public interface JdlPackage extends EPackage {
 	int CONFIG__APPLICATION = 17;
 
 	/**
+	 * The feature id for the '<em><b>Client Framework</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONFIG__CLIENT_FRAMEWORK = 18;
+
+	/**
 	 * The number of structural features of the '<em>Config</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONFIG_FEATURE_COUNT = 18;
+	int CONFIG_FEATURE_COUNT = 19;
 
 	/**
 	 * The meta object id for the '{@link com.github.icelyframework.jdl.impl.EntityImpl <em>Entity</em>}' class.
@@ -1275,50 +1248,6 @@ public interface JdlPackage extends EPackage {
 	EReference getApplication_Entities();
 
 	/**
-	 * Returns the meta object for the reference list '{@link com.github.icelyframework.jdl.Application#getDtos <em>Dtos</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Dtos</em>'.
-	 * @see com.github.icelyframework.jdl.Application#getDtos()
-	 * @see #getApplication()
-	 * @generated
-	 */
-	EReference getApplication_Dtos();
-
-	/**
-	 * Returns the meta object for the reference list '{@link com.github.icelyframework.jdl.Application#getPaginates <em>Paginates</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Paginates</em>'.
-	 * @see com.github.icelyframework.jdl.Application#getPaginates()
-	 * @see #getApplication()
-	 * @generated
-	 */
-	EReference getApplication_Paginates();
-
-	/**
-	 * Returns the meta object for the reference list '{@link com.github.icelyframework.jdl.Application#getServices <em>Services</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Services</em>'.
-	 * @see com.github.icelyframework.jdl.Application#getServices()
-	 * @see #getApplication()
-	 * @generated
-	 */
-	EReference getApplication_Services();
-
-	/**
-	 * Returns the meta object for the reference list '{@link com.github.icelyframework.jdl.Application#getSearch <em>Search</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Search</em>'.
-	 * @see com.github.icelyframework.jdl.Application#getSearch()
-	 * @see #getApplication()
-	 * @generated
-	 */
-	EReference getApplication_Search();
-
-	/**
 	 * Returns the meta object for the attribute '{@link com.github.icelyframework.jdl.Application#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1536,6 +1465,17 @@ public interface JdlPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getConfig_Application();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.github.icelyframework.jdl.Config#getClientFramework <em>Client Framework</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Client Framework</em>'.
+	 * @see com.github.icelyframework.jdl.Config#getClientFramework()
+	 * @see #getConfig()
+	 * @generated
+	 */
+	EAttribute getConfig_ClientFramework();
 
 	/**
 	 * Returns the meta object for class '{@link com.github.icelyframework.jdl.Entity <em>Entity</em>}'.
@@ -2403,38 +2343,6 @@ public interface JdlPackage extends EPackage {
 		EReference APPLICATION__ENTITIES = eINSTANCE.getApplication_Entities();
 
 		/**
-		 * The meta object literal for the '<em><b>Dtos</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference APPLICATION__DTOS = eINSTANCE.getApplication_Dtos();
-
-		/**
-		 * The meta object literal for the '<em><b>Paginates</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference APPLICATION__PAGINATES = eINSTANCE.getApplication_Paginates();
-
-		/**
-		 * The meta object literal for the '<em><b>Services</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference APPLICATION__SERVICES = eINSTANCE.getApplication_Services();
-
-		/**
-		 * The meta object literal for the '<em><b>Search</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference APPLICATION__SEARCH = eINSTANCE.getApplication_Search();
-
-		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2595,6 +2503,14 @@ public interface JdlPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CONFIG__APPLICATION = eINSTANCE.getConfig_Application();
+
+		/**
+		 * The meta object literal for the '<em><b>Client Framework</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CONFIG__CLIENT_FRAMEWORK = eINSTANCE.getConfig_ClientFramework();
 
 		/**
 		 * The meta object literal for the '{@link com.github.icelyframework.jdl.impl.EntityImpl <em>Entity</em>}' class.

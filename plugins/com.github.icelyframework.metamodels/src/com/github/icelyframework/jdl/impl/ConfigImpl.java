@@ -5,6 +5,7 @@ package com.github.icelyframework.jdl.impl;
 import com.github.icelyframework.jdl.Application;
 import com.github.icelyframework.jdl.ApplicationType;
 import com.github.icelyframework.jdl.AuthenticationType;
+import com.github.icelyframework.jdl.ClientFramework;
 import com.github.icelyframework.jdl.Config;
 import com.github.icelyframework.jdl.DatabaseType;
 import com.github.icelyframework.jdl.JdlPackage;
@@ -45,6 +46,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  *   <li>{@link com.github.icelyframework.jdl.impl.ConfigImpl#getAuthenticationType <em>Authentication Type</em>}</li>
  *   <li>{@link com.github.icelyframework.jdl.impl.ConfigImpl#getCacheProvider <em>Cache Provider</em>}</li>
  *   <li>{@link com.github.icelyframework.jdl.impl.ConfigImpl#getApplication <em>Application</em>}</li>
+ *   <li>{@link com.github.icelyframework.jdl.impl.ConfigImpl#getClientFramework <em>Client Framework</em>}</li>
  * </ul>
  *
  * @generated
@@ -389,6 +391,26 @@ public class ConfigImpl extends EObjectImpl implements Config {
 	 * @ordered
 	 */
 	protected String cacheProvider = CACHE_PROVIDER_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getClientFramework() <em>Client Framework</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getClientFramework()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final ClientFramework CLIENT_FRAMEWORK_EDEFAULT = ClientFramework.ANGULARX;
+
+	/**
+	 * The cached value of the '{@link #getClientFramework() <em>Client Framework</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getClientFramework()
+	 * @generated
+	 * @ordered
+	 */
+	protected ClientFramework clientFramework = CLIENT_FRAMEWORK_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -849,6 +871,29 @@ public class ConfigImpl extends EObjectImpl implements Config {
 	 * @generated
 	 */
 	@Override
+	public ClientFramework getClientFramework() {
+		return clientFramework;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setClientFramework(ClientFramework newClientFramework) {
+		ClientFramework oldClientFramework = clientFramework;
+		clientFramework = newClientFramework == null ? CLIENT_FRAMEWORK_EDEFAULT : newClientFramework;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, JdlPackage.CONFIG__CLIENT_FRAMEWORK, oldClientFramework, clientFramework));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case JdlPackage.CONFIG__APPLICATION:
@@ -931,6 +976,8 @@ public class ConfigImpl extends EObjectImpl implements Config {
 				return getCacheProvider();
 			case JdlPackage.CONFIG__APPLICATION:
 				return getApplication();
+			case JdlPackage.CONFIG__CLIENT_FRAMEWORK:
+				return getClientFramework();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -996,6 +1043,9 @@ public class ConfigImpl extends EObjectImpl implements Config {
 				return;
 			case JdlPackage.CONFIG__APPLICATION:
 				setApplication((Application)newValue);
+				return;
+			case JdlPackage.CONFIG__CLIENT_FRAMEWORK:
+				setClientFramework((ClientFramework)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -1063,6 +1113,9 @@ public class ConfigImpl extends EObjectImpl implements Config {
 			case JdlPackage.CONFIG__APPLICATION:
 				setApplication((Application)null);
 				return;
+			case JdlPackage.CONFIG__CLIENT_FRAMEWORK:
+				setClientFramework(CLIENT_FRAMEWORK_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -1111,6 +1164,8 @@ public class ConfigImpl extends EObjectImpl implements Config {
 				return CACHE_PROVIDER_EDEFAULT == null ? cacheProvider != null : !CACHE_PROVIDER_EDEFAULT.equals(cacheProvider);
 			case JdlPackage.CONFIG__APPLICATION:
 				return getApplication() != null;
+			case JdlPackage.CONFIG__CLIENT_FRAMEWORK:
+				return clientFramework != CLIENT_FRAMEWORK_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -1159,6 +1214,8 @@ public class ConfigImpl extends EObjectImpl implements Config {
 		result.append(authenticationType);
 		result.append(", cacheProvider: ");
 		result.append(cacheProvider);
+		result.append(", clientFramework: ");
+		result.append(clientFramework);
 		result.append(')');
 		return result.toString();
 	}

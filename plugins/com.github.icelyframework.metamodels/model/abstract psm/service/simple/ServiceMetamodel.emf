@@ -1,0 +1,390 @@
+@Ecore(invocationDelegates="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot", settingDelegates="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot", validationDelegates="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot")
+@namespace(uri="http://github.com/icelyframework/service", prefix="icely")
+package service;
+
+enum Multiplicity {
+	ONE_TO_MANY = 0;
+	MANY_TO_ONE = 1;
+	ONE_TO_ONE = 2;
+	MANY_TO_MANY = 3;
+}
+
+class Project {
+	val Application[*]#project applications;
+	val PrimitiveType[*] primitivetype;
+	attr String[1] name;
+	attr String basePath;
+	!unique attr String basePackage;
+	attr ArchitectureType[1] architecture;
+}
+
+class Application {
+	attr String[1] name;
+	ref Project[1]#applications project;
+	!unique attr String basePackage;
+	val ComplexType[*] complextypes;
+	val Module[*]#application modules;
+	val Role[*]#application roles;
+}
+
+class Property {
+	attr boolean ~unique;
+	attr boolean[1] isNamingProperty;
+	attr String[1] name;
+	attr boolean required = true;
+	attr int min;
+	attr int max;
+	ref TypeDefinition[1] type;
+	!unique attr boolean changeable = true;
+	!unique attr boolean nullable;
+	!unique attr String visibility;
+	!unique attr String databaseColumn;
+	!unique attr boolean ~transient;
+	!unique attr String validate;
+	!unique attr String length;
+}
+
+class PrimitiveType extends SimpleType {
+	attr DefaultType type;
+}
+
+class Relation {
+	ref DomainObject[1] target;
+	ref DomainObject[1]#relations source;
+	!unique attr String cascade;
+	!unique attr String orderBy;
+	!unique attr String visibility;
+	!unique attr boolean required;
+	!unique attr boolean nullable;
+	ref Relation opposite;
+	attr RelationType relationType;
+	attr String name;
+	!unique attr boolean changeable = true;
+	!unique attr boolean cache;
+	!unique attr String databaseJoinColumn;
+	!unique attr boolean inverse;
+	!unique attr String validate;
+	!unique attr boolean ~transient;
+	!unique attr String databaseJoinTable;
+	ref TypeDefinition[1] type;
+	attr boolean generatedBySculptor = True;
+	attr boolean generatedByJHipster = False;
+}
+
+class Literal {
+	id attr String[1] name;
+	attr int[1] value;
+}
+
+class Inheritance {
+	!unique attr String discriminatorColumnLength;
+	!unique attr DiscriminatorType discriminatorType;
+	!unique attr String discriminatorColumnName;
+	!unique attr InheritanceType type;
+}
+
+class Entity extends DomainObject {
+	!unique attr boolean auditable = true;
+}
+
+abstract class TypeDefinition {
+}
+
+class ValueObject extends DomainObject {
+	attr boolean immutable;
+	attr boolean persistent;
+}
+
+class DataMapper {
+	ref DomainObject[+] domainObject;
+	ref DTO[1] dto;
+	attr String name;
+}
+
+class BasicType extends ValueObject {
+}
+
+class CommandEvent extends Event {
+}
+
+abstract class DomainObject extends SimpleType {
+	val Property[*] properties;
+	attr String name;
+	attr boolean ~abstract;
+	!unique attr boolean aggregateRoot = true;
+	val Relation[*]#source relations;
+	val Inheritance inheritance;
+	val Repository#aggregateRoot repository;
+	val DomainObjectOperation[*]#domainobject operations;
+	ref Aggregate[1]#domainobjects aggregate;
+	!unique attr String ~package;
+	!unique attr boolean gapClass;
+	!unique attr boolean cache;
+	!unique attr boolean optimisticLocking = true;
+	!unique attr String databaseTable;
+	!unique attr String validate;
+	!unique attr String discriminatorColumnValue;
+	attr boolean scaffold;
+	attr boolean generatedByJHipster = False;
+	attr boolean generatedBySculptor = True;
+}
+
+class Enumeration extends DomainObject {
+	val Literal[+] literals;
+}
+
+class Aggregate {
+	val DomainObject[+]#aggregate domainobjects;
+	attr String name;
+	ref Module[1]#aggregates module;
+	ref DomainObject[1] aggregateRoot;
+}
+
+class DTO extends ValueObject {
+}
+
+abstract class Event extends ValueObject {
+}
+
+class DomainEvent extends Event {
+}
+
+enum DefaultType {
+	String = 0;
+	Integer = 1;
+	Float = 2;
+	Boolean = 3;
+	null = 4;
+	Date = 5;
+}
+
+enum HttpMethod {
+	UNDEFINED = 0;
+	GET = 0;
+	POST = 0;
+	PUT = 0;
+	DELETE = 0;
+}
+
+class Path {
+	attr String relativePath;
+}
+
+class Repository {
+	!resolve val RepositoryOperation[*]#repository operations;
+	ref Repository[*] repositoryDependencies;
+	attr String[*] otherDependencies;
+	val Subscribe subscribe;
+	ref DomainObject#repository aggregateRoot;
+	!unique attr boolean gapClass;
+	attr String[1] name;
+}
+
+class ResourceOperation extends Operation {
+	ref Resource#operations resource;
+	!unique attr HttpMethod httpMethod;
+	ref ServiceOperation delegate;
+	!unique attr String returnString;
+	val Path path;
+	attr String contentType;
+	val ResourceParam[*] resourceParams;
+}
+
+class Resource {
+	ref Service[*] serviceDependencies;
+	!resolve val ResourceOperation[*]#resource operations;
+	val Path path;
+	!unique attr boolean gapClass;
+	attr String name;
+	ref Module[1]#resources module;
+	val Permission[*] permissions;
+	val InputRepresentation inputrepresentation;
+	val OutputRepresentation outputrepresentation;
+}
+
+class ServiceOperation extends Operation {
+	ref Service[1]#operations service;
+	ref ServiceOperation serviceDelegate;
+	ref RepositoryOperation delegate;
+}
+
+class RepositoryOperation extends Operation {
+	!unique attr boolean delegateToAccessObject = false;
+	!unique attr boolean accessObjectName;
+	ref Repository[1]#operations repository;
+	attr String query;
+	attr String select;
+	attr String condition;
+}
+
+class DomainObjectOperation extends Operation {
+	!unique attr boolean ~abstract;
+	ref DomainObject#operations domainobject;
+}
+
+class Consumer {
+	ref Repository[*] repositoryDependencies;
+	ref Service[*] serviceDependencies;
+	!unique attr String channel;
+	attr String[*] otherDependencies;
+	val Subscribe subscribe;
+	ref DomainObject messageRoot;
+}
+
+class Subscribe {
+	!unique attr String eventBus;
+	!unique attr String topic;
+}
+
+class Service {
+	!resolve val ServiceOperation[*]#service operations;
+	ref Repository[*] repositoryDependencies;
+	attr String[*] otherDependencies;
+	ref Service[*] serviceDependencies;
+	!unique attr boolean webService;
+	!unique attr boolean remoteInterface = true;
+	!unique attr boolean localInterface = true;
+	val Subscribe subscribe;
+	!unique attr boolean gapClass;
+	attr String[1] name;
+	ref Module[1]#services module;
+}
+
+class Operation {
+	!unique attr String ~throws;
+	!unique attr String visibility;
+	val Publish publish;
+	attr String name;
+	val Parameter[*] parameters;
+	ref TypeDefinition returntype;
+}
+
+class Publish {
+	!unique attr String eventBus;
+	!unique attr String topic;
+	ref Event eventType;
+}
+
+class Parameter {
+	attr String name;
+	ref TypeDefinition type;
+}
+
+enum RelationType {
+	COMPOSITION = 0;
+	ASSOCIATION = 1;
+}
+
+enum InheritanceType {
+	SINGLE_TABLE = 0;
+	JOINED = 0;
+}
+
+enum DiscriminatorType {
+	STRING = 0;
+	CHAR = 0;
+	INTEGER = 0;
+}
+
+enum CollectionType {
+	SET = 0;
+	LIST = 1;
+	BAG = 2;
+	MAP = 3;
+	COLLECTION = 4;
+}
+
+class ComplexType extends TypeDefinition {
+	ref TypeDefinition[1] type;
+	attr CollectionType collection;
+	ref TypeDefinition mappedType;
+}
+
+abstract class SimpleType extends TypeDefinition {
+	id attr String[1] typeName;
+}
+
+class Module {
+	!unique attr boolean external;
+	!unique attr String basePackage;
+	!unique attr String persistenceUnit;
+	attr String[1] name;
+	val Aggregate[*]#module aggregates;
+	ref Application#modules application;
+	val Service[*]#module services;
+	val Resource[*]#module resources;
+}
+
+enum ArchitectureType {
+	SIMPLE = 0;
+	CQRS = 0;
+}
+
+class HasAnyAuthorities extends Permission {
+	ref Role[+] role;
+}
+
+class HasAuthority extends Permission {
+	ref Role[1] role;
+}
+
+class Authenticated extends Permission {
+}
+
+enum AuthenticationType {
+	CENTERALIZED = 0;
+	DECENTERALIZED = 1;
+}
+
+class Access extends Permission {
+	attr String access;
+}
+
+class PermitAll extends Permission {
+	attr boolean withAllSubresource;
+}
+
+class Role {
+	ref Application[1]#roles application;
+}
+
+abstract class Permission {
+}
+
+class ResourceParam {
+	attr String name;
+	attr QueryType queryType;
+}
+
+enum QueryType {
+	NONE = 0;
+	PAGE = 1;
+	SIZE = 2;
+	SORT = 3;
+	SEARCH = 4;
+	FILTER = 5;
+	SELECT = 6;
+}
+
+enum ApplicationType {
+	JHIPSTER_MICROSERVICE = 0;
+	JHIPSTER_GATEWAY = 1;
+	JHIPSTER_MONOLITH = 2;
+	JHIPSTER_UAA = 3;
+	SCULPTOR_MICROSERVICE = 4;
+	SCULPTOR_MONOLITH = 5;
+}
+
+class OutputRepresentation {
+	!unique attr MediaType[1] outputMediaType;
+}
+
+class InputRepresentation {
+	!unique attr MediaType[1] inputMediaType;
+}
+
+enum MediaType {
+	JSON = 0;
+	XML = 1;
+}
+

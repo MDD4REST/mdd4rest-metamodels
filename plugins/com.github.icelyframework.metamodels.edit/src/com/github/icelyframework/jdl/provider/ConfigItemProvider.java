@@ -77,6 +77,7 @@ public class ConfigItemProvider
 			addTestFrameworksPropertyDescriptor(object);
 			addAuthenticationTypePropertyDescriptor(object);
 			addCacheProviderPropertyDescriptor(object);
+			addClientFrameworkPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -456,6 +457,28 @@ public class ConfigItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Client Framework feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addClientFrameworkPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Config_clientFramework_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Config_clientFramework_feature", "_UI_Config_type"),
+				 JdlPackage.Literals.CONFIG__CLIENT_FRAMEWORK,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns Config.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -510,6 +533,7 @@ public class ConfigItemProvider
 			case JdlPackage.CONFIG__TEST_FRAMEWORKS:
 			case JdlPackage.CONFIG__AUTHENTICATION_TYPE:
 			case JdlPackage.CONFIG__CACHE_PROVIDER:
+			case JdlPackage.CONFIG__CLIENT_FRAMEWORK:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

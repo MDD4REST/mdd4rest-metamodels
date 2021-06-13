@@ -17,10 +17,6 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link com.github.icelyframework.jdl.Application#getConfig <em>Config</em>}</li>
  *   <li>{@link com.github.icelyframework.jdl.Application#getEntities <em>Entities</em>}</li>
- *   <li>{@link com.github.icelyframework.jdl.Application#getDtos <em>Dtos</em>}</li>
- *   <li>{@link com.github.icelyframework.jdl.Application#getPaginates <em>Paginates</em>}</li>
- *   <li>{@link com.github.icelyframework.jdl.Application#getServices <em>Services</em>}</li>
- *   <li>{@link com.github.icelyframework.jdl.Application#getSearch <em>Search</em>}</li>
  *   <li>{@link com.github.icelyframework.jdl.Application#getName <em>Name</em>}</li>
  * </ul>
  *
@@ -64,54 +60,6 @@ public interface Application extends EObject {
 	 * @generated
 	 */
 	EList<Entity> getEntities();
-
-	/**
-	 * Returns the value of the '<em><b>Dtos</b></em>' reference list.
-	 * The list contents are of type {@link com.github.icelyframework.jdl.DTO}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Dtos</em>' reference list.
-	 * @see com.github.icelyframework.jdl.JdlPackage#getApplication_Dtos()
-	 * @model
-	 * @generated
-	 */
-	EList<DTO> getDtos();
-
-	/**
-	 * Returns the value of the '<em><b>Paginates</b></em>' reference list.
-	 * The list contents are of type {@link com.github.icelyframework.jdl.Paginate}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Paginates</em>' reference list.
-	 * @see com.github.icelyframework.jdl.JdlPackage#getApplication_Paginates()
-	 * @model
-	 * @generated
-	 */
-	EList<Paginate> getPaginates();
-
-	/**
-	 * Returns the value of the '<em><b>Services</b></em>' reference list.
-	 * The list contents are of type {@link com.github.icelyframework.jdl.Service}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Services</em>' reference list.
-	 * @see com.github.icelyframework.jdl.JdlPackage#getApplication_Services()
-	 * @model
-	 * @generated
-	 */
-	EList<Service> getServices();
-
-	/**
-	 * Returns the value of the '<em><b>Search</b></em>' reference list.
-	 * The list contents are of type {@link com.github.icelyframework.jdl.Search}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Search</em>' reference list.
-	 * @see com.github.icelyframework.jdl.JdlPackage#getApplication_Search()
-	 * @model
-	 * @generated
-	 */
-	EList<Search> getSearch();
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.

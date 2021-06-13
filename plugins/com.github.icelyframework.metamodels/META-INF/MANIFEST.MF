@@ -28,7 +28,10 @@ Export-Package: com.github.icelyframework.staticview,
  com.github.icelyframework.jdl.util,
  org.sculptor.sculptormetamodel,
  org.sculptor.sculptormetamodel.impl,
- org.sculptor.sculptormetamodel.util
+ org.sculptor.sculptormetamodel.util,
+ openapi2,
+ openapi2.impl,
+ openapi2.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.xtext.xbase.lib,

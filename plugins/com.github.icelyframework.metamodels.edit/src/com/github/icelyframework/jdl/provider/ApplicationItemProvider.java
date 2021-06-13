@@ -64,10 +64,6 @@ public class ApplicationItemProvider
 			super.getPropertyDescriptors(object);
 
 			addEntitiesPropertyDescriptor(object);
-			addDtosPropertyDescriptor(object);
-			addPaginatesPropertyDescriptor(object);
-			addServicesPropertyDescriptor(object);
-			addSearchPropertyDescriptor(object);
 			addNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -87,94 +83,6 @@ public class ApplicationItemProvider
 				 getString("_UI_Application_entities_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Application_entities_feature", "_UI_Application_type"),
 				 JdlPackage.Literals.APPLICATION__ENTITIES,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Dtos feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addDtosPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Application_dtos_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Application_dtos_feature", "_UI_Application_type"),
-				 JdlPackage.Literals.APPLICATION__DTOS,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Paginates feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addPaginatesPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Application_paginates_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Application_paginates_feature", "_UI_Application_type"),
-				 JdlPackage.Literals.APPLICATION__PAGINATES,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Services feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addServicesPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Application_services_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Application_services_feature", "_UI_Application_type"),
-				 JdlPackage.Literals.APPLICATION__SERVICES,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Search feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addSearchPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Application_search_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Application_search_feature", "_UI_Application_type"),
-				 JdlPackage.Literals.APPLICATION__SEARCH,
 				 true,
 				 false,
 				 true,

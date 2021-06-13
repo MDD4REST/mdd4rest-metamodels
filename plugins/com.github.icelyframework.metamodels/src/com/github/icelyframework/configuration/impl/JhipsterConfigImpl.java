@@ -36,6 +36,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link com.github.icelyframework.configuration.impl.JhipsterConfigImpl#getBuildTool <em>Build Tool</em>}</li>
  *   <li>{@link com.github.icelyframework.configuration.impl.JhipsterConfigImpl#getAuthenticationType <em>Authentication Type</em>}</li>
  *   <li>{@link com.github.icelyframework.configuration.impl.JhipsterConfigImpl#getApplicationType <em>Application Type</em>}</li>
+ *   <li>{@link com.github.icelyframework.configuration.impl.JhipsterConfigImpl#getClientFramework <em>Client Framework</em>}</li>
  * </ul>
  *
  * @generated
@@ -320,6 +321,26 @@ public class JhipsterConfigImpl extends ApplicationConfigImpl implements Jhipste
 	 * @ordered
 	 */
 	protected JhipsterApplicationType applicationType = APPLICATION_TYPE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getClientFramework() <em>Client Framework</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getClientFramework()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CLIENT_FRAMEWORK_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getClientFramework() <em>Client Framework</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getClientFramework()
+	 * @generated
+	 * @ordered
+	 */
+	protected String clientFramework = CLIENT_FRAMEWORK_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -668,6 +689,29 @@ public class JhipsterConfigImpl extends ApplicationConfigImpl implements Jhipste
 	 * @generated
 	 */
 	@Override
+	public String getClientFramework() {
+		return clientFramework;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setClientFramework(String newClientFramework) {
+		String oldClientFramework = clientFramework;
+		clientFramework = newClientFramework;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ConfigurationPackage.JHIPSTER_CONFIG__CLIENT_FRAMEWORK, oldClientFramework, clientFramework));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case ConfigurationPackage.JHIPSTER_CONFIG__DATABASE_TYPE:
@@ -698,6 +742,8 @@ public class JhipsterConfigImpl extends ApplicationConfigImpl implements Jhipste
 				return getAuthenticationType();
 			case ConfigurationPackage.JHIPSTER_CONFIG__APPLICATION_TYPE:
 				return getApplicationType();
+			case ConfigurationPackage.JHIPSTER_CONFIG__CLIENT_FRAMEWORK:
+				return getClientFramework();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -751,6 +797,9 @@ public class JhipsterConfigImpl extends ApplicationConfigImpl implements Jhipste
 				return;
 			case ConfigurationPackage.JHIPSTER_CONFIG__APPLICATION_TYPE:
 				setApplicationType((JhipsterApplicationType)newValue);
+				return;
+			case ConfigurationPackage.JHIPSTER_CONFIG__CLIENT_FRAMEWORK:
+				setClientFramework((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -806,6 +855,9 @@ public class JhipsterConfigImpl extends ApplicationConfigImpl implements Jhipste
 			case ConfigurationPackage.JHIPSTER_CONFIG__APPLICATION_TYPE:
 				setApplicationType(APPLICATION_TYPE_EDEFAULT);
 				return;
+			case ConfigurationPackage.JHIPSTER_CONFIG__CLIENT_FRAMEWORK:
+				setClientFramework(CLIENT_FRAMEWORK_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -846,6 +898,8 @@ public class JhipsterConfigImpl extends ApplicationConfigImpl implements Jhipste
 				return authenticationType != AUTHENTICATION_TYPE_EDEFAULT;
 			case ConfigurationPackage.JHIPSTER_CONFIG__APPLICATION_TYPE:
 				return applicationType != APPLICATION_TYPE_EDEFAULT;
+			case ConfigurationPackage.JHIPSTER_CONFIG__CLIENT_FRAMEWORK:
+				return CLIENT_FRAMEWORK_EDEFAULT == null ? clientFramework != null : !CLIENT_FRAMEWORK_EDEFAULT.equals(clientFramework);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -888,6 +942,8 @@ public class JhipsterConfigImpl extends ApplicationConfigImpl implements Jhipste
 		result.append(authenticationType);
 		result.append(", applicationType: ");
 		result.append(applicationType);
+		result.append(", clientFramework: ");
+		result.append(clientFramework);
 		result.append(')');
 		return result.toString();
 	}

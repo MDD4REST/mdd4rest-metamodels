@@ -676,13 +676,22 @@ public interface ConfigurationPackage extends EPackage {
 	int JHIPSTER_CONFIG__APPLICATION_TYPE = APPLICATION_CONFIG_FEATURE_COUNT + 13;
 
 	/**
+	 * The feature id for the '<em><b>Client Framework</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JHIPSTER_CONFIG__CLIENT_FRAMEWORK = APPLICATION_CONFIG_FEATURE_COUNT + 14;
+
+	/**
 	 * The number of structural features of the '<em>Jhipster Config</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int JHIPSTER_CONFIG_FEATURE_COUNT = APPLICATION_CONFIG_FEATURE_COUNT + 14;
+	int JHIPSTER_CONFIG_FEATURE_COUNT = APPLICATION_CONFIG_FEATURE_COUNT + 15;
 
 	/**
 	 * The meta object id for the '{@link com.github.icelyframework.configuration.impl.RESTOptionsImpl <em>REST Options</em>}' class.
@@ -2009,6 +2018,17 @@ public interface ConfigurationPackage extends EPackage {
 	EAttribute getJhipsterConfig_ApplicationType();
 
 	/**
+	 * Returns the meta object for the attribute '{@link com.github.icelyframework.configuration.JhipsterConfig#getClientFramework <em>Client Framework</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Client Framework</em>'.
+	 * @see com.github.icelyframework.configuration.JhipsterConfig#getClientFramework()
+	 * @see #getJhipsterConfig()
+	 * @generated
+	 */
+	EAttribute getJhipsterConfig_ClientFramework();
+
+	/**
 	 * Returns the meta object for class '{@link com.github.icelyframework.configuration.RESTOptions <em>REST Options</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3184,6 +3204,14 @@ public interface ConfigurationPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute JHIPSTER_CONFIG__APPLICATION_TYPE = eINSTANCE.getJhipsterConfig_ApplicationType();
+
+		/**
+		 * The meta object literal for the '<em><b>Client Framework</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute JHIPSTER_CONFIG__CLIENT_FRAMEWORK = eINSTANCE.getJhipsterConfig_ClientFramework();
 
 		/**
 		 * The meta object literal for the '{@link com.github.icelyframework.configuration.impl.RESTOptionsImpl <em>REST Options</em>}' class.

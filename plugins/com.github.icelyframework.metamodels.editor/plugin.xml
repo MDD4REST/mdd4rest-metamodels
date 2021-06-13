@@ -169,4 +169,31 @@
             contributorClass="com.github.icelyframework.jdl.presentation.JdlActionBarContributor">
       </editor>
    </extension>
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated openapi2 -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="openapi2.presentation.Openapi2ModelWizardID"
+            name="%_UI_Openapi2ModelWizard_label"
+            class="openapi2.presentation.Openapi2ModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/Openapi2ModelFile.gif">
+         <description>%_UI_Openapi2ModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated openapi2 -->
+      <editor
+            id="openapi2.presentation.Openapi2EditorID"
+            name="%_UI_Openapi2Editor_label"
+            icon="icons/full/obj16/Openapi2ModelFile.gif"
+            extensions="openapi2"
+            class="openapi2.presentation.Openapi2Editor"
+            contributorClass="openapi2.presentation.Openapi2ActionBarContributor">
+      </editor>
+   </extension>
 </plugin>
